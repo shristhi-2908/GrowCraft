@@ -1,0 +1,418 @@
+:root {
+    --blue: #0078FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.icon {
+    height: 1.5rem;
+}
+
+.training-links {
+    color: black;
+    text-decoration: none;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+}
+
+.training-links:hover {
+    color: var(--blue);
+    transition: transform, bacbkground-color 0.2s ease-in-out;
+}
+
+.training-links:hover img {
+    filter: brightness(0) saturate(100%) invert(30%) sepia(98%) saturate(2500%) hue-rotate(190deg);
+}
+
+.cauresel-images img {
+    height: 65vh;
+    width: auto;
+    object-fit: cover;
+}
+
+.redirect-btns button {
+    border-radius: 1.5rem;
+}
+
+.nav-link:hover,
+.visited {
+    text-decoration-line: underline;
+    text-decoration-color: var(--blue);
+    text-underline-offset: 0.3rem;
+    transition: text-decoration-line 0.3s ease-in-out;
+    text-decoration-thickness: 2px;
+    color: var(--blue) !important;
+}
+
+.carousel-item {
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item h2 {
+    color: white;
+}
+
+.carousel-overlay {
+    position: relative;
+}
+
+.carousel-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /*Black with 50% opacity */
+    z-index: 1;
+}
+
+
+.carousel-caption {
+    position: absolute;
+    z-index: 2;
+}
+
+.nav-btn {
+    filter: invert(1)
+}
+
+.heading-text {
+    text-decoration-line: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: var(--blue);
+}
+
+.svg-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 50%;
+
+}
+
+.card-services {
+    margin: 1rem;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+p {
+    text-align: justify;
+}
+
+.card-services:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-services:hover h5 {
+    color: var(--blue);
+}
+
+.card-services h5 {
+    font-weight: 700;
+    margin: 1rem;
+}
+
+#digital-marketing-card {
+    background-color: #ff689a3d;
+}
+
+
+#content-writing-card {
+    background-color: #e98e063d;
+}
+
+#website-development-card {
+    background-color: #41cf2e3d;
+}
+
+#graphic-design-card {
+    background-color: #2282ff3d;
+}
+
+#social-media-management-card {
+    background-color: #8660fe3d;
+}
+
+.card {
+    border: none;
+}
+
+.about-us {
+    font-size: 1rem;
+    text-align: left;
+}
+
+.about-us ul li {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.about-us ul svg {
+    filter: brightness(0) saturate(100%) invert(30%) sepia(98%) saturate(2500%) hue-rotate(190deg);
+}
+
+.about-us-img {
+    width: 100%;
+}
+
+.founder-text {
+    padding-left: 5rem !important;
+}
+
+.clients-img {
+    /* height: 7rem; */
+    background-color: white;
+    padding: 1rem;
+}
+
+.clients-img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+.client-page {
+    width: 100%;
+    padding: 3rem;
+    background-color: var(--blue);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.founder-detail {
+    font-size: 1.2rem;
+}
+
+.founder-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.founder-image:hover .founder-links {
+    transform: translateY(-40px);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.founder-links {
+    position: absolute;
+    bottom: -60px;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in-out;
+    left: 15%;
+    width: 70%;
+}
+
+.founder-links h5,
+.founder-links p {
+    color: white;
+}
+
+.founder-detail img {
+    width: 70%;
+    border-radius: 2rem;
+}
+
+.founder-detail p {
+    text-align: justify;
+
+}
+
+.founder-card {
+    background-color: rgba(0, 0, 0, 0.426);
+}
+
+.socialmedia ul {
+    list-style: none;
+    gap: 1rem;
+}
+
+footer {
+    background-color: var(--blue);
+    color: white;
+}
+
+footer .heading-text {
+    text-decoration-color: white !important;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links a {
+    background-color: white;
+    padding: 0.75rem;
+    border-radius: 50%;
+}
+
+.footer-links a:hover {
+    transform: scale(1.1);
+}
+
+.address p {
+    margin: 0;
+}
+
+footer form {
+    gap: 1rem;
+}
+
+footer p{
+    font-size: 1.2rem;
+}
+footer form input,
+footer form textarea {
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 70%;
+    border: none;
+}
+
+footer button {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+.copyright {
+    gap: 5px;
+}
+
+footer form input:focus,
+footer form textarea:focus {
+    border: none;
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgb(180, 180, 180);
+}
+
+textarea {
+    min-height: 8rem;
+}
+
+#error {
+    color: red;
+    font-size: 1rem;
+}
+
+.gallery-card {
+    /* background-color: #111; */
+    /* border: 1px solid #fff; */
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    text-align: center;
+    color: black;
+}
+
+.gallery-card:hover {
+    box-shadow: 0 0 15px white;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.gallery-card .card-body {
+    padding: 15px;
+}
+
+.gallery-card .card-title {
+    /* color: #fff; */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.gallery-card .card-text {
+    /* color: #e0e0e0; */
+    font-size: 15px;
+}
+
+.work-card:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.work-card:hover h3 {
+    color: var(--blue);
+}
+
+@media only screen and (max-width:576px) {
+    #logo {
+        width: 10rem;
+    }
+
+    .clients-img {
+        max-width: 60px;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    #logo {
+        width: 6rem;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .footer-links {
+        flex-direction: row;
+        margin: 2rem 0;
+    }
+
+    .founder-text {
+        padding-left: 1rem !important;
+    }
+
+    .clients-img {
+        max-width: 80px;
+    }
+}
+
+@media (max-width:1412px) {
+    .clients-img {
+        max-width: 105px;
+    }
+}
