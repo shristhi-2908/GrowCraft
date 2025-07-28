@@ -1,30 +1,35 @@
-// Auto slide of caurosel
+console.log("script.js is loading");
+console.log(document.getElementById("backToTop"));
+
+// Auto slide of carousel
 let autoSlide = () => {
   let next = document.getElementById("nextbtn");
+  if (!next) return; // ⛔ Skip if element doesn't exist
   setInterval(() => {
     next.click();
   }, 5000);
 };
-
 autoSlide();
 
+// Auto slide of client section
 let clientSlide = () => {
   let client = document.getElementById("client-next");
+  if (!client) return; // ⛔ Prevent error if not found
   setInterval(() => {
     client.click();
   }, 5000);
 };
-
 clientSlide();
 
-// Scroll effect on navbar
+// Scroll effect on navbar (only on index page)
 let sections = document.querySelectorAll(".section");
 let navLinks = document.querySelectorAll(".nav-link");
 if (window.location.pathname.includes("index")) {
   window.addEventListener("scroll", () => {
     let current = "home";
     const scrollY = window.pageYOffset;
-    const navHeight = document.querySelector("nav").offsetHeight - 50;
+    const nav = document.querySelector("nav");
+    const navHeight = nav ? nav.offsetHeight - 50 : 50;
     sections.forEach((section) => {
       const sectionTop = section.offsetTop - navHeight;
       const sectionHeight = section.offsetHeight;
@@ -44,34 +49,60 @@ if (window.location.pathname.includes("index")) {
   });
 }
 
-// Form validation
+// Form validation (only if form exists)
 let submitForm = document.getElementById("form-submit");
-submitForm.addEventListener("click", (e) => {
-  e.preventDefault();
-  const nameField = document.getElementById("name");
-  const emailField = document.getElementById("email");
-  const subjectField = document.getElementById("subject");
-  const messageField = document.getElementById("message");
+if (submitForm) {
+  submitForm.addEventListener("click", (e) => {
+    e.preventDefault();
+    const nameField = document.getElementById("name");
+    const emailField = document.getElementById("email");
+    const subjectField = document.getElementById("subject");
+    const messageField = document.getElementById("message");
+    const error = document.getElementById("error");
 
-  const name = nameField.value.trim();
-  const email = emailField.value.trim();
-  const subject = subjectField.value.trim();
-  const message = messageField.value.trim();
-  const error = document.getElementById("error");
-  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!nameField || !emailField || !subjectField || !messageField || !error) return;
 
-  if (!name || !email || !subject || !message) {
-    error.textContent = "All fields are required.";
-    return;
+    const name = nameField.value.trim();
+    const email = emailField.value.trim();
+    const subject = subjectField.value.trim();
+    const message = messageField.value.trim();
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (!name || !email || !subject || !message) {
+      error.textContent = "All fields are required.";
+      return;
+    }
+    if (!emailPattern.test(email)) {
+      error.textContent = "Please enter a valid email address.";
+      return;
+    }
+
+    error.textContent = "";
+    alert("Form submitted successfully!");
+    nameField.value = "";
+    emailField.value = "";
+    subjectField.value = "";
+    messageField.value = "";
+  });
+}
+
+// Show/hide the back-to-top button on scroll
+window.onscroll = function () {
+  const btn = document.getElementById("backToTop");
+  if (!btn) return;
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
   }
-  if (!emailPattern.test(email)) {
-    error.textContent = "Please enter a valid email address.";
-    return;
+};
+
+// Scroll to top smoothly when back-to-top button is clicked
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("backToTop");
+  if (btn) {
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   }
-  error.textContent = "";
-  alert("Form submitted succesfully!");
-  nameField.value = "";
-  emailField.value = "";
-  subjectField.value = "";
-  messageField.value = "";
 });
