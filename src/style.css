@@ -169,6 +169,7 @@ p {
 }
 
 .about-us ul li {
+    text-align: justify;
     list-style: none;
     margin-bottom: 1rem;
 }
