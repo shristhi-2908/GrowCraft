@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body id="main-body">
     <!-- Navbar starts here -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid d-flex justify-content-between align-items-center px-2 px-sm-5">
@@ -50,7 +50,14 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#contact">Contact Us</a>
                     </li>
-
+                    <li class="nav-item">
+                        <div class="toggle-switch">
+                            <label class="switch-label">
+                            <input onclick="toggleDarkMode()" type="checkbox" class="checkbox">
+                            <span class="slider"></span>
+                            </label>
+                        </div>  
+                    </li>
                 </ul>
             </div>
         </div>
@@ -95,7 +102,7 @@
             </div>
         </div>
     </div>
-    <!-- Trainign abd Internship program section ends here -->
+    <!-- Trainign and Internship program section ends here -->
 
     <main class="section" id="home">
         <!-- Caurosel section starts here -->
@@ -604,6 +611,7 @@
 
     <!-- Copyright section ends here  -->
     <script src="src/script.js"></script>
+    <script src="src/utils.js"></script>
 </body>
 
 </html>
