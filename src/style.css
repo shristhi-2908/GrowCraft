@@ -407,15 +407,15 @@ textarea {
     }
 
     .toggle-switch {
-            width: 40px;
-            height: 8px;
-            padding: 8px;
-            margin-right: 10px;
+            position: relative;
+            width: 60px;
+            height: 10px;
+            padding: 10px;
             --light:#0078FF;
             --dark: #28292c;
             --link: rgb(27, 129, 112);
             --link-hover: rgb(24, 94, 82);
-        }
+    }
     .navbar .toggle-switch {
         align-self: center;
         margin-left: 1rem;
@@ -445,7 +445,8 @@ textarea {
             --dark: #28292c;
             --link: rgb(27, 129, 112);
             --link-hover: rgb(24, 94, 82);
-        }
+    }
+        
      .switch-label {
         height: 16px;
         border-radius: 10px;
@@ -485,8 +486,6 @@ textarea {
             position: relative;
             width: 60px;
             height: 10px;
-            /* margin-left: auto; */
-            /* margin-right: auto; */
             padding: 10px;
             --light:#0078FF;
             --dark: #28292c;
@@ -501,6 +500,16 @@ textarea {
     }
 }
 
+    .toggle-switch {
+            position: relative;
+            width: 60px;
+            height: 10px;
+            padding: 10px;
+            --light:#0078FF;
+            --dark: #070708;
+            --link: rgb(27, 129, 112);
+            --link-hover: rgb(24, 94, 82);
+    }
 
 .switch-label {
   position: absolute;
@@ -559,6 +568,12 @@ body.dark {background-color: #222;}
 body.dark .navbar .container-fluid {
     background-color: #292929;
     color: #fff;
+}
+
+body.dark .navbar-toggler{
+    border-color: #fff;
+    color:#f2f2f2;
+    background-color: #f2f2f2;
 }
 
 body.dark .navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link  {
@@ -637,6 +652,7 @@ body.dark .container .text-center{
 
 body.dark .copyright{
     color:#f2f2f2
+}
 
 #backToTop {
   display: none;
@@ -659,3 +675,21 @@ body.dark .copyright{
   background-color: #005fcc; /* darker shade of blue */
   transform: scale(1.1);
 }
+
+body.dark .icon {
+    filter: invert(1);
+}
+
+body.dark .mb-0:hover {
+    color: var(--blue);
+    transition: transform, bacbkground-color 0.2s ease-in-out;
+}
+
+body.dark .mb-4:hover {
+    color: var(--blue);
+    transition: transform, bacbkground-color 0.2s ease-in-out;
+}
+
+body.dark .icon:hover{
+    filter: brightness(0) saturate(100%) invert(30%) sepia(98%) saturate(2500%) hue-rotate(190deg);
+} 
