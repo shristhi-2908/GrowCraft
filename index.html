@@ -22,7 +22,11 @@
     <!-- Navbar starts here -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid d-flex justify-content-between align-items-center px-2 px-sm-5">
-            <a class="navbar-brand" href="#"><img src="images/Logo.png" alt="GrowCraft" width="200" id="logo"></a>
+            <a class="navbar-brand" href="#">
+                <div class="logo-wrapper">
+                        <img src="images/Logo.png" alt="GrowCraft" width="200" id="logo">
+                </div>
+            </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +45,7 @@
                         <a class="nav-link active" aria-current="page" href="#about">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="src/workList.html">Our Work</a>
+                        <a class="nav-link active" aria-current="page" href="#workList">Our Works</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#contact">Contact Us</a>
@@ -339,12 +343,17 @@
                     <!-- New Services card can be add here -->
                 </div>
             </div>
+
+            </section>
+            <!-- Services section ends here -->
+
             <script>
                 document.querySelectorAll('.toggle-btn').forEach(function (btn) {
                     btn.addEventListener('click', function () {
                         const cardBody = btn.closest('.card-body');
                         const summary = cardBody.querySelector('.summary');
                         const extra = cardBody.querySelector('.extra');
+
 
                         const isExpanded = !extra.classList.contains('d-none');
 
@@ -363,6 +372,7 @@
             <!-- Services section ends here -->
             <hr>
             <!-- About us section starts from here -->
+             <section class="d-flex flex-column align-items-center mt-4 section" id="about"></section>
             <div class="card section" id="about">
                 <h2 class="heading-text text-center mt-4">About Us</h2>
                 <p class="fst-italic text-center">Gateway to Go Digital and Grow Business</p>
@@ -425,7 +435,88 @@
                     </div>
                 </div>
             </div>
+        </section>
             <!-- About us section ends here -->
+
+            <!--Works section starts here-->
+            <section class="d-flex flex-column align-items-center mt-4 section" id="workList"></section>
+            <div class="container py-5">
+        <h2 class="text-center mb-5 heading-text">Our Works</h2>
+
+        <div class="row justify-content-center g-4">
+
+            <div class="col-md-4 col-sm-6 col-12">
+                <a href="works.html#WebDev" style="text-decoration: none;">
+                    <div class="gallery-card h-100 work-card">
+                        <img src="images/WebDev.png" alt="Web Dev" />
+                        <div class="card-body">
+                            <h3 class="card-title">Web Development</h3>
+                            <p class="card-text">
+                                Modern and responsive websites using the latest tech.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-12">
+                <a href="works.html#digital-marketing" style="text-decoration: none;">
+                    <div class="gallery-card h-100 work-card">
+                        <img src="images/DigitalMarketing.png" alt="Digital Marketing" />
+                        <div class="card-body">
+                            <h3 class="card-title">Digital Marketing</h3>
+                            <p class="card-text">
+                                Boost your online presence with smart strategies.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-12">
+                <a href="works.html#social-media" style="text-decoration: none;">
+                    <div class="gallery-card h-100 work-card">
+                        <img src="images/SocialMediaManagement.png" alt="Social Media Marketing" />
+                        <div class="card-body">
+                            <h3 class="card-title">Social Media Marketing</h3>
+                            <p class="card-text">
+                                Grow your brand with engaging social media content.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-12">
+                <a href="works.html#content-writing" style="text-decoration: none;">
+                    <div class="gallery-card h-100 work-card">
+                        <img src="images/ContentWriting.png" alt="Content Writing" />
+                        <div class="card-body">
+                            <h3 class="card-title">Content Writing</h3>
+                            <p class="card-text">
+                                Creative content that connects with your audience.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 col-sm-6 sol-12">
+                <a href="works.html#graphic-design" style="text-decoration: none;">
+                    <div class="gallery-card h-100  work-card">
+                        <img src="images/GraphicDesign.png" alt="Graphic Designing" />
+                        <div class="card-body">
+                            <h3 class="card-title">Graphic Designing</h3>
+                            <p class="card-text">
+                                Eye-catching visuals for web, print, and more.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--Works section starts here-->
         </section>
     </main>
 
