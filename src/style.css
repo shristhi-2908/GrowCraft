@@ -266,69 +266,127 @@ p {
     gap: 1rem;
 }
 
-footer {
-    
-    background-color: var(--blue);
-    color: white;
+.footer {
+  background-color: #21903b;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px 10px;
 }
 
-footer .heading-text {
-    text-decoration-color: white !important;
-    margin-bottom: 1rem;
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 60px;
 }
 
-.footer-links {
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.footer-container > div {
+  flex: 1 1 200px;
+  min-width: 200px;
 }
 
-.footer-links a {
-    background-color: white;
-    padding: 0.75rem;
-    border-radius: 50%;
+.footer h3 {
+  text-decoration: underline;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
-.footer-links a:hover {
-    transform: scale(1.1);
+.footer p, .footer a {
+  font-size: 14px;
+  color: white;
+  line-height: 1.6;
 }
 
-.address p {
-    margin: 0;
+.footer a {
+  text-decoration: none;
 }
 
-footer form {
-    gap: 1rem;
+.footer a:hover {
+  text-decoration: underline;
 }
 
-footer p{
-    font-size: 1.2rem;
-}
-footer form input,
-footer form textarea {
-    border-radius: 1rem;
-    padding: 0.5rem;
-    width: 70%;
-    border: none;
+.footer-links ul {
+  list-style: none;
+  padding: 0;
 }
 
-footer button {
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    border: none;
+.footer-links ul li {
+  margin-bottom: 6px;
 }
 
-.copyright {
-    gap: 5px;
+.footer-social h3 {
+  margin-bottom: 15px;
 }
 
-footer form input:focus,
-footer form textarea:focus {
-    border: none;
-    outline: none;
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+.social-list li {
+  margin-bottom: 10px;
+}
+
+.social-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.social-list a:hover {
+  color: #d4f7d4;
+}
+
+.social-list i {
+  background-color: #ffffff30;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.social-list a:hover i {
+  background-color: white;
+  color: #28a745;
+}
+
+
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #ffffff80;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 13px;
+}
+.send-message-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: white;
+  color: #28a745;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.send-message-btn:hover {
+  background-color: #dff0d8;
+}
+
+
+
 
 input::placeholder,
 textarea::placeholder {
