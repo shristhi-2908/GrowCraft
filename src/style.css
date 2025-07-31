@@ -765,19 +765,15 @@ body.dark .icon {
     filter: invert(1);
 }
 
-body.dark .mb-0:hover {
+body.dark .training-links:hover .mb-0 ,body.dark .training-links:hover img{
     color: var(--blue);
     transition: transform, bacbkground-color 0.2s ease-in-out;
+     filter: brightness(0) saturate(100%) invert(30%) sepia(98%) saturate(2500%) hue-rotate(190deg)
 }
 
-body.dark .mb-4:hover {
+body.dark .mb-4:hover{
     color: var(--blue);
-    transition: transform, bacbkground-color 0.2s ease-in-out;
 }
-
-body.dark .icon:hover{
-    filter: brightness(0) saturate(100%) invert(30%) sepia(98%) saturate(2500%) hue-rotate(190deg);
-} 
 
 .logo-wrapper {
   background-color: rgba(255, 255, 255, 0.2);
