@@ -785,3 +785,25 @@ body.dark .icon:hover{
     transform: 0.4s;
 }
 
+.btn-custom-purple {
+            background-color: #463896;
+            border-color: #291987;
+            color: white;
+        }
+        
+        .btn-custom-purple:hover {
+            background-color: #1f0d66;
+            border-color: #1f0d66;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(41, 25, 135, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom-purple:focus,
+        .btn-custom-purple:active {
+            background-color: #1f0d66 !important;
+            border-color: #1f0d66 !important;
+            color: white !important;
+            box-shadow: 0 0 0 0.2rem rgba(41, 25, 135, 0.25) !important;
+        }
