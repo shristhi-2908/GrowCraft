@@ -150,7 +150,9 @@ body {
 p {
   text-align: justify;
 }
-
+.card-services {
+  min-height: 350px;
+}
 .card-services:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
