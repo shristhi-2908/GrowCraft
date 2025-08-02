@@ -921,6 +921,9 @@ body.dark .mb-4:hover{
   transform: 0.4s;
 }
 
+
+.btn-custom-purple {
+
 @media screen and (max-width: 768px) {
   .footer-container {
     display: flex;
@@ -1029,6 +1032,7 @@ body.dark .mb-4:hover{
 .send-message-btn {
   display: none;
        .btn-custom-purple {
+
             background-color: #463896;
             border-color: #291987;
             color: white;
@@ -1049,6 +1053,9 @@ body.dark .mb-4:hover{
             border-color: #1f0d66 !important;
             color: white !important;
             box-shadow: 0 0 0 0.2rem rgba(41, 25, 135, 0.25) !important;
+
+        }
+
         }
         /* === Navbar Custom Styling === */
 

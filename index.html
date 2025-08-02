@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="shortcut icon" href="Favicon.ico" type="image/x-icon">
 
+
+
     <!-- Added custom view all works button class with hover effects and smooth transitions -->
     <style>
         .btn-custom-purple {
@@ -100,6 +102,7 @@
 
     </style>
     <!-- END: Custom CSS changes -->
+
 
 </head>
 
@@ -430,27 +433,6 @@
                     <!-- New Services card can be add here -->
                 </div>
             </div>
-            <script>
-                document.querySelectorAll('.toggle-btn').forEach(function (btn) {
-                    btn.addEventListener('click', function () {
-                        const cardBody = btn.closest('.card-body');
-                        const summary = cardBody.querySelector('.summary');
-                        const extra = cardBody.querySelector('.extra');
-
-                        const isExpanded = !extra.classList.contains('d-none');
-
-                        if (isExpanded) {
-                            summary.classList.remove('d-none');
-                            extra.classList.add('d-none');
-                            btn.textContent = "Read More";
-                        } else {
-                            summary.classList.add('d-none');
-                            extra.classList.remove('d-none');
-                            btn.textContent = "Read Less";
-                        }
-                    });
-                });
-            </script>
             <!-- Services section ends here -->
             <hr>
             <!-- About us section starts from here -->
