@@ -1080,8 +1080,7 @@ body.dark .mb-4:hover{
 
 .about-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-=======
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1); 
 .send-message-btn {
   display: none;
        .btn-custom-purple {

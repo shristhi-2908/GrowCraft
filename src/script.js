@@ -37,7 +37,10 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  if (!currentSection && window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+  if (
+    !currentSection &&
+    window.innerHeight + window.scrollY >= document.body.offsetHeight
+  ) {
     currentSection = "contact"; // fallback if at bottom
   }
 
@@ -48,7 +51,6 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-
 
 // Form validation (only if form exists)
 let submitForm = document.getElementById("form-submit");
@@ -61,7 +63,8 @@ if (submitForm) {
     const messageField = document.getElementById("message");
     const error = document.getElementById("error");
 
-    if (!nameField || !emailField || !subjectField || !messageField || !error) return;
+    if (!nameField || !emailField || !subjectField || !messageField || !error)
+      return;
 
     const name = nameField.value.trim();
     const email = emailField.value.trim();
@@ -87,42 +90,40 @@ if (submitForm) {
   });
 }
 
-// Show/hide the back-to-top button on scroll
+// Scroll to top button functionality
+// Show button when scrolled down
 window.onscroll = function () {
-  const btn = document.getElementById("backToTop");
-  if (!btn) return;
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    btn.style.display = "block";
+  const btn = document.getElementById("scrollBtn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btn.classList.add("show");
+    // added bounce animation
+    btn.classList.add("bounce");
   } else {
-    btn.style.display = "none";
+    btn.classList.remove("show");
+    btn.classList.remove("bounce");
   }
 };
 
-// Scroll to top smoothly when back-to-top button is clicked
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("backToTop");
-  if (btn) {
-    btn.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
+// Scroll to top on click
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+document.querySelectorAll(".toggle-btn").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    const cardBody = btn.closest(".card-body");
+    const summary = cardBody.querySelector(".summary");
+    const extra = cardBody.querySelector(".extra");
+
+    const isExpanded = !extra.classList.contains("d-none");
+
+    if (isExpanded) {
+      summary.classList.remove("d-none");
+      extra.classList.add("d-none");
+      btn.textContent = "Read More";
+    } else {
+      summary.classList.add("d-none");
+      extra.classList.remove("d-none");
+      btn.textContent = "Read Less";
+    }
+  });
 });
-document.querySelectorAll('.toggle-btn').forEach(function (btn) {
-                    btn.addEventListener('click', function () {
-                        const cardBody = btn.closest('.card-body');
-                        const summary = cardBody.querySelector('.summary');
-                        const extra = cardBody.querySelector('.extra');
-
-                        const isExpanded = !extra.classList.contains('d-none');
-
-                        if (isExpanded) {
-                            summary.classList.remove('d-none');
-                            extra.classList.add('d-none');
-                            btn.textContent = "Read More";
-                        } else {
-                            summary.classList.add('d-none');
-                            extra.classList.remove('d-none');
-                            btn.textContent = "Read Less";
-                        }
-                    });
-                });
