@@ -174,13 +174,26 @@
 }
 
 .about-card {
-  background-color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .about-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.12);
+}
+
+.about-card h4 {
+  color: #463896;
+  font-weight: 600;
+}
+
+.about-card p {
+  color: #333;
+  font-size: 1rem;
 }
 
         .btn-group {
@@ -221,7 +234,7 @@
 
 
         /* FOOTER STYLING*/
-        .footer {
+        /* .footer {
             background: linear-gradient(to right, #2c3e50, #34495e);
             color: #ffffff;
             padding: 60px 30px 30px;
@@ -298,9 +311,9 @@
   padding-top: 20px;
   font-size: 0.85rem;
   color: #bbb;
-}
+} */
 
-/* Back to Top */
+        /* Back to Top */
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -789,7 +802,7 @@
   
       <!-- View All Work Button -->
       <div class="text-center mt-4 mb-5">
-        <a href="src/workList.html" class="btn btn-custom-purple btn-lg">
+        <a href="src/workList.html" class="btn btn-brand btn-lg">
           View All Our Work <i class="fas fa-arrow-right ms-2"></i>
         </a>
       </div>
@@ -799,68 +812,10 @@
   
 
     <!-- Footer section starts here (Contact us) -->
-<footer class="footer">
-  <div class="footer-container">
-    <!-- About GrowCraft -->
-    <div class="footer-about-wrapper">
-      <div class="footer-about">
-        <h3>About GrowCraft</h3>
-        <p>
-          GrowCraft is a service-based platform offering:<br />
-          🌐 Website Development<br />
-          🖌️ Graphic Design<br />
-          ✍️ Content Writing<br />
-          📣 Social Media Management<br />
-          📊 Digital Marketing<br />
-          🎓 Internship Programs
-        </p>
-      </div>
-    </div>
-
-    <!-- Quick Links + Contact -->
-    <div class="footer-top">
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#index.html">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Internship</a></li>
-          <li><a href="#contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p>📍 235, PQR, GHI, ABC Street, XYZ, ABC - 10000, India</p>
-        <p>📞 +91 999 999 999</p>
-        <p>📧 info@growcraft.com</p>
-        <button class="send-message-btn">Send Message</button>
-      </div>
-    </div>
-
-    <!-- Social -->
-    <div class="footer-social">
-      <h3>Follow Us</h3>
-      <ul class="social-list">
-        <li><a href="https://facebook.com"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-        <li><a href="https://instagram.com"><i class="fab fa-instagram"></i> Instagram</a></li>
-        <li><a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
-        <li><a href="https://github.com"><i class="fab fa-github"></i> GitHub</a></li>
-      </ul>
-    </div>
-  </div>
+<footer class="footer py-3 mt-5 text-center">
+  <span>&copy; 2025 GrowCraft. All rights reserved.</span>
 </footer>
 
-        </div>
-      
-        <!-- Copyright -->
-        <div class="footer-bottom">
-            <p style="text-align: center;">&copy; <strong>GrowCraft</strong>. All Rights Reserved</p>
-
-        </div>
-      </footer>
-      
       <!-- Back to Top -->
       <button id="backToTop" title="Go to top">
         <i class="fas fa-arrow-up"></i>
