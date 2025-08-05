@@ -56,7 +56,8 @@ GrowCraft/
 
 ## 📢 Discord Server
 
-- https://discord.gg/mpeDXD7f
+### For any queries, feel free to join our discord serever.
+- **Discord:** https://discord.gg/mpeDXD7f
 
 ---
 
