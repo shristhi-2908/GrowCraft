@@ -2,6 +2,8 @@
 
 :root {
   --blue: #0078ff;
+  --green : rgba(29, 141, 55, 0.9);
+  --green1 :rgb(27, 116, 48);
 }
 
 * {
@@ -48,17 +50,12 @@ body {
   text-decoration: none;
   padding: 0.3rem;
   border-radius: 0.3rem;
-}
+} 
 
-.training-links:hover {
-  color: var(--blue);
-  transition: transform, bacbkground-color 0.2s ease-in-out;
-}
-
-.training-links:hover img {
+/* .training-links:hover img {
   filter: brightness(0) saturate(100%) invert(30%) sepia(98%) saturate(2500%)
     hue-rotate(190deg);
-}
+} */
 
 .cauresel-images img {
   height: 65vh;
