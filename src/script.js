@@ -222,3 +222,74 @@ document.querySelectorAll('.toggle-btn').forEach(function (btn) {
                         }
                     });
                 });
+
+// Enhanced Services Cards Animation
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Intersection Observer for scroll-triggered animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Add staggered animation delay
+                setTimeout(() => {
+                    entry.target.classList.add('animate-in');
+                }, index * 150);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all service cards
+    const serviceCards = document.querySelectorAll('.card-services');
+    serviceCards.forEach((card, index) => {
+        // Add class for scroll animation but keep cards visible by default
+        card.classList.add('animate-on-scroll');
+        
+        // Add mouse interaction effects
+        card.addEventListener('mouseenter', function() {
+            this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transition = 'all 0.3s ease-out';
+        });
+
+        observer.observe(card);
+    });
+
+    // Add CSS class for enhanced button effects
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Enhanced hover effect for buttons inside cards */
+        .card-services .btn-group .btn {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-services .btn-group .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .card-services .btn-group .btn:hover::before {
+            left: 100%;
+        }
+
+        .card-services .btn-group .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+    `;
+    document.head.appendChild(style);
+});

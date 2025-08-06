@@ -138,31 +138,112 @@ body {
 }
 /* Services card is here */
 .card-services {
-
     margin: 1rem;
     border: none;
     cursor: pointer;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    position: relative;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced hover effects with smooth animations */
+.card-services:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 123, 255, 0.3);
+}
+
+/* SVG icon animation */
+.card-services .svg-img {
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.card-services:hover .svg-img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.card-services:hover h5 {
+    color: var(--blue);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.card-services h5 {
+    font-weight: 700;
+    margin: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Button hover effects */
+.card-services .btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card entrance animation - will be controlled by JavaScript */
+.card-services.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.card-services.animate-on-scroll.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 p {
   text-align: justify;
 }
 
-.card-services:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
+/* Pulse effect on card focus */
+.card-services:focus-within {
+    animation: pulse 2s infinite;
 }
 
-.card-services:hover h5 {
-  color: var(--blue);
+@keyframes pulse {
+    0% { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    50% { box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2); }
+    100% { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
 }
 
-.card-services h5 {
-  font-weight: 700;
-  margin: 1rem;
+/* Enhanced 2x2 Grid Styling */
+#services .container .row {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments for 2x2 layout */
+@media (max-width: 768px) {
+    .card-services {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+    
+    .card-services:hover {
+        transform: translateY(-8px) scale(1.02);
+    }
+}
+
+/* Dark mode adjustments for enhanced cards */
+body.dark .card-services {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .card-services:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 #digital-marketing-card {
   background-color: #ff689a3d;
