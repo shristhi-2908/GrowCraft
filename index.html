@@ -174,13 +174,26 @@
 }
 
 .about-card {
-  background-color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .about-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.12);
+}
+
+.about-card h4 {
+  color: #463896;
+  font-weight: 600;
+}
+
+.about-card p {
+  color: #333;
+  font-size: 1rem;
 }
 
         .btn-group {
@@ -220,87 +233,7 @@
 }
 
 
-        /* FOOTER STYLING*/
-        .footer {
-            background: linear-gradient(to right, #2c3e50, #34495e);
-            color: #ffffff;
-            padding: 60px 30px 30px;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-section h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: #ffffff;
-            border-bottom: 2px solid #3498db;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        .footer-section p,
-        .footer-section ul,
-        .footer-section li,
-        .footer-section a {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: #ccc;
-            text-decoration: none;
-        }
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section li a:hover {
-  color: #3498db;
-}
-
-.send-message-btn {
-  background-color: #3498db;
-  border: none;
-  color: white;
-  padding: 8px 14px;
-  margin-top: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.send-message-btn:hover {
-  background-color: #2980b9;
-}
-
-.social-list li {
-  margin-bottom: 8px;
-}
-
-.social-list i {
-  margin-right: 8px;
-  color: #ffffff;
-  transition: 0.3s;
-}
-
-.social-list i:hover {
-  color: #1abc9c;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-top: 20px;
-  font-size: 0.85rem;
-  color: #bbb;
-}
-
-/* Back to Top */
+        /* Back to Top */
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -815,7 +748,7 @@
   
       <!-- View All Work Button -->
       <div class="text-center mt-4 mb-5">
-        <a href="src/workList.html" class="btn btn-custom-purple btn-lg">
+        <a href="src/workList.html" class="btn btn-brand btn-lg">
           View All Our Work <i class="fas fa-arrow-right ms-2"></i>
         </a>
       </div>
@@ -825,7 +758,8 @@
   
 
     <!-- Footer section starts here (Contact us) -->
-   <footer style="background: linear-gradient(160deg, #184d23, #219653); color: #fff; font-family: 'Segoe UI', sans-serif; padding: 60px 25px 20px;">
+<!-- Footer section starts here (Contact us) -->
+<footer style="background: linear-gradient(160deg, #184d23, #219653); color: #fff; font-family: 'Segoe UI', sans-serif; padding: 60px 25px 20px;">
 
   <!-- Main Footer Container -->
   <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 50px; max-width: 1200px; margin: auto;">
@@ -880,18 +814,12 @@
   </div>
 
   <!-- Footer Bottom -->
+  <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 14px;">
+    &copy; 2025 <strong>GrowCraft</strong>. All rights reserved.
+  </div>
 </footer>
+<!-- Footer section ends here -->
 
-
-        </div>
-      
-        <!-- Copyright -->
-        <div class="footer-bottom">
-            <p style="text-align: center;">&copy; <strong>GrowCraft</strong>. All Rights Reserved</p>
-
-        </div>
-      </footer>
-      
       <!-- Back to Top -->
       <button id="backToTop" title="Go to top">
         <i class="fas fa-arrow-up"></i>
