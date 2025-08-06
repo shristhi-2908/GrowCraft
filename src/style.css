@@ -417,16 +417,14 @@ h1, h2, h3, h4, h5 {
     overflow: hidden;
 }
 
-/* Card entrance animation - will be controlled by JavaScript */
-.card-services.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-out;
+/* Progressive loading compatibility - initial states handled by JavaScript */
+.card-services {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.card-services.animate-on-scroll.animate-in {
-    opacity: 1;
-    transform: translateY(0);
+/* Enhanced loading state for better performance */
+.progressive-load:not(.loaded) {
+    pointer-events: none;
 }
 
 p {
@@ -448,6 +446,24 @@ p {
 #services .container .row {
     max-width: 900px;
     margin: 0 auto;
+}
+
+/* Loading skeleton effect for better UX */
+.progressive-load:not(.loaded) {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Dark mode loading effect */
+body.dark .progressive-load:not(.loaded) {
+    background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+    background-size: 200% 100%;
 }
 
 /* Responsive adjustments for 2x2 layout */
