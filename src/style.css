@@ -471,20 +471,7 @@ textarea {
   color: var(--blue);
 }
 
-/* Dark Mode Switch Styles  */
-.toggle-switch {
-  position: relative;
-  width: 60px;
-  height: 10px;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 10px;
-  margin-top: 0;
-  --light:#0078FF;
-  --dark: #060707;
-  --link: rgb(27, 129, 112);
-  --link-hover: rgb(24, 94, 82);
-}
+
 
 @media only screen and (max-width: 576px) {
   #logo {
@@ -505,47 +492,7 @@ textarea {
         max-width: 60px;
     }
 
-    .toggle-switch {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 8px;
-        padding: 8px;
-        margin: 0;
-        --light:#0078FF;
-        --dark: #28292c;
-        --link: rgb(27, 129, 112);
-        --link-hover: rgb(24, 94, 82);
-    }
-    
-    .navbar .toggle-switch {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        margin: 0;
-    }
-    
 
-    
-    .switch-label {
-        height: 20px;
-        border-radius: 12px;
-        border-width: 2px;
-    }
-    
-    .slider::before {
-        top: 2px;
-        left: 3px;
-        width: 16px;
-        height: 18px;
-    }
-    
-    .checkbox:checked ~ .slider::before {
-        transform: translateX(20px);
-    }
 }
 
 @media only screen and (max-width:320px) {
@@ -553,20 +500,7 @@ textarea {
         width: 6rem;
     }
 
-    .toggle-switch {
-        position: absolute;
-        right: 8px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40px;
-        height: 6px;
-        padding: 6px;
-        margin: 0;
-        --light:#0078FF;
-        --dark: #28292c;
-        --link: rgb(27, 129, 112);
-        --link-hover: rgb(24, 94, 82);
-    }
+
         
     .switch-label {
         height: 16px;
@@ -610,47 +544,7 @@ textarea {
         max-width: 80px;
     }
 
-    .toggle-switch {
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 55px;
-        height: 9px;
-        padding: 9px;
-        margin: 0;
-        --light:#0078FF;
-        --dark: #28292c;
-        --link: rgb(27, 129, 112);
-        --link-hover: rgb(24, 94, 82);
-    }
-    
-    .navbar .toggle-switch {
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        margin: 0;
-    }
-    
 
-    
-    .switch-label {
-        height: 24px;
-        border-radius: 14px;
-        border-width: 2px;
-    }
-    
-    .slider::before {
-        top: 2px;
-        left: 4px;
-        width: 18px;
-        height: 18px;
-    }
-    
-    .checkbox:checked ~ .slider::before {
-        transform: translateX(22px);
-    }
 }
 
 @media (max-width:1412px) {
@@ -658,121 +552,15 @@ textarea {
         max-width: 105px;
     }
     
-    .toggle-switch {
-        position: relative;
-        width: 60px;
-        height: 10px;
-        padding: 10px;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-        --light:#0078FF;
-        --dark: #070708;
-        --link: rgb(27, 129, 112);
-        --link-hover: rgb(24, 94, 82);
-    }
+
 }
 
 @media (max-width:991.5px) {
-    .toggle-switch {
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 55px;
-        height: 9px;
-        padding: 9px;
-        margin: 0;
-        --light:#0078FF;
-        --dark: #28292c;
-        --link: rgb(27, 129, 112);
-        --link-hover: rgb(24, 94, 82);
-    }
-    
-    .navbar .toggle-switch {
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        margin: 0;
-    }
+
 }
 
-.switch-label {
-  position: absolute;
-  width: 100%;
-  height: 30px;
-  background-color: var(--dark);
-  border-radius: 25px;
-  cursor: pointer;
-  border: 3px solid var(--dark);
-}
 
-.checkbox {
-  position: absolute;
-  display: none;
-}
 
-.slider {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.checkbox:checked ~ .slider {
-  background-color: var(--light);
-}
-
-.slider::before {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 5px;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
-  box-shadow: inset 12px -4px 0px 0px var(--light);
-  background-color: var(--dark);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.checkbox:checked ~ .slider::before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-  background-color: var(--dark);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-/* Dark Mode Switch Styles for Body element*/
-body.dark {
-  background-color: #222;
-}
-
-body.dark .navbar .container-fluid {
-  background-color: #292929;
-  color: #fff;
-}
-
-body.dark .navbar-toggler {
-  border-color: #fff;
-  color: #f2f2f2;
-  background-color: #f2f2f2;
-}
-
-body.dark .navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link {
-  color: #fff !important;
-}
-
-body.dark h1,
-body.dark .support a {
-  color: #fff;
-}
 
 /* Dark mode for about section */
 body.dark .about-us {
@@ -1141,12 +929,7 @@ body.dark .mb-4:hover{
     color: #463896;
 }
 
-/* Dark Mode Toggle Switch Alignment */
-.navbar .toggle-switch {
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-}
+
 
 /* Responsive logo alignment fix */
 @media (max-width: 991.98px) {
@@ -1162,10 +945,7 @@ body.dark .mb-4:hover{
         padding-left: 0;
     }
 
-    .toggle-switch {
-        margin-top: 1rem;
-        padding-left: 0.5rem;
-    }
+
 }
 
 /* Authentication Navbar Styles */
