@@ -86,94 +86,60 @@
         text-decoration: none;
         color: white;
       }
-    </style>
-  </head>
-
+    </style> 
+  </head> 
+  
+  
   <body id="main-body">
     <!-- Navbar starts here -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div
-        class="container-fluid d-flex justify-content-between align-items-center px-2 px-sm-5"
-      >
-        <a class="navbar-brand" href="index.html">
-          <div class="logo-wrapper">
-            <img
-              src="../images/Logo.png"
-              alt="GrowCraft"
-              width="200"
-              id="logo"
-            />
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid d-flex justify-content-between align-items-center px-2 px-sm-5">
+      
+          <!-- Brand Logo -->
+          <a class="navbar-brand" href="index.html">
+            <div class="logo-wrapper">
+              <img src="../images/Logo.png" alt="GrowCraft" width="200" id="logo">
+            </div>
+          </a>
+      
+          <!-- Toggler for mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <!-- Nav Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+      
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                      <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                      <a class="nav-link" href="../index.html#services">Services</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                      <a class="nav-link" href="../index.html#about">About Us</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                      <a class="nav-link" href="../index.html#workList">Our Works</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                      <a class="nav-link active visited" aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+                  </ul>
+                  
+    
+            </ul>
           </div>
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="index.html#services"
-                >Services</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="index.html#about"
-                >About Us</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="index.html#workList"
-                >Our Works</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active visited"
-                aria-current="page"
-                href="contact.html"
-                >Contact Us</a
-              >
-            </li>
-            <li class="nav-item">
-              <div class="toggle-switch">
-                <label class="switch-label">
-                  <input
-                    onclick="toggleDarkMode()"
-                    type="checkbox"
-                    class="checkbox"
-                  />
-                  <span class="slider"></span>
-                </label>
-              </div>
-            </li>
-          </ul>
         </div>
-      </div>
-    </nav>
-    <!-- Navbar ends here -->
+      </nav>
+      <!-- Navbar ends here --> 
 
     <!-- Contact Information Section -->
     <div class="container mt-5">
@@ -302,16 +268,32 @@
         </div>
       </div>
     </footer>
-
+ 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Scripts -->
+    <script src="src/contact.js"></script>
+    <script src="src/utils.js"></script>
+    <script src="darkMode.js"></script> 
     <script>
       document.querySelector(".theme-toggle").addEventListener("click", () => {
         const html = document.documentElement;
         const isDark = html.getAttribute("data-bs-theme") === "dark";
         html.setAttribute("data-bs-theme", isDark ? "light" : "dark");
         document.querySelector(".footer").classList.toggle("dark");
-      });
+      }); 
+
+     
+        const backToTopBtn = document.getElementById("backToTop");
+        window.onscroll = () => {
+          backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+        };
+      
+        backToTopBtn.onclick = () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }; 
+       
 
       document
         .getElementById("fileUpload")
