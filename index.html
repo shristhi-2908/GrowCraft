@@ -105,6 +105,7 @@
         max-height: 60px;
         object-fit: contain;
         vertical-align: middle;
+        background: transparent;
       }
 
       /* Align all nav items vertically center */
@@ -280,10 +281,19 @@
 
 .about-card p {
   color: #333;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid green;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 12px #8f91f7;
+}
+.about-card p:hover{
+  transform: translateY(3px);
+  box-shadow: 0 5px 20px #100699;
 }
 
-        .btn-group {
+.btn-group {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
@@ -723,8 +733,9 @@
       <div
         class="container-fluid d-flex justify-content-between align-items-center px-2 px-sm-5"
       >
+      <!-- added transparent background of logo -->
         <a class="navbar-brand" href="#"
-          ><img src="images/Logo.png" alt="GrowCraft" width="200" id="logo"
+          ><img src="images/logo_bg_transparent.png" alt="GrowCraft" width="200" id="logo"
         /></a>
 
         <button
@@ -1164,15 +1175,15 @@
 <section class="about-section py-5" id="about">
     <div class="container text-center">
       <h2 class="about-title mb-2">About Us</h2>
-      <p class="about-subtitle mb-4">
+      <p class="about-subtitle mb-4 mt-2">
         Gateway to <em>Go Digital and Grow Business</em>
       </p>
   
       <div class="row justify-content-center g-4">
         <!-- Card 1 -->
         <div class="col-sm-6 col-lg-4">
-          <div class="about-card p-4 h-100 shadow rounded">
-            <h4 class="mb-2">Who We Are</h4>
+          <div class="about-card p-4 h-100 shadow rounded"> 
+            <h4 class="mb-4"> <i class="fas fa-users icon"></i> Who We Are</h4>
             <p>
               GrowCraft is a one-stop shop for Software, App, Website development, Digital Marketing, Graphic Design & Social Media. We deliver high-quality services that align with market trends.
             </p>
@@ -1182,7 +1193,7 @@
         <!-- Card 2 -->
         <div class="col-sm-6 col-lg-4">
           <div class="about-card p-4 h-100 shadow rounded">
-            <h4 class="mb-2">Tech-Driven Solutions</h4>
+            <h4 class="mb-4"><i class="fas fa-microchip icon"></i> Tech-Driven Solutions</h4>
             <p>
               We use the latest technologies & best practices to deliver innovative solutions. Our services evolve constantly to meet clients’ changing needs.
             </p>
@@ -1192,7 +1203,7 @@
         <!-- Card 3 -->
         <div class="col-sm-6 col-lg-4">
           <div class="about-card p-4 h-100 shadow rounded">
-            <h4 class="mb-2">Client-Centric Approach</h4>
+            <h4 class="mb-4"><i class="fas fa-handshake icon"></i> Client-Centric Approach</h4>
             <p>
               Every client has unique needs. We understand their goals before creating custom solutions and involve them throughout the development process.
             </p>
@@ -1202,7 +1213,7 @@
         <!-- Card 4 -->
         <div class="col-sm-6 col-lg-4">
           <div class="about-card p-4 h-100 shadow rounded">
-            <h4 class="mb-2">Reliable & Transparent</h4>
+            <h4 class="mb-4"><i class="fas fa-shield-alt icon"></i> Reliable & Transparent</h4>
             <p>
               With clear communication, timely delivery, and transparent processes, we ensure success for both our clients and ourselves.
             </p>
@@ -1212,7 +1223,7 @@
         <!-- Card 5 -->
         <div class="col-sm-6 col-lg-4">
           <div class="about-card p-4 h-100 shadow rounded">
-            <h4 class="mb-2">Affordable & Proven</h4>
+            <h4 class="mb-4"><i class="fas fa-award icon"></i> Affordable & Proven</h4>
             <p>
               We offer cost-effective services and have a history of successful projects. For a reliable digital partner, GrowCraft is your best choice.
             </p>
