@@ -13,10 +13,10 @@ class DarkModeToggle {
     init() {
         // Apply saved theme on page load
         this.applyTheme();
-        
+
         // Create and insert toggle button
         this.createToggle();
-        
+
         // Add transition styles
         this.addTransitionStyles();
     }
@@ -74,7 +74,7 @@ class DarkModeToggle {
         this.theme = this.theme === 'light' ? 'dark' : 'light';
         localStorage.setItem('theme', this.theme);
         this.applyTheme();
-        
+
         // Update toggle button state
         if (this.toggleElement) {
             this.toggleElement.classList.toggle('active', this.theme === 'dark');
@@ -791,6 +791,223 @@ class DarkModeToggle {
             .dark-mode .footer-bottom p, .dark .footer-bottom p {
                 color: var(--text-secondary) !important;
             }
+                .dark .hero {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+}
+
+.dark .hero-content h1 {
+    color: #f4f6fb;
+}
+
+.dark .hero-content p {
+    color: #c9d6e5;
+}
+
+.dark .hero-content button {
+    background-color: #1e90ff;
+}
+
+.dark .hero-content button:hover {
+    background-color: #63b3ff;
+}
+
+.dark .modal-content {
+    background: #1b263b;
+    color: #e2e8f0;
+}
+
+.dark .modal-content h2 {
+    color: #f4f6fb;
+}
+
+.dark label {
+    color: #cbd5e1;
+}
+
+.dark input,
+.dark textarea {
+    background: #0d1b2a;
+    color: #e2e8f0;
+    border-color: #334155;
+}
+/* DARK MODE STYLES */
+.dark .services-section {
+    background: #0f172a; /* deep navy */
+}
+
+.dark .services-intro h2 {
+    color: #f1f5f9; /* soft white */
+}
+
+.dark .services-intro p {
+    color: #94a3b8; /* muted gray */
+}
+
+.dark .service-card {
+    background: #1e293b; /* slate */
+    border-color: rgba(255,255,255,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.dark .service-card h3 {
+
+    color: #bfd5f0ff; /* soft blue */
+    font-weight: 400;
+}
+
+.dark .service-card p {
+    color: #cbd5e1; /* light gray */
+}
+
+.dark .services-highlight {
+    background: rgba(96, 165, 250, 0.1); /* soft blue background */
+    color: #93c5fd;
+}
+    /* DARK MODE STYLES */
+.dark .benefits-alt-section {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.dark .benefits-alt-header h2 {
+    color: #f1f5f9;
+    font-weight: 400;
+
+}
+
+.dark .benefits-alt-header p {
+    color: #94a3b8;
+}
+
+.dark .benefit-alt-item {
+    background: #1e293b;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+    .dark .benefit-alt-item: hover {
+    background: #46484bff;
+    box-shadow: 0 5px 15px rgba(215, 212, 212, 0.5);
+}
+
+.dark .benefit-alt-text h3 {
+    color: #60a5fa;
+}
+
+.dark .benefit-alt-text p {
+    color: #cbd5e1;
+}
+
+.dark .benefit-alt-icon {
+    color: #93c5fd;
+}
+    .dark .process-flow {
+    background: #0f172a;
+}
+
+.dark .section-title {
+    color: #f1f5f9;
+}
+
+.dark .timeline::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+.dark .timeline::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.dark .step {
+    background: #1e293b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dark .step::before {
+    background: #60a5fa;
+    color: #0f172a;
+}
+
+.dark .step h3 {
+    color: #e2e8f0;
+}
+
+.dark .step p {
+    color: #cbd5e1;
+}
+.dark .case-study-section {
+    background: #0f172a; /* Dark navy */
+}
+
+.dark .case-study-header h2 {
+    color: #f1f5f9; /* Light gray text */
+}
+
+.dark .case-study-header p {
+    color: #cbd5e1; /* Softer light text */
+}
+
+.dark .case-card {
+    background: #1e293b;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+}
+
+.dark .case-card h3 {
+    color: #e2e8f0;
+}
+
+.dark .case-card p {
+    color: #cbd5e1;
+}
+
+.dark .progress-bar {
+    background: #334155; /* Darker gray for background */
+}
+
+.dark .result-text {
+    color: #f1f5f9;
+}
+    .dark .cta-section {
+    background: linear-gradient(135deg, #1f2937, #111827);
+}
+
+.dark .cta-section h2 {
+    color: #f9fafb;
+}
+
+.dark .cta-section p {
+    color: #d1d5db;
+}
+
+.dark .btn-primary {
+    background: #2563eb;
+}
+
+.dark .btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.dark .btn-secondary {
+    border-color: #2563eb;
+    color: #93c5fd;
+}
+
+.dark .btn-secondary:hover {
+    background: #2563eb;
+    color: #fff;
+    }
+    .dark .cta-btn:hover {
+  background-color: #ffa54d;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 165, 77, 0.4);
+}
+
+/* CTA section hover effect */
+.dark .cta-section:hover {
+  background-color: #222;
+  box-shadow: 0 4px 30px rgba(255, 123, 0, 0.15);
+}
+   .dark .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 25px rgba(42, 41, 41, 0.26);
+        }
+
         `;
         document.head.appendChild(style);
     }
