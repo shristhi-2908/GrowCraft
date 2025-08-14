@@ -1,4 +1,5 @@
-[![join our group on discord](./Client/public/joinDiscordIcon.png)
+[![join our group on discord](<img width="1011" height="397" alt="image" src="https://github.com/user-attachments/assets/f7be9334-dd82-4c36-83d4-2e21bfca7633" />
+)
 ](https://discord.gg/mpeDXD7f)
 
 # 🌱 GrowCraft
