@@ -90,7 +90,7 @@ GrowCraft/
   </table>
 
 </div>
-s
+
 ---
 
 ## 🚀 Getting Started
