@@ -34,27 +34,56 @@
     <link rel="shortcut icon" href="Favicon.ico" type="image/x-icon" />
     
     <style>
-      :root {
-        --light_green: rgba(5, 173, 44, 0.7);
-      }
-      body {
-        transition: background 0.3s, color 0.3s;
-      }
       .card {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
       }
       .form-label {
+        font-weight: 600;
+        color: #fafafa;
         color: #fff;
         font-size: 1.2rem;
       }
+
+      .section-subtitle{
+        display: flex;
+        justify-self: center;
+      font-style: italic;
+      font-weight: 600;
+      padding: 0.5rem;
+      background: linear-gradient(45deg,#90d4c8, #f3d17d);
+      border-radius: 25px;
+    }
+
       .form-section {
-        background-color: var(--light_green);
+         margin-top: 6vh;
+         background: conic-gradient(from -90deg,
+  rgba(85, 131, 181, 0.5), 
+  rgba(76, 165, 150, 0.5),   
+  rgba(212, 178, 219, 0.8),  
+  rgba(162, 157, 157, 0.1), 
+  rgba(85, 131, 181, 0.5)  
+);
         padding: 2rem;
         border-radius: 10px;
       }
+
+      
+    .mb-4{
+      margin-top: 10%;
+      color: #24a51a;
+      text-shadow: 2px 2px 5px rgb(112, 166, 112);
+    }
+
+    .section-title{
+      color: #24a51a;
+      text-shadow: 2px 2px 5px rgb(112, 166, 112);
+      margin-bottom: 4vh;
+    }
+
       .info-box {
-        background: #fff;
+         margin-top: 3vh;
+      background: rgba(55, 116, 168, 0.4);
         border-radius: 10px;
         padding: 20px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -66,18 +95,9 @@
         color: #00b894;
         margin-right: 10px;
       } 
-      #myBtn{
-        font-size: 1.2rem;
-        box-shadow: 0 2px 12px #fff;
-        transition: transform 0.3s ease;
-      }
-      #myBtn:hover{
-        transform: scale(1.05);
-        box-shadow: 0 5px 20px #fff;
-      }
       .get-touch{
         border-radius: 12px;
-        background-color: var(--light_green);
+        transform: translateY(-150px);
       }
       .footer-links{
         display: flex;
@@ -172,8 +192,6 @@
     gap: 20px;
   }
 
-
-
   .navbar-brand img {
     max-height: 60px;
     object-fit: contain;
@@ -241,44 +259,59 @@
     }
 
     .form-label {
-      color: #fff;
+       font-weight: 600;
+      color: #fafafa;
       font-size: 1.2rem;
     }
 
-    .form-section {
-      background-color: var(--light_green);
-      padding: 2rem;
-      border-radius: 10px;
-    }
-
     .info-box {
-      background: #fff;
+       margin-top: 3vh;
+      background: rgba(55, 116, 168, 0.4);
       border-radius: 10px;
       padding: 20px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
       margin-bottom: 20px;
     }
 
     .info-box i {
       font-size: 20px;
-      color: #00b894;
+      color: #1649cb;
       margin-right: 10px;
     }
 
     #myBtn {
+      border-radius: 25px;
+      border: none;
       font-size: 1.2rem;
       box-shadow: 0 2px 12px #fff;
       transition: transform 0.3s ease;
-    }
+        background-image: linear-gradient(30deg,#2e62bb, #4ce3f7);
+        padding: .5rem;
+}
+    
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 #05bada66;
+  }
 
+  70% {
+    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+}
     #myBtn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 5px 20px #fff;
+       background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+  transform: scale(1.1);
     }
 
     .get-touch {
       border-radius: 12px;
-      background-color: var(--light_green);
     }
 
     .footer-links {
@@ -288,7 +321,7 @@
       flex-direction: column;
       gap: 1rem;
     }
-
+  
     .footer-links a {
       text-decoration: none;
       color: white;
@@ -424,9 +457,9 @@
 <!-- Get in Touch Section -->
 <section class="get-touch mt-5 text-center">
   <h3 class="section-title">Get In Touch</h3>
-  <p class="section-subtitle">
-    Ready to start your digital journey? Let's discuss how we can help grow your business.
-  </p>
+
+    <div class="section-subtitle">Ready to start your digital journey? Let's discuss how we can help grow your business.</div>
+    
 
   <div class="container">
     <div class="row g-4 justify-content-center">
