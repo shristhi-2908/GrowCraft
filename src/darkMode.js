@@ -238,7 +238,10 @@ class DarkModeToggle {
             .dark-mode .navbar .navbar-brand, .dark .navbar .navbar-brand {
                 color: var(--text-primary) !important;
             }
-            
+            /* training card bg white on dark*/
+            .dark-mode .program-card , .dark .program-card{
+               background-color: var(--bg-primary); 
+            }
             /* Card overrides */
             .dark-mode .card, .dark .card {
                 background-color: var(--bg-secondary) !important;
