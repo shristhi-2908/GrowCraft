@@ -588,10 +588,11 @@ class DarkModeToggle {
                 color: var(--text-secondary) !important;
             }
             
-            /* Contact info section */
-            .dark-mode .contact-info, .dark .contact-info {
-                background-color: var(--bg-primary) !important;
-            }
+            // no need to apply background black in footer in light mode
+            // /* Contact info section */
+            // .dark-mode .contact-info, .dark .contact-info {
+            //     background-color: var(--bg-primary) !important;
+            // }
             
             .dark-mode .contact-info-card, .dark .contact-info-card {
                 background-color: var(--bg-secondary) !important;
