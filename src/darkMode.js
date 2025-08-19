@@ -13,10 +13,10 @@ class DarkModeToggle {
     init() {
         // Apply saved theme on page load
         this.applyTheme();
-        
+
         // Create and insert toggle button
         this.createToggle();
-        
+
         // Add transition styles
         this.addTransitionStyles();
     }
@@ -62,22 +62,61 @@ class DarkModeToggle {
 
     applyTheme() {
         if (this.theme === 'dark') {
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
             document.documentElement.classList.add('dark');
             document.body.classList.add('dark-mode');
         } else {
+            document.documentElement.setAttribute('data-bs-theme', 'light');
             document.documentElement.classList.remove('dark');
             document.body.classList.remove('dark-mode');
         }
+        
+        // Update logo based on theme
+        this.updateLogo();
     }
 
     toggle() {
         this.theme = this.theme === 'light' ? 'dark' : 'light';
         localStorage.setItem('theme', this.theme);
         this.applyTheme();
-        
+
         // Update toggle button state
         if (this.toggleElement) {
             this.toggleElement.classList.toggle('active', this.theme === 'dark');
+        }
+        
+        // Update logo based on theme
+        this.updateLogo();
+    }
+    
+    updateLogo() {
+        const logo = document.querySelector("#logo");
+        if (logo) {
+            // Determine the correct path based on current page location
+            let darkLogoPath, lightLogoPath;
+            
+            // Check if we're in the src folder (contact page) or root (home page)
+            if (window.location.pathname.includes('/src/')) {
+                // We're in src folder, use relative path
+                darkLogoPath = 'images/logo-transparent-dark-mode.png';
+                lightLogoPath = 'images/logo_bg_transparent.png';
+            } else {
+                // We're in root folder, use root path
+                darkLogoPath = 'images/logo-transparent-dark-mode.png';
+                lightLogoPath = 'images/logo_bg_transparent.png';
+            }
+            
+            console.log('Updating logo:', this.theme, 'Dark path:', darkLogoPath, 'Light path:', lightLogoPath);
+            
+            if (this.theme === 'dark') {
+                logo.src = darkLogoPath;
+                console.log('Logo updated to dark mode:', logo.src);
+            } else {
+                logo.src = lightLogoPath;
+                console.log('Logo updated to light mode:', logo.src);
+            }
+        } else {
+            console.log('Logo element not found');
         }
     }
 
@@ -199,7 +238,10 @@ class DarkModeToggle {
             .dark-mode .navbar .navbar-brand, .dark .navbar .navbar-brand {
                 color: var(--text-primary) !important;
             }
-            
+            /* training card bg white on dark*/
+            .dark-mode .program-card , .dark .program-card{
+               background-color: var(--bg-primary); 
+            }
             /* Card overrides */
             .dark-mode .card, .dark .card {
                 background-color: var(--bg-secondary) !important;
@@ -549,10 +591,11 @@ class DarkModeToggle {
                 color: var(--text-secondary) !important;
             }
             
-            /* Contact info section */
-            .dark-mode .contact-info, .dark .contact-info {
-                background-color: var(--bg-primary) !important;
-            }
+            // no need to apply background black in footer in light mode
+            // /* Contact info section */
+            // .dark-mode .contact-info, .dark .contact-info {
+            //     background-color: var(--bg-primary) !important;
+            // }
             
             .dark-mode .contact-info-card, .dark .contact-info-card {
                 background-color: var(--bg-secondary) !important;
@@ -570,6 +613,22 @@ class DarkModeToggle {
             
             .dark-mode .contact-info-card p, .dark .contact-info-card p {
                 color: var(--text-secondary) !important;
+            }
+            
+            /* Get in Touch info boxes (Contact page) - keep original white cards in dark mode */
+            .dark-mode .info-box, .dark .info-box {
+                background-color: #ffffff !important;
+                color: #333333 !important;
+                box-shadow: 0 5px 15px var(--shadow) !important;
+            }
+
+            /* Ensure inner text stays dark on white cards in dark mode */
+            .dark-mode .info-box *, .dark .info-box * {
+                color: #333333 !important;
+            }
+            
+            .dark-mode .info-box i, .dark .info-box i {
+                color: #00b894 !important; /* keep the accent color for icons */
             }
             
             /* Contact form section */
@@ -791,6 +850,223 @@ class DarkModeToggle {
             .dark-mode .footer-bottom p, .dark .footer-bottom p {
                 color: var(--text-secondary) !important;
             }
+                .dark .hero {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+}
+
+.dark .hero-content h1 {
+    color: #f4f6fb;
+}
+
+.dark .hero-content p {
+    color: #c9d6e5;
+}
+
+.dark .hero-content button {
+    background-color: #1e90ff;
+}
+
+.dark .hero-content button:hover {
+    background-color: #63b3ff;
+}
+
+.dark .modal-content {
+    background: #1b263b;
+    color: #e2e8f0;
+}
+
+.dark .modal-content h2 {
+    color: #f4f6fb;
+}
+
+.dark label {
+    color: #cbd5e1;
+}
+
+.dark input,
+.dark textarea {
+    background: #0d1b2a;
+    color: #e2e8f0;
+    border-color: #334155;
+}
+/* DARK MODE STYLES */
+.dark .services-section {
+    background: #0f172a; /* deep navy */
+}
+
+.dark .services-intro h2 {
+    color: #f1f5f9; /* soft white */
+}
+
+.dark .services-intro p {
+    color: #94a3b8; /* muted gray */
+}
+
+.dark .service-card {
+    background: #1e293b; /* slate */
+    border-color: rgba(255,255,255,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.dark .service-card h3 {
+
+    color: #bfd5f0ff; /* soft blue */
+    font-weight: 400;
+}
+
+.dark .service-card p {
+    color: #cbd5e1; /* light gray */
+}
+
+.dark .services-highlight {
+    background: rgba(96, 165, 250, 0.1); /* soft blue background */
+    color: #93c5fd;
+}
+    /* DARK MODE STYLES */
+.dark .benefits-alt-section {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.dark .benefits-alt-header h2 {
+    color: #f1f5f9;
+    font-weight: 400;
+
+}
+
+.dark .benefits-alt-header p {
+    color: #94a3b8;
+}
+
+.dark .benefit-alt-item {
+    background: #1e293b;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+    .dark .benefit-alt-item: hover {
+    background: #46484bff;
+    box-shadow: 0 5px 15px rgba(215, 212, 212, 0.5);
+}
+
+.dark .benefit-alt-text h3 {
+    color: #60a5fa;
+}
+
+.dark .benefit-alt-text p {
+    color: #cbd5e1;
+}
+
+.dark .benefit-alt-icon {
+    color: #93c5fd;
+}
+    .dark .process-flow {
+    background: #0f172a;
+}
+
+.dark .section-title {
+    color: #f1f5f9;
+}
+
+.dark .timeline::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+.dark .timeline::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.dark .step {
+    background: #1e293b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dark .step::before {
+    background: #60a5fa;
+    color: #0f172a;
+}
+
+.dark .step h3 {
+    color: #e2e8f0;
+}
+
+.dark .step p {
+    color: #cbd5e1;
+}
+.dark .case-study-section {
+    background: #0f172a; /* Dark navy */
+}
+
+.dark .case-study-header h2 {
+    color: #f1f5f9; /* Light gray text */
+}
+
+.dark .case-study-header p {
+    color: #cbd5e1; /* Softer light text */
+}
+
+.dark .case-card {
+    background: #1e293b;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+}
+
+.dark .case-card h3 {
+    color: #e2e8f0;
+}
+
+.dark .case-card p {
+    color: #cbd5e1;
+}
+
+.dark .progress-bar {
+    background: #334155; /* Darker gray for background */
+}
+
+.dark .result-text {
+    color: #f1f5f9;
+}
+    .dark .cta-section {
+    background: linear-gradient(135deg, #1f2937, #111827);
+}
+
+.dark .cta-section h2 {
+    color: #f9fafb;
+}
+
+.dark .cta-section p {
+    color: #d1d5db;
+}
+
+.dark .btn-primary {
+    background: #2563eb;
+}
+
+.dark .btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.dark .btn-secondary {
+    border-color: #2563eb;
+    color: #93c5fd;
+}
+
+.dark .btn-secondary:hover {
+    background: #2563eb;
+    color: #fff;
+    }
+    .dark .cta-btn:hover {
+  background-color: #ffa54d;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 165, 77, 0.4);
+}
+
+/* CTA section hover effect */
+.dark .cta-section:hover {
+  background-color: #222;
+  box-shadow: 0 4px 30px rgba(255, 123, 0, 0.15);
+}
+   .dark .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 25px rgba(42, 41, 41, 0.26);
+        }
+
         `;
         document.head.appendChild(style);
     }
