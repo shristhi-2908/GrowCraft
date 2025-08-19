@@ -22,10 +22,121 @@
 
   <!-- Optional additional styling -->
   <style>
+    /* Base styles */
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f8f9fc;
       color: #333;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Ensure html covers full viewport */
+    html {
+      background-color: #f8f9fc;
+      transition: background-color 0.3s ease;
+      min-height: 100vh;
+    }
+
+    /* Navbar styling - slightly darker than hero section */
+    .navbar.bg-body-tertiary {
+      background-color: #e9ecef !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      transition: background-color 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Hero section (page background) - slightly lighter than navbar */
+    body {
+      background-color: #f4f6f8 !important;
+    }
+
+    /* Navbar text styling */
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      transition: color 0.3s ease;
+    }
+
+    /* Dark mode html - Force override with highest specificity */
+    html[data-bs-theme="dark"],
+    html.dark,
+    html.dark-mode {
+      background-color: #0f1419 !important;
+      background: #0f1419 !important;
+    }
+
+    /* Dark mode navbar - slightly darker than hero section */
+    html[data-bs-theme="dark"] .navbar.bg-body-tertiary,
+    html.dark .navbar.bg-body-tertiary,
+    html.dark-mode .navbar.bg-body-tertiary {
+      background-color: #0a0e12 !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* Dark mode navbar text */
+    html[data-bs-theme="dark"] .navbar-brand,
+    html[data-bs-theme="dark"] .navbar-nav .nav-link,
+    html.dark .navbar-brand,
+    html.dark .navbar-nav .nav-link,
+    html.dark-mode .navbar-brand,
+    html.dark-mode .navbar-nav .nav-link {
+      color: #ffffff !important;
+    }
+
+    /* Dark mode body - Force override with highest specificity */
+    html[data-bs-theme="dark"] body,
+    html[data-bs-theme="dark"] body.dark-mode,
+    html.dark body,
+    html.dark body.dark-mode,
+    .dark-mode body,
+    .dark body,
+    body.dark-mode {
+      background-color: #121822 !important;
+      background: #121822 !important;
+      color: #ffffff !important;
+      min-height: 100vh !important;
+    }
+
+    /* Dark mode container override */
+    .dark-mode .container,
+    .dark .container,
+    body.dark-mode .container,
+    html.dark .container,
+    html[data-bs-theme="dark"] .container {
+      background-color: transparent !important;
+    }
+
+    /* Force entire viewport to be dark */
+    html[data-bs-theme="dark"],
+    html.dark,
+    html.dark-mode {
+      background: #121822 !important;
+    }
+
+    /* Override any potential Bootstrap or external CSS */
+    html[data-bs-theme="dark"] *:not(.blog-section):not(.professional-footer):not(.navbar),
+    html.dark *:not(.blog-section):not(.professional-footer):not(.navbar),
+    .dark-mode *:not(.blog-section):not(.professional-footer):not(.navbar) {
+      background-color: inherit !important;
+    }
+
+    /* Force specific Bootstrap utility overrides in dark mode */
+    html[data-bs-theme="dark"] .bg-light,
+    html[data-bs-theme="dark"] .bg-white,
+    html[data-bs-theme="dark"] .bg-body,
+    html[data-bs-theme="dark"] .bg-body-secondary,
+    html[data-bs-theme="dark"] .bg-body-tertiary:not(.navbar) {
+      background-color: #121822 !important;
+    }
+
+    /* Ensure main content area is dark */
+    html[data-bs-theme="dark"] .container,
+    html[data-bs-theme="dark"] main,
+    html[data-bs-theme="dark"] section {
+      background-color: transparent !important;
     }
 
     /* Dark mode logo switching */
@@ -39,6 +150,30 @@
       padding: 40px;
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Dark mode blog section */
+    .dark-mode .blog-section,
+    .dark .blog-section,
+    body.dark-mode .blog-section,
+    html.dark .blog-section,
+    html[data-bs-theme="dark"] .blog-section {
+      background-color: #1a1a2e !important;
+      color: #ffffff !important;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* Dark mode blog content text */
+    html[data-bs-theme="dark"] .blog-section h2,
+    html[data-bs-theme="dark"] .blog-section small,
+    html[data-bs-theme="dark"] .blog-section div,
+    html[data-bs-theme="dark"] #full-blog-content h2,
+    html[data-bs-theme="dark"] #full-blog-content small,
+    html[data-bs-theme="dark"] #full-blog-content div,
+    html[data-bs-theme="dark"] .blog-title,
+    html[data-bs-theme="dark"] .blog-meta,
+    html[data-bs-theme="dark"] .blog-content {
+      color: #ffffff !important;
     }
 
     .back-btn {
@@ -58,6 +193,23 @@
       transform: translateY(-2px);
       text-decoration: none;
       color: #273055;
+    }
+
+    /* Dark mode back button */
+    .dark-mode .back-btn,
+    .dark .back-btn,
+    body.dark-mode .back-btn,
+    html.dark .back-btn {
+      background-color: #4a5568 !important;
+      color: #ffffff !important;
+    }
+
+    .dark-mode .back-btn:hover,
+    .dark .back-btn:hover,
+    body.dark-mode .back-btn:hover,
+    html.dark .back-btn:hover {
+      background-color: #2d3748 !important;
+      color: #ffffff !important;
     }
 
     /* Professional Footer Styles */
@@ -272,9 +424,6 @@
 
     .dark-mode .contact-item span, .dark .contact-item span { color: #a8b2d1 !important; }
 
-    /* Social Section */
-    .social-section { margin-top: 0.5rem; clear: both; }
-
     /* Footer Bottom */
     .footer-bottom {
       background: rgba(0, 0, 0, 0.05);
@@ -333,10 +482,6 @@
         justify-content: center;
       }
 
-      .social-links {
-        justify-content: center;
-      }
-
       .footer-bottom .row {
         text-align: center;
       }
@@ -383,6 +528,50 @@
         line-height: 1.8;
         font-size: 1.05rem;
         margin-bottom: 1.2rem;
+      }
+
+      /* Dark mode blog content */
+      .dark-mode #full-blog-content h1,
+      .dark-mode #full-blog-content h2,
+      .dark #full-blog-content h1,
+      .dark #full-blog-content h2,
+      body.dark-mode #full-blog-content h1,
+      body.dark-mode #full-blog-content h2,
+      html.dark #full-blog-content h1,
+      html.dark #full-blog-content h2 {
+        color: #ffffff !important;
+      }
+
+      .dark-mode #full-blog-content p,
+      .dark #full-blog-content p,
+      body.dark-mode #full-blog-content p,
+      html.dark #full-blog-content p {
+        color: #a8b2d1 !important;
+      }
+
+      /* Additional dark mode styles for all text in blog section */
+      .dark-mode .blog-section *,
+      .dark .blog-section *,
+      body.dark-mode .blog-section *,
+      html.dark .blog-section * {
+        color: inherit !important;
+      }
+
+      /* Force dark mode override - highest specificity */
+      html[data-bs-theme="dark"] body {
+        background-color: #0f1419 !important;
+        color: #ffffff !important;
+      }
+
+      html[data-bs-theme="dark"] .blog-section {
+        background-color: #1a1a2e !important;
+        color: #ffffff !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+      }
+
+      html[data-bs-theme="dark"] .back-btn {
+        background-color: #4a5568 !important;
+        color: #ffffff !important;
       }
 
       @media (max-width: 768px) {
