@@ -110,6 +110,23 @@
   color: #f9a825; /* golden */
   position: relative;
   transition: all 0.3s ease;
+  margin: 0 15px; /* Add horizontal spacing between nav links */
+}
+
+/* Additional spacing for better visual separation */
+.navbar-nav .nav-item {
+  margin: 0 5px;
+}
+
+/* Responsive spacing */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    margin: 10px 0; /* Vertical spacing on mobile */
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 5px 0;
+  }
 }
 
 /* Underline animation */
@@ -124,10 +141,7 @@
   transition: width 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
-  width: 100%;
-}
+
 
 /* Toggle Button */
 .theme-toggle .toggle-btn {
@@ -180,7 +194,7 @@
 
     <!-- Menu -->
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav mx-auto gap-lg-3">
+      <ul class="navbar-nav mx-auto gap-4">
         <li class="nav-item">
           <a class="nav-link " href="./index.html">Home</a>
         </li>
@@ -238,7 +252,7 @@
       <div class="col-md-6 col-lg-4 service-card fade-in" style="animation-delay: 0.2s;">
         <div class="card h-100 service-box">
           <div class="card-body d-flex flex-column">
-            <<img src="./images/WebDev.png" alt="Website Development Icon" class="icon mb-3" />
+            <img src="./images/WebDev.png" alt="Website Development Icon" class="icon mb-3" />
             <h5 class="card-title">Website Development</h5>
             <p class="card-text summary">
               A website is often the first impression. Our services ensure your site is attractive, functional, and aligned with your business needs...
