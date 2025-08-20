@@ -37,6 +37,7 @@
     />
 
     <style>
+
       .light-mode.webdev-hero {
         display: flex;
         justify-content: space-between;
@@ -112,6 +113,7 @@
           height: 120px;
           top: -20px;
           left: -30px;
+
         }
 
         .webdev-heading::after {
@@ -864,6 +866,7 @@
           margin-bottom: 12px;
         }
 
+
         .why-content h3 {
           font-size: 1.3rem;
         }
@@ -926,12 +929,47 @@
         color: #a29bfe !important;
         text-decoration: underline;
       }
+
     </style>
   </head>
 
   <body>
     <!-- Navbar starts here -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+        <div class="container-fluid d-flex justify-content-between align-items-center px-2 px-sm-5">
+            <a class="navbar-brand" href="#"><img src="../images/Logo.png" alt="GrowCraft" width="200" id="logo"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active visited" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../blogListing.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#about">About Us</a>
+                    </li>
+                    <!-- Added new "Our Work" link to navigate to the new work section on same page -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#work">Our Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+
+                </ul>
+            </div>
+
       <div
         class="container-fluid d-flex justify-content-between align-items-center px-2 px-sm-5"
       >
@@ -988,6 +1026,7 @@
               >
             </li>
           </ul>
+
         </div>
       </div>
     </nav>
@@ -1068,6 +1107,7 @@
       </div>
     </section>
     <section class="offer-section-glass">
+
       <h2 class="offer-glass-title">What We Made</h2>
       <!-- Carousel Wrapper -->
       <div class="carousel-wrapper">
@@ -1148,6 +1188,7 @@
         aria-label="Carousel pagination"
         role="tablist"
       ></ul>
+
     </section>
     <section class="tech-section">
       <h2 class="tech-title">Technologies We Use</h2>
@@ -1295,6 +1336,7 @@
     </section>
 
     <!-- Footer section starts here (Contact us) -->
+
     <footer class="footer py-5 text-white" style="background-color: #222">
       <div class="container">
         <div class="row gy-4">
@@ -1402,6 +1444,7 @@
       ↑
     </button>
 
+
     <script>
       //Show/hide the back-to-top button on scroll
       window.onscroll = function () {
@@ -1447,12 +1490,14 @@
           );
         };
 
+
         const updateButtons = () => {
           const maxScroll = scroller.scrollWidth - scroller.clientWidth - 2; // allow small epsilon
           prevBtn.disabled = scroller.scrollLeft <= 0;
           nextBtn.disabled = scroller.scrollLeft >= maxScroll;
           updateActiveDot();
         };
+
 
         const scrollByAmount = (dir) => {
           // If using fixed 4-dot model we'll override below after anchors built
