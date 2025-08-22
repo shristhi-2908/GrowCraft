@@ -22,10 +22,94 @@
 
   <!-- Inline Enhancements -->
   <style>
+    /* Base styles */
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f7fa;
+      background-color: #f4f6f8;
       color: #333;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Ensure html covers full viewport */
+    html {
+      background-color: #f4f6f8;
+      transition: background-color 0.3s ease;
+      min-height: 100vh;
+    }
+
+    /* Navbar styling - slightly darker than hero section */
+    .navbar.bg-body-tertiary {
+      background-color: #e9ecef !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      transition: background-color 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Dark mode html - Force override with highest specificity */
+    html[data-bs-theme="dark"],
+    html.dark,
+    html.dark-mode {
+      background-color: #121822 !important;
+      background: #121822 !important;
+    }
+
+    /* Dark mode navbar - slightly darker than hero section */
+    html[data-bs-theme="dark"] .navbar.bg-body-tertiary,
+    html.dark .navbar.bg-body-tertiary,
+    html.dark-mode .navbar.bg-body-tertiary {
+      background-color: #0a0e12 !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* Dark mode navbar text */
+    html[data-bs-theme="dark"] .navbar-brand,
+    html[data-bs-theme="dark"] .navbar-nav .nav-link,
+    html.dark .navbar-brand,
+    html.dark .navbar-nav .nav-link,
+    html.dark-mode .navbar-brand,
+    html.dark-mode .navbar-nav .nav-link {
+      color: #ffffff !important;
+    }
+
+    /* Dark mode body - Force override with highest specificity */
+    html[data-bs-theme="dark"] body,
+    html[data-bs-theme="dark"] body.dark-mode,
+    html.dark body,
+    html.dark body.dark-mode,
+    .dark-mode body,
+    .dark body,
+    body.dark-mode {
+      background-color: #121822 !important;
+      background: #121822 !important;
+      color: #ffffff !important;
+      min-height: 100vh !important;
+    }
+
+    /* Dark mode container override */
+    .dark-mode .container,
+    .dark .container,
+    body.dark-mode .container,
+    html.dark .container,
+    html[data-bs-theme="dark"] .container {
+      background-color: transparent !important;
+    }
+
+    /* Force specific Bootstrap utility overrides in dark mode */
+    html[data-bs-theme="dark"] .bg-light,
+    html[data-bs-theme="dark"] .bg-white,
+    html[data-bs-theme="dark"] .bg-body,
+    html[data-bs-theme="dark"] .bg-body-secondary,
+    html[data-bs-theme="dark"] .bg-body-tertiary:not(.navbar) {
+      background-color: #121822 !important;
+    }
+
+    /* Dark mode logo switching */
+    [data-bs-theme="dark"] .navbar-brand img {
+      content: url('images/logo-transparent-dark-mode.png');
     }
 
     .blog-section {
@@ -35,6 +119,18 @@
       padding: 40px;
       border-radius: 12px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Dark mode blog section */
+    .dark-mode .blog-section,
+    .dark .blog-section,
+    body.dark-mode .blog-section,
+    html.dark .blog-section,
+    html[data-bs-theme="dark"] .blog-section {
+      background-color: #1a1a2e !important;
+      color: #ffffff !important;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
     }
 
     .blog-section h2 {
@@ -56,12 +152,36 @@
       background-color: #fafbfc;
     }
 
+    /* Dark mode form inputs */
+    html[data-bs-theme="dark"] #blog-form input,
+    html[data-bs-theme="dark"] #blog-form textarea,
+    .dark-mode #blog-form input,
+    .dark-mode #blog-form textarea,
+    .dark #blog-form input,
+    .dark #blog-form textarea {
+      background-color: #2d3748 !important;
+      border-color: #4a5568 !important;
+      color: #ffffff !important;
+    }
+
     #blog-form input:focus,
     #blog-form textarea:focus {
       outline: none;
       border-color: #007bff;
       background-color: #ffffff;
       box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+    }
+
+    /* Dark mode form focus states */
+    html[data-bs-theme="dark"] #blog-form input:focus,
+    html[data-bs-theme="dark"] #blog-form textarea:focus,
+    .dark-mode #blog-form input:focus,
+    .dark-mode #blog-form textarea:focus,
+    .dark #blog-form input:focus,
+    .dark #blog-form textarea:focus {
+      background-color: #1a202c !important;
+      border-color: #00ffe7 !important;
+      box-shadow: 0 0 0 3px rgba(0, 255, 231, 0.15) !important;
     }
 
     #blog-form textarea {
@@ -105,6 +225,21 @@
       transform: translateY(-2px);
       text-decoration: none;
       color: #273055;
+    }
+
+    /* Dark mode back button */
+    html[data-bs-theme="dark"] .back-btn,
+    .dark-mode .back-btn,
+    .dark .back-btn {
+      background-color: #4a5568 !important;
+      color: #ffffff !important;
+    }
+
+    html[data-bs-theme="dark"] .back-btn:hover,
+    .dark-mode .back-btn:hover,
+    .dark .back-btn:hover {
+      background-color: #2d3748 !important;
+      color: #ffffff !important;
     }
 
     /* Professional Footer Styles */
@@ -291,9 +426,6 @@
 
     .dark-mode .contact-item span, .dark .contact-item span { color: #a8b2d1 !important; }
 
-    /* Social Section */
-    .social-section { margin-top: 0.5rem; clear: both; }
-
     /* Footer Bottom */
     .footer-bottom {
       background: rgba(0, 0, 0, 0.05);
@@ -346,10 +478,6 @@
         justify-content: center;
       }
 
-      .social-links {
-        justify-content: center;
-      }
-
       .footer-bottom .row {
         text-align: center;
       }
@@ -381,7 +509,11 @@
         font-size: 0.7rem;
       }
     }
-  </style>
+  
+      #blog-form input,
+      #blog-form textarea {
+      width: 100%;
+      padding: 12px;
       margin-bottom: 20px;
       font-size: 1rem;
       border: 1px solid #dcdfe6;
@@ -439,6 +571,7 @@
         font-size: 0.95rem;
       }
     }
+  
   </style>
 </head>
 <body>
@@ -446,7 +579,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid d-flex justify-content-between align-items-center px-3 px-sm-5">
-      <a class="navbar-brand" href="#"><img src="images/Logo.png" alt="GrowCraft" width="180" id="logo"></a>
+      <a class="navbar-brand" href="#"><img src="images/logo_bg_transparent.png" alt="GrowCraft" width="180" id="logo"></a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -464,6 +597,10 @@
 
         </ul>
       </div>
+      
+
+      
+
     </div>
   </nav>
 
@@ -582,6 +719,7 @@
   <script src="src/write-blog.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="src/darkMode.js"></script>
+  
 
 </body>
 </html>
