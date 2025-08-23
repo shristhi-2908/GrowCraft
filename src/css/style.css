@@ -962,9 +962,9 @@ body.dark-mode .offer-title {
 }
 
 body.dark-mode .offer-card {
-  background: #d3d5d8;
-  color: #e0e0e0;
-  box-shadow: 0 8px 24px rgba(0, 174, 255, 0.575);
+  background: #0867f5;
+  color: #cebdbd;
+  box-shadow: 0 8px 24px rgba(228, 247, 255, 0.401);
   border: 1px solid rgba(0, 174, 255, 0.08);
 }
 
@@ -974,7 +974,7 @@ body.dark-mode .offer-card i {
 
 body.dark-mode .offer-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(207, 210, 212, 0.893);
+  box-shadow: 0 0 20px rgba(234, 247, 255, 0.893);
 }
 
 .card:hover {
