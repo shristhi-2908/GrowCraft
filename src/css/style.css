@@ -598,7 +598,7 @@ body.dark .support a {
 
 /* DARK MODE STYLES */
 body.dark-mode {
-  background-color: #121212;
+  background-color: #020a44be;
   color: #f0f0f0;
 }
 
@@ -962,9 +962,9 @@ body.dark-mode .offer-title {
 }
 
 body.dark-mode .offer-card {
-  background: #d3d5d8;
-  color: #e0e0e0;
-  box-shadow: 0 8px 24px rgba(0, 174, 255, 0.575);
+  background: #0867f5;
+  color: #cebdbd;
+  box-shadow: 0 8px 24px rgba(228, 247, 255, 0.401);
   border: 1px solid rgba(0, 174, 255, 0.08);
 }
 
@@ -974,7 +974,7 @@ body.dark-mode .offer-card i {
 
 body.dark-mode .offer-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(207, 210, 212, 0.893);
+  box-shadow: 0 0 20px rgba(234, 247, 255, 0.893);
 }
 
 .card:hover {
@@ -1236,4 +1236,68 @@ body.dark-mode .contact-btn {
 body.dark-mode .contact-btn:hover {
   background: linear-gradient(135deg, #2563eb, #4f46e5);
   transform: translateY(-2px);
+}
+
+
+
+.navbar.bg-body-tertiary .navbar-nav .nav-link {
+  color: #000;
+}
+
+/* Dark mode text color */
+[data-bs-theme="dark"] .navbar .nav-link {
+  color: #fff;
+}
+
+/* Hover color in both modes */
+.navbar .nav-link:hover {
+  color: #28a745;
+}
+
+
+.form-section .iti__country-list {
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+.form-section .iti__country-list .iti__country {
+  color: #fff !important;
+}
+
+.form-section .iti__country-list .iti__dial-code {
+  color: #ccc !important;
+}
+
+.form-section .iti__country-list .iti__highlight {
+  background-color: #444 !important;
+}
+
+
+.form-section label {
+  font-weight: 500;
+}
+
+.form-section .form-control,
+.form-section .form-select {
+  border-radius: 6px;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode a,
+body.dark-mode nav,
+body.dark-mode nav a {
+  color: #ffffff;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode nav a {
+  color: #000000;
 }
