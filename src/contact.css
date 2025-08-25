@@ -22,9 +22,7 @@
 }
 
 /* Contact Info Cards */
-.contact-info {
-    background-color: #f8f9fa;
-}
+
 
 .contact-info-card {
     background: white;
@@ -523,7 +521,7 @@
 
 .footer-bottom {
     border-top: 1px solid #555;
-    margin-top: 1.5rem;
+    margin-top: 0;
     padding-top: 1.5rem;
     text-align: center;
 }
