@@ -1067,6 +1067,7 @@ class DarkModeToggle {
             box-shadow: 0 8px 25px rgba(42, 41, 41, 0.26);
         }
 
+
         `;
         document.head.appendChild(style);
     }
