@@ -51,14 +51,16 @@ section {
   height: 40px;
   margin-bottom: 12px;
 }
+
 .program-card h6 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  transition: all 0.3s ease;
-  color: var(--green);
-  font-size: 1.4rem;
-  margin: 0;
-  font-weight: 400;
-  white-space: nowrap;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    transition: all 0.3s ease;
+    color: var(--green);
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 400;
+    white-space: nowrap;
+    text-decoration: none;
 }
 
 .program-card:hover {
