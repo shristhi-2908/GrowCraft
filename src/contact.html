@@ -70,7 +70,6 @@
     }
 
     .section-title{
-      margin-top: 20rem;
       color: #24a51a;
       text-shadow: 2px 2px 5px rgb(112, 166, 112);
       margin-bottom: 4vh;
@@ -363,13 +362,48 @@
   }
 
   [data-bs-theme="dark"] .info-box {
-    background: rgba(45, 45, 45, 0.8);
+    background: rgba(45, 45, 45, 0.8) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  [data-bs-theme="dark"] .info-box i {
+    color: #90d4c8 !important;
+  }
+
+  [data-bs-theme="dark"] .info-box p {
+    color: #e0e0e0 !important;
+  }
+
+  /* Additional specific selector for get-touch section */
+  [data-bs-theme="dark"] .get-touch .info-box {
+    background: rgba(45, 45, 45, 0.9) !important;
+    color: #ffffff !important;
+  }
+
+  [data-bs-theme="dark"] .get-touch .info-box i {
+    color: #90d4c8 !important;
+  }
+
+  [data-bs-theme="dark"] .get-touch .info-box p {
+    color: #e0e0e0 !important;
   }
 
   [data-bs-theme="dark"] .section-title,
   [data-bs-theme="dark"] .mb-4 {
     color: #90d4c8 !important;
     text-shadow: 2px 2px 5px rgba(144, 212, 200, 0.3);
+  }
+
+  [data-bs-theme="dark"] .section-subtitle {
+    background: linear-gradient(45deg, #4a90a4, #8b6914) !important;
+    color: #ffffff !important;
+  }
+
+  [data-bs-theme="dark"] .get-touch {
+    background-color: rgba(30, 30, 46, 0.8);
+    color: #ffffff;
   }
 
   /* Professional Footer Styles */
