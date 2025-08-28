@@ -1250,6 +1250,7 @@ class DarkModeToggle {
 
             
 
+
         `;
         document.head.appendChild(style);
     }
