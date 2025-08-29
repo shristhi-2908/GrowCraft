@@ -46,6 +46,13 @@ GrowCraft/
 ```
 
 ---
+## 👥 Contributors
+<a href="https://github.com/gyanshankar1708/GrowCraft/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=gyanshankar1708/GrowCraft" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+---
 
 ## 🛠️ Tech Stack
 
