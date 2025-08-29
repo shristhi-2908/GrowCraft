@@ -32,10 +32,10 @@ body {
   background-color: #388e3c;
 }
 
-.navbar .nav-link,
+/* .navbar .nav-link,
 .footer {
   color: #fff !important;
-}
+} */
 
 .navbar .nav-link.active {
   color: #fbc02d !important;

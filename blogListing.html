@@ -18,6 +18,7 @@
     padding-bottom: 0.8rem;
     background-color: #ffffff !important;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
   }
 
   .navbar-brand img {
@@ -53,6 +54,52 @@
     padding-left: 1rem;
   }
 
+  /* search bar */
+
+    .search-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  padding: 5px 10px;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+  flex: 1;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    max-width: 200px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+}
+
+
   /* Responsive logo alignment fix */
   @media (max-width: 991.98px) {
     .navbar .navbar-brand {
@@ -80,12 +127,7 @@
     background-color: #ffffff !important;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 
-  }
 
-  .navbar-collapse {
-    display: flex !important;
-    justify-content: center !important;
-    width: 100%;
   }
 
   .navbar-nav li {
@@ -114,25 +156,6 @@
     content: url('images/logo-transparent-dark-mode.png');
   }
 
-  /* Align all nav items vertically center */
-  .navbar-nav .nav-link {
-    padding-left: 0;
-  }
-
-  .toggle-switch {
-    margin-top: 1rem;
-    padding-left: 0.5rem;
-  }
-
-  /* Dark Mode Toggle Switch Alignment */
-  .navbar .toggle-switch {
-    display: flex;
-    align-items: center;
-    padding: 0.75rem 1rem;
-    height: 100%;
-  }
-
-  /* Ensure all nav items are aligned */
   .navbar-nav .nav-item {
     display: flex;
     align-items: center;
@@ -140,24 +163,43 @@
 
   }
 
-  /* Responsive logo alignment fix */
-  @media (max-width: 991.98px) {
-    .navbar .navbar-brand {
-      margin-right: auto;
-    }
+  .nav-item .nav-link {
+    font-weight: 900;
+    color: #7a5a08 !important;
+    font-family: "Lora", serif;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
 
-    .navbar-collapse {
-      margin-top: 0.8rem;
-    }
+  /* Navbar link hover effect */
+  .navbar-nav .nav-link {
+    position: relative;
+    color: #333;
+    /* Default link color */
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
 
-    .navbar-nav .nav-link {
-      padding-left: 0;
-    }
+  .navbar-nav .nav-link:hover {
+    color: #007bff;
+    /* Change text color on hover */
+  }
 
-    .toggle-switch {
-      margin-top: 1rem;
-      padding-left: 0.5rem;
-    }
+  /* Underline animation */
+  .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover::after {
+    width: 100%;
   }
 </style>
 
@@ -197,7 +239,14 @@
           </li>
         </ul>
       </div>
-      
+     
+      <!-- Responsive Search Bar -->
+ <div class="search-container">
+  <input type="text" placeholder="Search..." class="search-input">
+  <button class="search-button">
+    <i class="fas fa-search"></i> <!-- Font Awesome icon -->
+  </button>
+</div>
 
     </div>
 

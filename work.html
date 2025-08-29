@@ -61,6 +61,23 @@
   color: #f9a825; /* golden */
   position: relative;
   transition: all 0.3s ease;
+  margin: 0 15px; /* Add horizontal spacing between nav links */
+}
+
+/* Additional spacing for better visual separation */
+.navbar-nav .nav-item {
+  margin: 0 5px;
+}
+
+/* Responsive spacing */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    margin: 10px 0; /* Vertical spacing on mobile */
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 5px 0;
+  }
 }
 
 /* Underline animation */
@@ -75,10 +92,7 @@
   transition: width 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
-  width: 100%;
-}
+
 
 /* Toggle Button */
 .theme-toggle .toggle-btn {
@@ -98,6 +112,50 @@
   transform: rotate(20deg) scale(1.1);
   border-color: #007c91;
   color: #007c91;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  padding: 5px 10px;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+  flex: 1;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    max-width: 200px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
 }
 
 
@@ -207,7 +265,7 @@
 
     <!-- Menu -->
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav mx-auto gap-lg-3">
+      <ul class="navbar-nav mx-auto gap-4">
         <li class="nav-item">
           <a class="nav-link " href="./index.html">Home</a>
         </li>
@@ -235,6 +293,14 @@
         <i class="fa-solid fa-sun"></i>
       </button>
     </div>
+
+    <!-- Responsive Search Bar -->
+ <div class="search-container">
+  <input type="text" placeholder="Search..." class="search-input">
+  <button class="search-button">
+    <i class="fas fa-search"></i> <!-- Font Awesome icon -->
+  </button>
+</div>
 
   </div>
 </nav>
