@@ -272,6 +272,51 @@
       height: 22px;
     }
 
+/* search bar */
+
+    .search-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  padding: 5px 10px;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+  flex: 1;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    max-width: 200px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+}
+
 
     /* Enhanced Scroll to Top Button - Fixed Right Position */
     #backToTop {
@@ -758,6 +803,13 @@
   
       </div>
 
+<!-- Responsive Search Bar -->
+ <div class="search-container">
+  <input type="text" placeholder="Search..." class="search-input">
+  <button class="search-button">
+    <i class="fas fa-search"></i> <!-- Font Awesome icon -->
+  </button>
+</div>
 
     </div>
 
@@ -818,7 +870,7 @@
 
         <!-- Graphic Designing -->
         <div class="col-sm-12 col-md-6 col-lg-4">
-          <a href="#" class="training-links">
+          <a href="src/graphic_design.html" class="training-links">
             <div class="program-card d-flex align-items-center gap-2"
               data-tooltip="Create beautiful and professional designs.">
               <img src="images/icons/GraphicDesign.png" alt="Graphic Designing" class="icon" />
@@ -829,7 +881,7 @@
 
         <!-- Cyber Analyst - Now properly aligned -->
         <div class="col-sm-12 col-md-6 col-lg-4">
-          <a href="#" class="training-links">
+          <a href="src/cyber-analyst.html" class="training-links">
             <div class="program-card d-flex align-items-center gap-2" data-tooltip="A future safe from cyber threats.">
               <img src="images/icons/Cyb-security.png" alt="Cyber Analyst" class="icon" />
               <h6 class="mb-0">Cyber Analyst</h6>

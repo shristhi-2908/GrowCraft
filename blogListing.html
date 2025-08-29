@@ -54,6 +54,52 @@
     padding-left: 1rem;
   }
 
+  /* search bar */
+
+    .search-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  padding: 5px 10px;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+  flex: 1;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    max-width: 200px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+}
+
+
   /* Responsive logo alignment fix */
   @media (max-width: 991.98px) {
     .navbar .navbar-brand {
@@ -162,7 +208,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid d-flex justify-content-between align-items-center px-2 px-sm-5">
-      <a class="navbar-brand" href="#"><img src="images/logo_bg_transparent.png" alt="GrowCraft" width="200" id="logo" /></a>
+      <a class="navbar-brand" href="index.html"><img src="images/logo_bg_transparent.png" alt="GrowCraft" width="200" id="logo" /></a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -193,7 +239,14 @@
           </li>
         </ul>
       </div>
-      
+     
+      <!-- Responsive Search Bar -->
+ <div class="search-container">
+  <input type="text" placeholder="Search..." class="search-input">
+  <button class="search-button">
+    <i class="fas fa-search"></i> <!-- Font Awesome icon -->
+  </button>
+</div>
 
     </div>
 
