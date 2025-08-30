@@ -1225,6 +1225,221 @@ class DarkModeToggle {
     .dark .footer-nav a:hover {
       color: #00ffe7 !important;
     }
+      /* ---------- Dark mode overrides ---------- */
+.dark .gc-hero-cyber {
+  --gc-bg: #030a43;
+  --gc-bg-2: #050c22;
+  --gc-fg: #f1f1f4;
+  --gc-muted: #495079;
+  --gc-card: rgba(0,0,0,0.04);
+  --gc-glass: rgba(255,255,255,0.55);
+  --gc-border: rgba(0,0,0,0.12);
+}
+    /* 🌙 Dark Mode Toggle for Cyber Section */
+.dark .cyber-intro {
+  background: #0b0e17;
+  color: #e4e7f0;
+}
+
+.dark .intro-text p {
+  color: #cfd4e3;
+}
+
+.dark .attacks-section h3 {
+  color: #b8d7ff;
+}
+
+.dark .attack-card {
+  background: #141824;
+  border: 1px solid rgba(120, 170, 255, 0.2);
+}
+
+.dark .attack-card:hover {
+  border-color: #3b82f6;
+}
+
+.dark .attack-card h4 {
+  color: #f1f4fa;
+}
+
+.dark .attack-card p {
+  color: #c0c7d6;
+}
+
+.dark .attack-card i {
+  color: #5ea8ff;
+}
+  /* 🌙 Dark Mode Toggle for Services Section */
+.dark .gc-services-section {
+  --gc-bg: #0b0e17;
+  --gc-fg: #e4e7f0;
+  --gc-muted: #a0aec0;
+  --gc-glass: rgba(255, 255, 255, 0.04);
+}
+
+.dark .gc-service-card {
+  background: var(--gc-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .gc-service-card:hover,
+.dark .gc-service-card:focus-within {
+  border: 1px solid var(--gc-primary-1);
+  box-shadow: 0 20px 50px rgba(0, 212, 255, 0.15);
+}
+
+.dark .gc-service-title {
+  color: var(--gc-fg);
+}
+
+.dark .gc-service-sub {
+  color: var(--gc-muted);
+}
+
+.dark .gc-service-drawer {
+  background: linear-gradient(180deg, #0d1117 0%, #101624 100%);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .gc-drawer-title {
+  color: #fff;
+}
+
+.dark .gc-drawer-body {
+  color: var(--gc-muted);
+}
+/* 🌙 Dark Mode Overrides */
+.dark {
+  --gc-bg: #0b0e17;
+  --gc-fg: #e4e7f0;
+  --gc-muted: #a0aec0;
+  --gc-card: rgba(255, 255, 255, 0.04);
+  --gc-shadow: 0 18px 40px rgba(0,0,0,0.7);
+}
+
+/* Why Cybersecurity Section */
+.dark .gc-eyebrow {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--gc-accent-1);
+}
+
+.dark .gc-benefits li {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .gc-benefits span {
+  color: var(--gc-muted);
+}
+
+.dark .gc-btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--gc-fg);
+}
+
+/* Stats & Trends Section */
+.dark .gc-stats-trends {
+  --fg: #e4e7f0;
+  --muted: #a0aec0;
+  --accent1: #00c3ff;
+  --accent2: #7b2ff7;
+  background: linear-gradient(180deg, #0b0e17, #101624 60%);
+  color: var(--fg);
+}
+
+.dark .gc-toggle select {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--fg);
+}
+
+.dark .gc-stat-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+.dark .gc-stat-desc {
+  color: var(--muted);
+}
+
+.dark .gc-sources-panel {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--muted);
+}
+  /* 🌙 Dark Mode Overrides for CTA Section */
+.dark {
+  --gc-bg: #0b0e17;
+  --gc-fg: #e4e7f0;
+  --gc-muted: #9ca3af;
+  --gc-glass: rgba(255,255,255,0.04);
+  --gc-shadow: 0 12px 34px rgba(0,0,0,0.6);
+  --gc-accent-contrast: #ffffff;
+}
+
+/* Section background */
+.dark .gc-cta-consult {
+  background: linear-gradient(180deg, #0b0e17, #121826);
+  color: var(--gc-fg);
+}
+
+/* Card */
+.dark .gc-cta-card {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.08);
+  box-shadow: var(--gc-shadow);
+}
+
+/* Eyebrow */
+.dark .gc-eyebrow {
+  background: rgba(2,121,145,0.12);
+  border-color: rgba(2,121,145,0.25);
+  color: var(--gc-accent-1);
+}
+
+/* Features */
+.dark .gc-cta-features li {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.1);
+  color: var(--gc-muted);
+}
+
+/* Buttons */
+.dark .gc-btn-ghost {
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--gc-fg);
+}
+
+/* Trust items */
+.dark .gc-trust-item {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.08);
+}
+.dark .gc-trust-item strong {
+  color: var(--gc-fg);
+}
+
+/* Form fields */
+.dark input[type="text"],
+.dark input[type="email"],
+.dark select,
+.dark textarea {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--gc-fg);
+}
+
+/* Labels & Privacy */
+.dark .gc-label,
+.dark .gc-privacy {
+  color: var(--gc-muted);
+}
+
+
+
+
+
 
 
 
@@ -1249,6 +1464,7 @@ class DarkModeToggle {
 
 
             
+
 
         `;
         document.head.appendChild(style);
