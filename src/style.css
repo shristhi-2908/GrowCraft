@@ -242,7 +242,8 @@ h5 {
   background-color: transparent !important;
 }
 .icon {
-  height: 1.5rem;
+  height: 6.5rem;
+
 }
 
 .training-links {
@@ -308,7 +309,10 @@ h5 {
 }
 
 .nav-btn {
+  position:relative;
+  top:90%;
   filter: invert(1); 
+
 }
 
 .heading-text {
@@ -438,6 +442,11 @@ body.dark .progressive-load:not(.loaded) {
 
 /* Responsive adjustments for 2x2 layout */
 @media (max-width: 768px) {
+
+  .nav-btn{
+    top:230%;
+  }
+
   .card-services {
     margin: 0.5rem;
     padding: 1rem;
@@ -952,6 +961,7 @@ body.dark .copyright {
 
 body.dark .icon {
   filter: invert(1);
+
 }
 
 body.dark .mb-0:hover {
