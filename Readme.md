@@ -1,4 +1,4 @@
-[![Join our group on Discord](https://github.com/user-attachments/assets/f7be9334-dd82-4c36-83d4-2e21bfca7633)](https://discord.gg/mpeDXD7f)
+[![Join our group on Discord](https://github.com/user-attachments/assets/f7be9334-dd82-4c36-83d4-2e21bfca7633)](https://discord.gg/a2zdpnfZ)
 
 # 🌱 GrowCraft
 
@@ -45,6 +45,13 @@ GrowCraft/
 └── (additional documentation and assets)
 ```
 
+---
+## 👥 Contributors
+<a href="https://github.com/gyanshankar1708/GrowCraft/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=gyanshankar1708/GrowCraft" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
 ---
 
 ## 🛠️ Tech Stack

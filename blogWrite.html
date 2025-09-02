@@ -75,6 +75,50 @@
       color: #ffffff !important;
     }
 
+    /* search bar*/
+    .search-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  padding: 5px 10px;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+  flex: 1;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    max-width: 200px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+}
+
     /* Dark mode body - Force override with highest specificity */
     html[data-bs-theme="dark"] body,
     html[data-bs-theme="dark"] body.dark-mode,
@@ -571,6 +615,15 @@
         font-size: 0.95rem;
       }
     }
+    .mid-sec ul{
+      display: flex;
+      text-align: center;
+      padding: 0px 48px;
+      margin-top: 8px;
+      width: 100%;
+      gap: 120px;
+      justify-content: space-around;
+    }
   
   </style>
 </head>
@@ -586,18 +639,26 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse mt-2 mt-lg-0" id="navbarNav">
+      <div class="collapse navbar-collapse mt-2 mt-lg-0 mid-sec" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center gap-2">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link active" href="blogListing.html">Blogs</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#about">About Us</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#work">Our Work</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./index.html#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./blogListing.html">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./index.html#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./index.html#work">Our Work</a></li>
+          <li class="nav-item"><a class="nav-link active" href="src/contact.html">Contact Us</a></li>
 
         </ul>
       </div>
       
+<!-- Responsive Search Bar -->
+ <div class="search-container">
+  <input type="text" placeholder="Search..." class="search-input">
+  <button class="search-button">
+    <i class="fas fa-search"></i> <!-- Font Awesome icon -->
+  </button>
+</div>
+ 
 
       
 

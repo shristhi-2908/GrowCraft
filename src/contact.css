@@ -22,9 +22,7 @@
 }
 
 /* Contact Info Cards */
-.contact-info {
-    background-color: #f8f9fa;
-}
+
 
 .contact-info-card {
     background: white;
@@ -487,52 +485,6 @@
     font-size: 0.9rem;
     line-height: 1.4;
 }
-
-/* Footer */
-.contact-footer {
-    background: #333;
-    color: white;
-    padding: 2rem 0;
-    margin-top: 3rem;
-}
-
-.footer-content h4 {
-    color: #0078FF;
-    margin-bottom: 0.5rem;
-}
-
-.footer-content p {
-    opacity: 0.8;
-    margin: 0;
-}
-
-.footer-links {
-    text-align: right;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #0078FF;
-}
-
-.footer-bottom {
-    border-top: 1px solid #555;
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    text-align: center;
-}
-
-.footer-bottom p {
-    margin: 0;
-    opacity: 0.7;
-}
-
 /* Back to Top Button */
 #backToTop {
     position: fixed;
