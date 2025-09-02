@@ -770,7 +770,7 @@
 
   <div class="bg-body-tertiary mt-4 py-2 mb-4 ">
     <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center px-2 px-sm-5 mt-3 mb-4">
-      <h5 class="head-training mb-xxl-0">Training and Internship program</h5>
+      <h1 id="typewriter" class="head-training mb-xxl-0">Training and Internship program</h1>
       <div class="row g-4 px-6 py-6 justify-content-md-center">
 
         <!-- Website Development -->
@@ -1350,8 +1350,23 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
     defer></script>
   <script>
-    // Logo switching functionality for dark mode
+    //Added typewriter effect in heading
     document.addEventListener('DOMContentLoaded', function () {
+     const typewriterElement = document.getElementById("typewriter");
+  const text = typewriterElement.textContent; // get text from h1
+  typewriterElement.textContent = ""; // clear text first
+  let index = 0;
+
+  function typeWriter() {
+    if (index < text.length) {
+      typewriterElement.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, 100); // speed
+    }
+  }
+
+  typeWriter();
+      // Logo switching functionality for dark mode
       const logo = document.querySelector("#logo");
 
       // Function to update logo based on theme
