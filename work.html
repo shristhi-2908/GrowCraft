@@ -1,23 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GrowCraft</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="src/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="shortcut icon" href="Favicon.ico" type="image/x-icon" />
-
-     <style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GrowCraft — Our Work</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="description" content="GrowCraft — creative agency: web development, graphic design, digital marketing, content & social media case studies and services." />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
     :root{
       --bg: 248 250 252;
       --card-radius: 14px;
@@ -264,13 +255,106 @@
     .card-desc{color:var(--muted);font-size:14px;margin:0 0 12px}
     .meta{font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center}
 
-    /* modal */
-    .modal-root{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(2,6,23,0.35),rgba(2,6,23,0.6));z-index:90;padding:20px}
-    .modal{width:min(980px,98%);background:var(--glass);border-radius:16px;padding:18px;box-shadow:var(--shadow-2);backdrop-filter:blur(8px)}
-    .modal .gallery{height:320px;background:#f6f7fb;border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-    .modal .gallery img{max-width:100%;max-height:100%;object-fit:contain}
-    .modal .meta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-    .modal .close{background:transparent;border:0;font-size:20px;cursor:pointer}
+    /* =====================
+   Modal Styling
+===================== */
+.modal-root {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* dark overlay */
+  backdrop-filter: blur(6px);      /* glass blur effect */
+  display: none;                   /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 9999;
+}
+.modal-root[aria-hidden="false"] {
+  display: flex !important; /* force visible on open */
+  z-index: 9999;
+}
+.modal {
+  background: var(--bg);
+  color: var(--text);
+  max-width: 760px;
+  width: 100%;
+  border-radius: 18px;
+  padding: 24px 28px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  animation: fadeUp 0.3s ease;
+  overflow-y: auto;
+  max-height: 85vh;
+}
+
+.modal h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text);
+}
+
+#modalKicker {
+  font-size: 14px;
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+/* Close button */
+.close {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.close:hover {
+  color: var(--primary);
+}
+
+/* Gallery image */
+.gallery img {
+  width: 100%;
+  max-height: 320px;
+  border-radius: 14px;
+  object-fit: cover;
+  margin-top: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* Content sections */
+.modal strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+#modalProblem, #modalApproach, #modalResult {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* Footer buttons */
+.modal .btn {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 
     /* footer */
     .site-footer{margin-top:34px;padding:28px;text-align:center;color:var(--muted);font-size:14px}
@@ -559,6 +643,9 @@ section {
         font-size: 0.7rem;
       }
     }
+  
+
+
 
 
   </style>
@@ -858,44 +945,43 @@ section {
 
 
   </main>
-
-  <!-- Modal -->
-  <div id="modalRoot" class="modal-root" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal" role="document">
-      <div style="display:flex;align-items:start;justify-content:space-between;gap:12px">
-        <div style="flex:1">
-          <h3 id="modalTitle">Title</h3>
-          <div id="modalKicker" style="font-size:13px;color:var(--muted);margin-top:6px">Kicker</div>
-        </div>
-        <button id="modalClose" class="close" aria-label="Close modal">✕</button>
+  <div id="modalRoot" class="modal-root" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal" role="document">
+    <div style="display:flex;align-items:start;justify-content:space-between;gap:12px">
+      <div style="flex:1">
+        <h3 id="modalTitle">Title</h3>
+        <div id="modalKicker" style="font-size:13px;color:var(--muted);margin-top:6px">Kicker</div>
       </div>
+      <button id="modalClose" class="close" aria-label="Close modal">✕</button>
+    </div>
 
-      <div class="gallery" id="modalGallery" style="margin-top:12px">
-        <img id="modalImage" src="" alt="case image" />
+    <div class="gallery" id="modalGallery" style="margin-top:12px">
+      <img id="modalImage" src="" alt="case image" />
+    </div>
+
+    <div style="display:flex;gap:12px;margin-top:12px;align-items:center">
+      <div style="flex:1">
+        <strong>Problem</strong>
+        <div id="modalProblem" style="color:var(--muted);margin-top:6px">Problem summary</div>
       </div>
-
-      <div style="display:flex;gap:12px;margin-top:12px;align-items:center">
-        <div style="flex:1">
-          <strong>Problem</strong>
-          <div id="modalProblem" style="color:var(--muted);margin-top:6px">Problem summary</div>
-        </div>
-        <div style="flex:1">
-          <strong>Approach</strong>
-          <div id="modalApproach" style="color:var(--muted);margin-top:6px">Approach summary</div>
-        </div>
-      </div>
-
-      <div style="margin-top:10px">
-        <strong>Result</strong>
-        <div id="modalResult" style="color:var(--muted);margin-top:6px">Measured results and impact</div>
-      </div>
-
-      <div style="display:flex;gap:8px;margin-top:14px;justify-content:flex-end">
-        <a id="caseStudyLink" class="btn btn-primary" href="#">Download report</a>
-        <button id="modalClose2" class="btn btn-ghost">Close</button>
+      <div style="flex:1">
+        <strong>Approach</strong>
+        <div id="modalApproach" style="color:var(--muted);margin-top:6px">Approach summary</div>
       </div>
     </div>
+
+    <div style="margin-top:10px">
+      <strong>Result</strong>
+      <div id="modalResult" style="color:var(--muted);margin-top:6px">Measured results and impact</div>
+    </div>
+
+    <div style="display:flex;gap:8px;margin-top:14px;justify-content:flex-end">
+      <a id="caseStudyLink" class="btn btn-primary" href="#">Download report</a>
+      <button id="modalClose2" class="btn btn-ghost">Close</button>
+    </div>
   </div>
+</div>
+
   <!-- Professional Footer -->
   <footer class="professional-footer fade-in">
     <div class="container">
@@ -995,128 +1081,187 @@ section {
   <!-- Professional Footer ends -->
   <script src="src/darkMode.js"></script>
   <script>
-    // utilities
-    const qs = (s, el=document) => el.querySelector(s);
-    const qsa = (s, el=document) => Array.from(el.querySelectorAll(s));
+    // Utilities
+const qs = (s, el = document) => el.querySelector(s);
+const qsa = (s, el = document) => Array.from(el.querySelectorAll(s));
 
-    // theme toggle
-    const themeBtn = qs('#themeToggle');
-    themeBtn.addEventListener('click', () => {
-      const root = document.documentElement;
-      const isDark = root.getAttribute('data-theme') === 'dark';
-      root.setAttribute('data-theme', isDark ? 'light' : 'dark');
-      themeBtn.setAttribute('aria-pressed', String(!isDark));
-      themeBtn.innerHTML = isDark ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
-    });
-
-    // set year
-    qs('#year').textContent = new Date().getFullYear();
-
-    // filtering & search
-    const chips = qsa('.chip');
-    const cards = qsa('.card');
-    const search = qs('#search');
-    let activeFilter = 'all';
-
-    function applyFilters(){
-      const query = search.value.trim().toLowerCase();
-      cards.forEach(card => {
-        const title = card.querySelector('.card-title').textContent.toLowerCase();
-        const desc = card.querySelector('.card-desc').textContent.toLowerCase();
-        const category = card.getAttribute('data-category');
-        const matchesFilter = activeFilter === 'all' || category === activeFilter;
-        const matchesQuery = query === '' || title.includes(query) || desc.includes(query) || category.includes(query);
-        card.style.display = (matchesFilter && matchesQuery) ? '' : 'none';
-      });
+/* =====================
+  THEME TOGGLE
+===================== */
+const themeBtn = qs('#themeToggle');
+if (themeBtn) {
+  themeBtn.addEventListener('click', () => {
+    const root = document.documentElement;
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    themeBtn.setAttribute('aria-pressed', String(!isDark));
+    const icon = themeBtn.querySelector('i');
+    if (icon) {
+      icon.className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
     }
+  });
+}
 
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        chips.forEach(c => c.dataset.active = 'false');
-        chip.dataset.active = 'true';
-        activeFilter = chip.dataset.filter;
-        applyFilters();
-      });
-    });
-    search.addEventListener('input', applyFilters);
+// Set year if element exists
+if (qs('#year')) qs('#year').textContent = new Date().getFullYear();
 
-    // modal
-    const modalRoot = qs('#modalRoot');
-    const modalTitle = qs('#modalTitle');
-    const modalKicker = qs('#modalKicker');
-    const modalImage = qs('#modalImage');
-    const modalProblem = qs('#modalProblem');
-    const modalApproach = qs('#modalApproach');
-    const modalResult = qs('#modalResult');
-    const caseStudyLink = qs('#caseStudyLink');
+/* =====================
+  FILTERING + SEARCH
+===================== */
+const chips = qsa('.chip');
+const cards = qsa('.card');
+const search = qs('.search-input');
+let activeFilter = 'all';
 
-    function openModalFromCard(card){
-      const data = card.querySelector('.case-data');
-      const title = data.getAttribute('data-title') || card.querySelector('.card-title').textContent;
-      const problem = data.getAttribute('data-problem') || '';
-      const approach = data.getAttribute('data-approach') || '';
-      const result = data.getAttribute('data-result') || '';
-      const imgs = (card.dataset.images || '').split(',').map(s=>s.trim()).filter(Boolean);
-      modalTitle.textContent = title;
-      modalKicker.textContent = card.querySelector('.kicker').textContent || '';
-      modalProblem.textContent = problem;
-      modalApproach.textContent = approach;
-      modalResult.textContent = result;
-      modalImage.src = imgs[0] || card.querySelector('img').src;
-      caseStudyLink.href = '#';
+function applyFilters() {
+  const query = search?.value.trim().toLowerCase() || "";
+  cards.forEach(card => {
+    const title = card.querySelector('.card-title')?.textContent.toLowerCase() || "";
+    const desc = card.querySelector('.card-desc')?.textContent.toLowerCase() || "";
+    const category = card.dataset.category;
+    const matchesFilter = activeFilter === 'all' || category === activeFilter;
+    const matchesQuery = !query || title.includes(query) || desc.includes(query) || category.includes(query);
+    card.style.display = (matchesFilter && matchesQuery) ? '' : 'none';
+  });
+}
 
-      modalRoot.style.display = 'flex';
-      modalRoot.setAttribute('aria-hidden','false');
-      document.body.style.overflow = 'hidden';
-      // focus for accessibility
-      qs('#modalClose').focus();
+chips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    chips.forEach(c => c.dataset.active = 'false');
+    chip.dataset.active = 'true';
+    activeFilter = chip.dataset.filter;
+    applyFilters();
+  });
+});
+
+if (search) {
+  search.addEventListener('input', applyFilters);
+}
+
+/* =====================
+  MODAL FUNCTIONALITY
+===================== */
+const modalRoot = qs('#modalRoot');
+const modalTitle = qs('#modalTitle');
+const modalKicker = qs('#modalKicker');
+const modalImage = qs('#modalImage');
+const modalProblem = qs('#modalProblem');
+const modalApproach = qs('#modalApproach');
+const modalResult = qs('#modalResult');
+const modalCloseBtns = qsa('.modal .close, .modal .btn-ghost');
+let lastFocusedElement; // Variable to store the last focused element before modal opens
+
+function openModal(card) {
+  const caseData = card.querySelector('.case-data');
+  if (!caseData) return;
+
+  // Store the element that was focused right before the modal opened
+  lastFocusedElement = document.activeElement;
+
+  modalTitle.textContent = caseData.dataset.title;
+  modalKicker.textContent = card.querySelector('.kicker').textContent;
+  modalImage.src = card.dataset.images;
+  modalProblem.textContent = caseData.dataset.problem;
+  modalApproach.textContent = caseData.dataset.approach;
+  modalResult.textContent = caseData.dataset.result;
+
+  modalRoot.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+
+  // Set focus to the modal to enable keyboard navigation inside it
+  modalRoot.focus();
+}
+
+function closeModal() {
+  modalRoot.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+
+  // Return focus to the element that opened the modal
+  if (lastFocusedElement) {
+    lastFocusedElement.focus();
+  }
+}
+
+qsa('.open-case').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const card = e.target.closest('.card');
+    if (card) {
+      openModal(card);
     }
+  });
+});
 
-    function closeModal(){
-      modalRoot.style.display = 'none';
-      modalRoot.setAttribute('aria-hidden','true');
-      document.body.style.overflow = '';
+modalCloseBtns.forEach(btn => {
+  btn.addEventListener('click', closeModal);
+});
+
+// Close modal on background click
+modalRoot.addEventListener('click', (e) => {
+  if (e.target === modalRoot) {
+    closeModal();
+  }
+});
+
+// Close modal on Esc key press
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modalRoot.getAttribute('aria-hidden') === 'false') {
+    closeModal();
+  }
+});
+
+// Trap focus inside the modal
+modalRoot.addEventListener('keydown', (e) => {
+  if (e.key !== 'Tab') return;
+
+  const focusableElements = qsa('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])', modalRoot);
+  const firstFocusableElement = focusableElements[0];
+  const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+  if (e.shiftKey) { // Shift + Tab
+    if (document.activeElement === firstFocusableElement) {
+      lastFocusableElement.focus();
+      e.preventDefault();
     }
-
-    qsa('.open-case').forEach(btn => btn.addEventListener('click', (e)=>{
-      const card = e.target.closest('.card');
-      openModalFromCard(card);
-    }));
-
-    // allow opening by keyboard on whole card (Enter/Space)
-    qsa('.card').forEach(card => {
-      card.addEventListener('keydown', (e) => {
-        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openModalFromCard(card); }
-      });
-    });
-
-    qs('#modalClose').addEventListener('click', closeModal);
-    qs('#modalClose2').addEventListener('click', closeModal);
-    modalRoot.addEventListener('click', (e)=>{ if(e.target === modalRoot) closeModal(); });
-    window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
-
-    // simple tilt for pointer devices
-    const supportsPointer = window.matchMedia('(pointer:fine)').matches;
-    if(supportsPointer){
-      qsa('.card').forEach(card => {
-        card.addEventListener('mousemove', (ev) => {
-          const rect = card.getBoundingClientRect();
-          const x = (ev.clientX - rect.left) / rect.width - 0.5;
-          const y = (ev.clientY - rect.top) / rect.height - 0.5;
-          const rx = (y * 10).toFixed(2);
-          const ry = (x * -10).toFixed(2);
-          card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
-        });
-        card.addEventListener('mouseleave', ()=>{ card.style.transform = ''; });
-      });
+  } else { // Tab
+    if (document.activeElement === lastFocusableElement) {
+      firstFocusableElement.focus();
+      e.preventDefault();
     }
-
-    // reveal animations stagger
-    window.addEventListener('load', ()=>{
-      qsa('.card').forEach((c,i)=>{ c.style.animation = `fadeUp .5s ease forwards`; c.style.animationDelay = `${i*80}ms`; });
-    });
-
+  }
+});
   </script>
+  <script>
+  
+
+  /* =====================
+     TILT EFFECT (pointer devices only)
+  ===================== */
+  if(window.matchMedia('(pointer:fine)').matches){
+    qsa('.card').forEach(card => {
+      card.addEventListener('mousemove', ev => {
+        const rect = card.getBoundingClientRect();
+        const x = (ev.clientX - rect.left) / rect.width - 0.5;
+        const y = (ev.clientY - rect.top) / rect.height - 0.5;
+        const rx = (y * 10).toFixed(2);
+        const ry = (x * -10).toFixed(2);
+        card.style.transform = 
+          `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+      });
+      card.addEventListener('mouseleave', ()=>{ card.style.transform = ''; });
+    });
+  }
+
+  /* =====================
+     REVEAL ON SCROLL
+  ===================== */
+  const reveals = qsa('.reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  },{threshold:0.2});
+  reveals.forEach(r => io.observe(r));
+</script>
 
   <style>
     @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
