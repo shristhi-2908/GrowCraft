@@ -134,22 +134,44 @@ class DarkModeToggle {
             }
             
             .theme-toggle {
-                background: none;
-                border: none;
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(0, 0, 0, 0.1);
                 cursor: pointer;
-                padding: 8px;
+                padding: 10px;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 transition: all 0.3s ease;
-                color: var(--text-color, #333);
-                background-color: var(--bg-color, transparent);
+                color: #333;
+                width: 40px;
+                height: 40px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             }
             
             .theme-toggle:hover {
-                background-color: var(--hover-bg, rgba(0,0,0,0.1));
+                background-color: rgba(76, 175, 80, 0.1);
+                border-color: #4caf50;
+                color: #4caf50;
                 transform: scale(1.1);
+                box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+            }
+            
+            /* Dark mode theme toggle */
+            .dark .theme-toggle,
+            .dark-mode .theme-toggle {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: #ffffff;
+            }
+            
+            .dark .theme-toggle:hover,
+            .dark-mode .theme-toggle:hover {
+                background: rgba(76, 175, 80, 0.2);
+                border-color: #4caf50;
+                color: #4caf50;
+                transform: scale(1.1);
+                box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
             }
             
             .theme-toggle svg {
