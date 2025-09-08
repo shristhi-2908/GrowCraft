@@ -826,6 +826,117 @@
       }
 
       /*Dark Mode*/
+      
+      /* Dark Mode Navbar Overrides */
+      .dark-mode .navbar,
+      .dark .navbar {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+        border-bottom: 3px solid #4caf50 !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+      }
+
+      .dark-mode .navbar.scrolled,
+      .dark .navbar.scrolled {
+        background: rgba(26, 26, 26, 0.95) !important;
+        backdrop-filter: blur(20px);
+      }
+
+      .dark-mode .navbar-nav .nav-link,
+      .dark .navbar-nav .nav-link {
+        color: #ffffff !important;
+        background: transparent;
+      }
+
+      .dark-mode .navbar-nav .nav-link:hover,
+      .dark .navbar-nav .nav-link:hover {
+        color: #000000 !important;
+        background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+      }
+
+      .dark-mode .navbar-nav .nav-link.active,
+      .dark .navbar-nav .nav-link.active {
+        color: #000000 !important;
+        background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%) !important;
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.25);
+      }
+
+      .dark-mode .navbar-brand,
+      .dark .navbar-brand {
+        color: #ffffff !important;
+      }
+
+      /* Dark Mode Search Bar */
+      .dark-mode .search-container,
+      .dark .search-container {
+        background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%) !important;
+        border: 2px solid transparent;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+      }
+
+      .dark-mode .search-container::before,
+      .dark .search-container::before {
+        background: linear-gradient(135deg, #4caf50, #388e3c) !important;
+      }
+
+      .dark-mode .search-input,
+      .dark .search-input {
+        background: transparent !important;
+        color: #ffffff !important;
+        border: none;
+      }
+
+      .dark-mode .search-input::placeholder,
+      .dark .search-input::placeholder {
+        color: #cccccc !important;
+      }
+
+      .dark-mode .search-button,
+      .dark .search-button {
+        background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%) !important;
+        color: #000000 !important;
+      }
+
+      .dark-mode .search-button:hover,
+      .dark .search-button:hover {
+        background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%) !important;
+        transform: scale(1.05);
+      }
+
+      /* Dark Mode Theme Toggle Button Enhancement */
+      .dark-mode .theme-toggle,
+      .dark .theme-toggle {
+        background: rgba(255, 255, 255, 0.1) !important;
+        color: #ffffff !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border-radius: 50% !important;
+        padding: 10px !important;
+        transition: all 0.3s ease !important;
+      }
+
+      .dark-mode .theme-toggle:hover,
+      .dark .theme-toggle:hover {
+        background: rgba(76, 175, 80, 0.2) !important;
+        border-color: #4caf50 !important;
+        color: #4caf50 !important;
+        transform: scale(1.1) !important;
+      }
+
+      /* Mobile Dark Mode Navbar */
+      @media screen and (max-width: 991.98px) {
+        .dark-mode .navbar-nav,
+        .dark .navbar-nav {
+          background: rgba(26, 26, 26, 0.98) !important;
+          border-radius: 15px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        .dark-mode .search-container,
+        .dark .search-container {
+          background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%) !important;
+        }
+      }
     </style>
     <!-- END: Custom CSS changes -->
   </head>
