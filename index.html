@@ -21,6 +21,88 @@
     <!-- Bootstrap Bundle JS + Popper -->
 
     <style>
+      /* Glassmorphic Services Flashcards */
+      .card-services {
+        background: rgba(39, 174, 96, 0.18);
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(39, 174, 96, 0.18);
+        border: 1px solid rgba(39, 174, 96, 0.25);
+        backdrop-filter: blur(12px);
+        color: #222;
+        transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+        position: relative;
+        overflow: hidden;
+        animation: fadeInUp 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .card-services:hover {
+        box-shadow: 0 16px 48px rgba(39, 174, 96, 0.28);
+        background: rgba(39, 174, 96, 0.28);
+        transform: translateY(-6px) scale(1.03);
+      }
+      .card-services .card-title {
+        color: #27ae60;
+        font-weight: 700;
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 0.5em;
+      }
+      .card-services .svg-img {
+        margin-bottom: 0.5em;
+      }
+      .card-services .btn-group button {
+        background: #27ae60;
+        color: #fff;
+        border-radius: 8px;
+        border: none;
+        margin: 0 0.2em;
+        transition: background 0.2s, transform 0.2s;
+      }
+      .card-services .btn-group button:hover {
+        background: #43e97b;
+        color: #222;
+        transform: scale(1.08);
+      }
+      .card-services .card-text {
+        font-size: 1.05rem;
+        margin-bottom: 0.5em;
+      }
+
+      /* About Us Glassmorphic Box */
+      .about-card-box {
+        background: linear-gradient(135deg, #e8f8f5 0%, #d4fc79 100%);
+        border-radius: 22px;
+        box-shadow: 0 8px 32px rgba(39, 174, 96, 0.18);
+        border: 1px solid rgba(39, 174, 96, 0.18);
+        backdrop-filter: blur(10px);
+        color: #222;
+        transition: box-shadow 0.3s, background 0.3s, transform 0.3s;
+        position: relative;
+        overflow: hidden;
+        padding: 2.5em 2em;
+        margin-bottom: 1em;
+        animation: fadeInUp 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .about-card-box ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .about-card-box li {
+        margin-bottom: 1.2em;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.7em;
+        font-size: 1.15rem;
+      }
+      .about-card-box li:last-child {
+        margin-bottom: 0;
+      }
+      .about-card-box .about-icon {
+        color: #27ae60;
+        font-size: 1.3em;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
       .btn-custom-purple {
         background-color: #463896;
         border-color: #291987;
@@ -1688,79 +1770,19 @@
 
     <!-- About Us section starts here -->
     <section class="about-section py-5" id="about">
-      <div class="container text-center">
+      <div class="container d-flex flex-column align-items-center">
         <h2 class="about-title mb-2">About Us</h2>
         <p class="about-subtitle mb-4 mt-2">
           Gateway to <em>Go Digital and Grow Business</em>
         </p>
-
-        <div class="row justify-content-center g-4">
-          <!-- Card 1 -->
-          <div class="col-sm-6 col-lg-4">
-            <div class="about-card p-4 h-100 shadow rounded">
-              <h4 class="mb-4"><i class="fas fa-users icon"></i> Who We Are</h4>
-              <p>
-                GrowCraft is a one-stop shop for Software, App, Website
-                development, Digital Marketing, Graphic Design & Social Media.
-                We deliver high-quality services that align with market trends.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="col-sm-6 col-lg-4">
-            <div class="about-card p-4 h-100 shadow rounded">
-              <h4 class="mb-4">
-                <i class="fas fa-microchip icon"></i> Tech-Driven Solutions
-              </h4>
-              <p>
-                We use the latest technologies & best practices to deliver
-                innovative solutions. Our services evolve constantly to meet
-                clients’ changing needs.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col-sm-6 col-lg-4">
-            <div class="about-card p-4 h-100 shadow rounded">
-              <h4 class="mb-4">
-                <i class="fas fa-handshake icon"></i> Client-Centric Approach
-              </h4>
-              <p>
-                Every client has unique needs. We understand their goals before
-                creating custom solutions and involve them throughout the
-                development process.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="col-sm-6 col-lg-4">
-            <div class="about-card p-4 h-100 shadow rounded">
-              <h4 class="mb-4">
-                <i class="fas fa-shield-alt icon"></i> Reliable & Transparent
-              </h4>
-              <p>
-                With clear communication, timely delivery, and transparent
-                processes, we ensure success for both our clients and ourselves.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="col-sm-6 col-lg-4">
-            <div class="about-card p-4 h-100 shadow rounded">
-              <h4 class="mb-4">
-                <i class="fas fa-award icon"></i> Affordable & Proven
-              </h4>
-              <p>
-                We offer cost-effective services and have a history of
-                successful projects. For a reliable digital partner, GrowCraft
-                is your best choice.
-              </p>
-            </div>
-          </div>
+        <div class="about-card-box w-100" style="max-width: 700px;">
+          <ul>
+            <li><span class="about-icon"><i class="fas fa-users"></i></span><span><strong>Who We Are:</strong> GrowCraft is a one-stop shop for Software, App, Website development, Digital Marketing, Graphic Design & Social Media. We deliver high-quality services that align with market trends.</span></li>
+            <li><span class="about-icon"><i class="fas fa-microchip"></i></span><span><strong>Tech-Driven Solutions:</strong> We use the latest technologies & best practices to deliver innovative solutions. Our services evolve constantly to meet clients’ changing needs.</span></li>
+            <li><span class="about-icon"><i class="fas fa-handshake"></i></span><span><strong>Client-Centric Approach:</strong> Every client has unique needs. We understand their goals before creating custom solutions and involve them throughout the development process.</span></li>
+            <li><span class="about-icon"><i class="fas fa-shield-alt"></i></span><span><strong>Reliable & Transparent:</strong> With clear communication, timely delivery, and transparent processes, we ensure success for both our clients and ourselves.</span></li>
+            <li><span class="about-icon"><i class="fas fa-award"></i></span><span><strong>Affordable & Proven:</strong> We offer cost-effective services and have a history of successful projects. For a reliable digital partner, GrowCraft is your best choice.</span></li>
+          </ul>
         </div>
       </div>
     </section>
