@@ -11,11 +11,11 @@ class DarkModeToggle {
     }
 
     init() {
-        // Apply saved theme on page load
-        this.applyTheme();
-
         // Create and insert toggle button
         this.createToggle();
+
+        // Apply saved theme on page load
+        this.applyTheme();
 
         // Add transition styles
         this.addTransitionStyles();
@@ -69,6 +69,11 @@ class DarkModeToggle {
             document.documentElement.setAttribute('data-bs-theme', 'light');
             document.documentElement.classList.remove('dark');
             document.body.classList.remove('dark-mode');
+        }
+
+           // Update toggle button icon state
+        if (this.toggleElement) {
+            this.toggleElement.classList.toggle('active', this.theme === 'dark');
         }
         
         // Update logo based on theme
@@ -1586,4 +1591,3 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = DarkModeToggle;
 } 
 
-localStorage.removeItem('theme');
