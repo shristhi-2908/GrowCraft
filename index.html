@@ -777,10 +777,7 @@
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="about.html"
+              <a class="nav-link active" aria-current="page" href="about.html"
                 >About Us</a
               >
             </li>
@@ -1211,10 +1208,19 @@
                 <div class="btn-group">
                   <button
                     class="btn btn-sm btn-outline-primary toggle-btn"
+                    id="readMoreBtn"
                     onclick="event.stopPropagation();"
                   >
                     Read More
                   </button>
+                  <div
+                    class="tooltip-box"
+                    id="tooltip"
+                    onclick="event.stopPropagation();"
+                  >
+                    Digital Marketing helps businesses grow online through SEO,
+                    social media, and ads.
+                  </div>
                   <a
                     href="src/digital-marketing.html"
                     onclick="event.stopPropagation();"
@@ -1268,6 +1274,14 @@
                   <button class="btn btn-sm btn-outline-primary toggle-btn">
                     Read More
                   </button>
+                  <div
+                    class="tooltip-box"
+                    id="tooltip"
+                    onclick="event.stopPropagation();"
+                  >
+                    We build responsive, fast, and user-friendly websites that
+                    create a lasting first impression
+                  </div>
                   <a href="src/web.html"
                     ><button class="btn btn-sm btn-outline-primary">
                       Explore
@@ -1313,6 +1327,14 @@
                   <button class="btn btn-sm btn-outline-primary toggle-btn">
                     Read More
                   </button>
+                  <div
+                    class="tooltip-box"
+                    id="tooltip"
+                    onclick="event.stopPropagation();"
+                  >
+                    Creative designs that communicate your brand’s identity
+                    through visuals, logos, and layouts.
+                  </div>
                   <a href="#"
                     ><button class="btn btn-sm btn-outline-primary">
                       Explore
@@ -1366,6 +1388,14 @@
                   <button class="btn btn-sm btn-outline-primary toggle-btn">
                     Read More
                   </button>
+                  <div
+                    class="tooltip-box"
+                    id="tooltip"
+                    onclick="event.stopPropagation();"
+                  >
+                    We manage and grow your social presence with engaging posts,
+                    campaigns, and analytics
+                  </div>
                   <a href="#"
                     ><button class="btn btn-sm btn-outline-primary">
                       Explore
@@ -1412,6 +1442,14 @@
                   <button class="btn btn-sm btn-outline-primary toggle-btn">
                     Read More
                   </button>
+                  <div
+                    class="tooltip-box"
+                    id="tooltip"
+                    onclick="event.stopPropagation();"
+                  >
+                    High-quality, SEO-friendly content that connects with your
+                    audience and boosts visibility
+                  </div>
                   <a href="learn/contentwriting.html"
                     ><button class="btn btn-sm btn-outline-primary">
                       Explore
@@ -1458,6 +1496,14 @@
                   <button class="btn btn-sm btn-outline-primary toggle-btn">
                     Read More
                   </button>
+                  <div
+                    class="tooltip-box"
+                    id="tooltip"
+                    onclick="event.stopPropagation();"
+                  >
+                    Protecting your business with threat detection, security
+                    audits, and cyber defense strategies
+                  </div>
                   <a href="learn/cyberanalyst.html"
                     ><button class="btn btn-sm btn-outline-primary">
                       Explore
@@ -1738,5 +1784,7 @@
         yearSpan.textContent = new Date().getFullYear();
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
