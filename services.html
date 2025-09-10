@@ -219,6 +219,36 @@
     </style>
      END: Custom CSS changes -->
 
+     <style>
+      .h{
+        
+        transition: transform 0.3s ease-in-out;
+      }
+      .h:hover{
+        
+        transform: scale(1.01);
+        }
+        .flex-column{
+          margin: 0.1rem;
+          transition: box-shadow 0.2s ease-in-out;
+        }
+        .flex-column:hover{
+          box-shadow: 0 0  18px grey;
+        }
+        .icon{
+          transition: transform 0.3s ease-in-out;
+        }
+        .card-title{
+          transition: font-size 0.3s ease-in;
+        }
+        .card-title:hover{
+          font-size: 22px;
+        }
+        .icon:hover{
+          transform: scale(1.01);
+          box-shadow: 0 0  18px grey;
+        }
+     </style>
 </head>
 
 <body id="main-body">
@@ -283,9 +313,9 @@
   <div class="container py-5">
     <div class="row g-4">
       <!-- Card Template -->
-      <div class="col-md-6 col-lg-4 service-card fade-in" style="animation-delay: 0s;">
+      <div class="col-md-6 col-lg-4 service-card fade-in h" style="animation-delay: 0s;">
         <div class="card h-100 service-box">
-          <div class="card-body d-flex flex-column">
+          <div class="card-body d-flex flex-column ">
             <img src="./images/DigitalMarketing.png" alt="Digital Marketing Icon" class="icon mb-3" />
             <h5 class="card-title">Digital Marketing</h5>
             <p class="card-text summary">
@@ -303,7 +333,7 @@
       </div>
 
       <!-- Add more cards below with updated delays -->
-      <div class="col-md-6 col-lg-4 service-card fade-in" style="animation-delay: 0.2s;">
+      <div class="col-md-6 col-lg-4 service-card fade-in h" style="animation-delay: 0.2s;">
         <div class="card h-100 service-box">
           <div class="card-body d-flex flex-column">
             <img src="./images/WebDev.png" alt="Website Development Icon" class="icon mb-3" />
@@ -322,7 +352,7 @@
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 service-card fade-in" style="animation-delay: 0.4s;">
+      <div class="col-md-6 col-lg-4 service-card fade-in h" style="animation-delay: 0.4s;">
         <div class="card h-100 service-box">
           <div class="card-body d-flex flex-column">
             <img src="./images/GraphicDesign.png" alt="Graphic Design Icon" class="icon mb-3" />
@@ -341,7 +371,7 @@
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 service-card fade-in" style="animation-delay: 0.6s;">
+      <div class="col-md-6 col-lg-4 service-card fade-in h" style="animation-delay: 0.6s;">
         <div class="card h-100 service-box">
           <div class="card-body d-flex flex-column">
             <img src="./images/SocialMediaManagement3.png" alt="Social Media Management Icon" class="icon mb-3" />
@@ -360,7 +390,7 @@
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 service-card fade-in" style="animation-delay: 0.8s;">
+      <div class="col-md-6 col-lg-4 service-card fade-in h" style="animation-delay: 0.8s;">
         <div class="card h-100 service-box">
           <div class="card-body d-flex flex-column">
             <img src="./images/ContentWriting3.png" alt="Content Writing" class="icon mb-3" />
