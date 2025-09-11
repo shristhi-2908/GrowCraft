@@ -669,11 +669,15 @@
   <div class="blog-section">
     <h2>Write a New Blog</h2>
     <form id="blog-form">
-      <input type="text" id="author" placeholder="Your Name" required />
-      <input type="text" id="title" placeholder="Blog Title" required />
-      <textarea id="content" rows="7" placeholder="Write your blog..." required></textarea>
-      <button type="submit">Publish Blog</button>
-    </form>
+  <input type="text" id="author" placeholder="Your Name" required />
+  <input type="text" id="title" placeholder="Blog Title" required />
+  
+  <!-- Blog content box with minlength -->
+  <textarea id="content" name="content" rows="7" placeholder="Write your blog..." minlength="100" required></textarea>
+  
+  <button type="submit">Publish Blog</button>
+</form>
+
 
     <a href="blogListing.html" class="back-btn"><i class="fas fa-arrow-left me-2"></i>Back to Blogs</a>
   </div>
