@@ -622,16 +622,15 @@
         background: #ffffff;
         padding: 20px;
         border-radius: 12px;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.158);
         transition: transform 0.3s cubic-bezier(0.4, 2, 0.3, 1),
           box-shadow 0.3s cubic-bezier(0.4, 2, 0.3, 1);
       }
-
+      
       .tech-card:hover {
         transform: translateY(-4px);
-        box-shadow: 0 32px 80px 0 rgba(0, 0, 0, 0.32),
-          0 2px 8px 0 rgba(0, 0, 0, 0.18);
-        background-color: #f1f5f9;
+        box-shadow: 0 0 15px rgba(0, 64, 255, 0.056), 0 0 8px rgba(0, 21, 255, 0.2),0 0 15px rgba(30, 0, 255, 0.107);
+        background-color: #ffffff;
         border: 2px solid #e0e7ef;
         cursor: pointer;
       }
@@ -641,11 +640,16 @@
         height: 60px;
         object-fit: contain;
         margin-bottom: 10px;
+        transition: transform 0.3s cubic-bezier(0.4, 2, 0.3, 1);
+      }
+      .tech-card img:hover{
+        transition: transform 0.3s cubic-bezier(0.4, 2, 0.3, 1);
+        transform: translateY(-4px);
       }
 
       .tech-card p {
         font-size: 1rem;
-        color: #374151;
+        color: black;
         font-weight: 500;
         margin: 0;
       }
@@ -657,6 +661,19 @@
         background: #f9fafb;
         text-align: center;
       }
+      .tech-card:hover p {
+       background: linear-gradient(
+    90deg,
+    #5b21b6,  
+    #1e40af,  
+    #0f766e, 
+    #b91c1c,  
+    #7c3aed  
+       );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+   }
+
 
       .process-heading {
         font-size: 2.5rem;
@@ -1540,28 +1557,28 @@
         </div>
         <div class="tech-card">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+            src="https://skillforge.com/wp-content/uploads/2020/10/javascript.png"
             alt="JavaScript"
           />
           <p>JavaScript</p>
         </div>
         <div class="tech-card">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/919/919851.png"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-gvo2Yv1tPyv5sscDpgspcRcglVofrGy4Q0gn6Okc-iMS1JfEFq6qBPf-6UeFhpGBez0&usqp=CAU"
             alt="React.js"
           />
           <p>React</p>
         </div>
         <div class="tech-card">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/919/919825.png"
+            src="https://cdn.iconscout.com/icon/free/png-256/free-node-js-icon-svg-png-download-1174925.png?f=webp"
             alt="Node.js"
           />
           <p>Node.js</p>
         </div>
         <div class="tech-card">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/528/528260.png"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmwp14zf49p207sNfvVH6gJQXQi2vZXlOxTZWaUh_jRfPJMqdnPjp9q8T5pctp2i8EkPE&usqp=CAU"
             alt="MongoDB"
           />
           <p>MongoDB</p>

@@ -11,11 +11,11 @@ class DarkModeToggle {
     }
 
     init() {
-        // Apply saved theme on page load
-        this.applyTheme();
-
         // Create and insert toggle button
         this.createToggle();
+
+        // Apply saved theme on page load
+        this.applyTheme();
 
         // Add transition styles
         this.addTransitionStyles();
@@ -69,6 +69,11 @@ class DarkModeToggle {
             document.documentElement.setAttribute('data-bs-theme', 'light');
             document.documentElement.classList.remove('dark');
             document.body.classList.remove('dark-mode');
+        }
+
+           // Update toggle button icon state
+        if (this.toggleElement) {
+            this.toggleElement.classList.toggle('active', this.theme === 'dark');
         }
         
         // Update logo based on theme
@@ -134,41 +139,63 @@ class DarkModeToggle {
             }
             
             .theme-toggle {
-                background: none;
-                border: none;
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(0, 0, 0, 0.1);
                 cursor: pointer;
-                padding: 8px;
+                padding: 10px;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 transition: all 0.3s ease;
-                color: var(--text-color, #333);
-                background-color: var(--bg-color, transparent);
+                color: #333;
+                width: 40px;
+                height: 40px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             }
             
             .theme-toggle:hover {
-                background-color: var(--hover-bg, rgba(0,0,0,0.1));
+                background-color: rgba(76, 175, 80, 0.1);
+                border-color: #4caf50;
+                color: #4caf50;
                 transform: scale(1.1);
+                box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+            }
+            
+            /* Dark mode theme toggle */
+            .dark .theme-toggle,
+            .dark-mode .theme-toggle {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: #ffffff;
+            }
+            
+            .dark .theme-toggle:hover,
+            .dark-mode .theme-toggle:hover {
+                background: rgba(76, 175, 80, 0.2);
+                border-color: #4caf50;
+                color: #4caf50;
+                transform: scale(1.1);
+                box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
             }
             
             .theme-toggle svg {
                 transition: all 0.3s ease;
             }
             
-            .theme-toggle .sun-icon {
+            .theme-toggle .moon-icon {
                 display: block;
             }
             
-            .theme-toggle .moon-icon {
-                display: none;
-            }
-            
-            .theme-toggle.active .sun-icon {
+            .theme-toggle .sun-icon {
                 display: none;
             }
             
             .theme-toggle.active .moon-icon {
+                display: none;
+            }
+            
+            .theme-toggle.active .sun-icon {
                 display: block;
             }
             
@@ -915,7 +942,7 @@ class DarkModeToggle {
 }
 
 .dark .service-card p {
-    color: #cbd5e1; /* light gray */
+    color: #070708ff; /* light gray */
 }
 
 .dark .services-highlight {
@@ -1435,6 +1462,89 @@ class DarkModeToggle {
 .dark .gc-privacy {
   color: var(--gc-muted);
 }
+  /* 🌙 Dark mode card styling */
+.dark .card {
+  background: #1e1e2f; /* deep slate */
+  color: #f5f5f5;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.dark .card-figure img {
+  border-radius: 0.75rem;
+  background: #2a2a3d; /* subtle image bg */
+}
+
+.dark .card-body {
+  background: transparent;
+  padding: 1rem;
+}
+
+.dark .card-title {
+  color: #ffffff;
+}
+
+.dark .card-desc {
+  color: #c7c7d3;
+}
+
+.dark .kicker {
+  color: #8b5cf6; /* accent purple */
+  font-weight: 600;
+}
+
+.dark .meta {
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.dark .btn-primary {
+  background: #8b5cf6;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+
+.dark .btn-primary:hover {
+  background: #a78bfa;
+}
+/* 🌙 Dark mode aside (featured case) */
+.dark aside {
+  padding: 18px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(40,40,60,0.8), #1e1e2f);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  color: #f5f5f5;
+}
+
+.dark aside h4 {
+  margin: 0 0 8px;
+  color: #ffffff;
+}
+
+.dark aside p {
+  margin: 0 0 12px;
+  color: #c7c7d3; /* muted text */
+}
+
+.dark aside .btn-primary {
+  display: inline-block;
+  background: #8b5cf6;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.dark aside .btn-primary:hover {
+  background: #a78bfa;
+}
+
 
 
 
@@ -1480,3 +1590,4 @@ document.addEventListener('DOMContentLoaded', () => {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = DarkModeToggle;
 } 
+
