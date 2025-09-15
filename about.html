@@ -330,7 +330,7 @@
       background: color-mix(in oklab, var(--bg-soft), transparent 70%);
       backdrop-filter: blur(8px);
     }
-    .metric b { font-size: clamp(18px, 3.6vw, 26px); }
+    .metric b { font-size: clamp(18px, 3.6vw, 26px); color: var(--text); }
     .metric p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
 
     /* Decorative ring */
@@ -549,7 +549,7 @@
     .reveal{opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .5s cubic-bezier(.2,.9,.3,1)}
     .reveal.in{opacity:1;transform:none}
     :root{
-      --brand:#16a34a; --brand-2:#22c55e; --bg:#0b0f14; --bg-soft:#0f1720; --text:#e6eef3; --muted:#9aa6b2; --card:rgba(255,255,255,0.03); --border:rgba(255,255,255,0.06); --glass:rgba(255,255,255,0.02); --shadow:0 14px 36px rgba(2,6,23,0.6); --radius:14px; --max-w:1100px;
+      --brand:#16a34a; --brand-2:#22c55e; --bg:#0b0f14; --bg-soft:#0f1720; --text:#e6eef3; --muted:#ffffff; --card:rgba(255,255,255,0.03); --border:rgba(255,255,255,0.06); --glass:rgba(255,255,255,0.02); --shadow:0 14px 36px rgba(2,6,23,0.6); --radius:14px; --max-w:1100px;
     }
     .theme-light{ --bg:#f8fafc; --bg-soft:#ffffff; --text:#07101a; --muted:#475569; --card:rgba(0,0,0,0.04); --border: rgba(2,6,23,0.06); --glass: rgba(0,0,0,0.04); --shadow: 0 10px 24px rgba(2,6,23,0.06); }
     *{box-sizing:border-box}
@@ -646,7 +646,56 @@
     /* accessibility focus */
     .role-btn:focus, .contrib:focus{outline:2px solid color-mix(in oklab,var(--brand),transparent 60%)}
       
-      
+  /* Make snapshot box text white in dark mode */
+  body:not(.theme-light) .metric b,
+  body:not(.theme-light) .metric p,
+  body:not(.theme-light) .facts .muted,
+  body:not(.theme-light) .card h3,
+  body:not(.theme-light) .card p.muted,
+  body:not(.theme-light) .panel h3,
+  body:not(.theme-light) .panel p.muted,
+  body:not(.theme-light) .fact b,
+  body:not(.theme-light) .fact .muted,
+  body:not(.theme-light) .kicker,
+  body:not(.theme-light) .muted,
+  body:not(.theme-light) .sub,
+  body:not(.theme-light) p.lead,
+  body:not(.theme-light) h2,
+  body:not(.theme-light) h3,
+  body:not(.theme-light) h4 {
+    color: #fff 
+  }  
+  body:not(.theme-light) #contactBtn {
+  color: #fff !important;
+  border-color: #fff !important;
+}
+  /*Changing colout to white in dark mode for mission metrics box*/
+  body:not(.theme-light) .panel .kicker,
+  body:not(.theme-light) .panel h3,
+  body:not(.theme-light) .panel p,
+  body:not(.theme-light) .panel .muted,
+  body:not(.theme-light) .panel .metric p,
+  body:not(.theme-light) .panel .fact .muted,
+  body:not(.theme-light) .radial .inner b,
+  body:not(.theme-light) .radial .inner small {
+   color: #fff !important;
+  }
+  body:not(.theme-light) .panel .radial small {
+    color: #fff !important;
+  }
+  /*Changing colours of buttons*/
+  body:not(.theme-light) #learnMore{
+    color: #fff !important;
+    border-color: #fff !important;
+  }
+  body:not(.theme-light) #meetBtn{
+    color: #fff !important;
+    border-color: #fff !important;
+  }
+  body:not(.theme-light) #contributeBtn{
+    color: #fff !important;
+    border-color: #fff !important;
+  }
 </style>
 </head>
 <body>
@@ -664,20 +713,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active visited" aria-current="page" href="../index.html">Home</a>
+                        <a class="nav-link active visited" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#services">Services</a>
+                        <a class="nav-link active" aria-current="page" href="services.html">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../blogListing.html">Blogs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../about.html">About Us</a>
+                        <a class="nav-link active" aria-current="page" href="blogListing.html">Blogs</a>
                     </li>
                     <!-- Added new "Our Work" link to navigate to the new work section on same page -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#work">Our Work</a>
+                        <a class="nav-link active" aria-current="page" href="work.html">Our Work</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="src/contact.html">Contact Us</a>
@@ -1265,7 +1311,7 @@
     // CTA demo handlers (replace with real routes)
     
     document.getElementById('exploreServices')?.addEventListener('click', ()=>{
-      window.location.hash = '#services';
+    window.location.href = 'services.html';
     });
     document.getElementById('joinContrib')?.addEventListener('click', ()=>{
       window.location.hash = '#contribute';
@@ -1327,9 +1373,9 @@
     })();
 
     // CTA handlers (replace hashes with routes)
-    document.getElementById('exploreBtn')?.addEventListener('click', ()=> window.location.hash = '#services');
+    document.getElementById('exploreBtn')?.addEventListener('click', ()=> window.location.href = 'services.html');
     document.getElementById('guideBtn')?.addEventListener('click', ()=> window.location.hash = '#contributing');
-    document.getElementById('contactBtn')?.addEventListener('click', ()=> window.location.hash = '#contact');
+    document.getElementById('contactBtn')?.addEventListener('click', ()=> window.location.href = 'src/contact.html');
     document.getElementById('contributeBtn')?.addEventListener('click', ()=> window.location.hash = '#contribute');
   
     // Theme init (keep parity with other sections)
