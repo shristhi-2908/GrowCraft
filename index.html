@@ -391,14 +391,13 @@
       padding: 10px 12px;
       font-size: 15px;
       flex: 1;
-      color: #2e7d32;
+      color: #fff;
       background: transparent;
       font-family: "Poppins", sans-serif;
       font-weight: 500;
     }
 
-    .search-input::placeholder {
-      color: #81c784;
+    .search-input::placeholder { 
       font-weight: 400;
     }
 
@@ -981,7 +980,7 @@
     .dark .search-input {
       background: transparent !important;
       color: #ffffff !important;
-      border: none;
+      border: none !important;
     }
 
     .dark-mode .search-input::placeholder,
@@ -1129,7 +1128,7 @@
       </div>
       <!-- Responsive Search Bar -->
       <div class="search-container">
-        <input type="text" placeholder="Search..." class="search-input" />
+        <input type="search" placeholder="Search..." class="search-input" />
         <button class="search-button">
           <i class="fas fa-search"></i>
           <!-- Font Awesome icon -->
