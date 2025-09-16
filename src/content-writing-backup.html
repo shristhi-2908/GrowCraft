@@ -1233,324 +1233,174 @@
     <!-- Navbar ends here -->
 
 
-    <!-- ===== HERO: Content Writing Excellence ===== -->
-    <section class="cw-hero-section" id="cw-hero-section" aria-labelledby="cw-hero-title">
-        <!-- Decorative background -->
-        <div class="cw-hero-bg" aria-hidden="true">
-            <div class="cw-blob cw-blob-1"></div>
-            <div class="cw-blob cw-blob-2"></div>
-            <!-- Dot grid overlay -->
-            <svg class="cw-grid" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <defs>
-                    <pattern id="cwDotGrid" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
-                        <circle cx="1" cy="1" r="0.6" />
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#cwDotGrid)" />
-            </svg>
+    <!-- Hero Section -->
+    <div class="heading">
+        <center>
+            <h1> Content Writing</h1>
+        </center>
+    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Engaging Content That Converts</h1>
+            <p>
+                We craft compelling, SEO-friendly content that boosts your brand’s
+                authority and drives measurable results.
+            </p>
+            <button id="cta-btn">Request a Free Quote</button>
         </div>
-        <!-- Content -->
-        <div class="cw-container">
-            <div class="cw-hero-inner">
-                <div class="cw-hero-copy">
-                    <p class="cw-eyebrow">GrowCraft · Content Writing</p>
-                    <h1 class="cw-hero-title" id="cw-hero-title">
-                        Words That <span class="cw-gradient">Convert & Captivate</span>
-                    </h1>
-                    <p class="cw-hero-sub">
-                        Transform your brand voice with compelling, <strong>SEO-optimized content</strong> that drives 
-                        engagement, builds authority, and converts readers into loyal customers.
-                    </p>
-                    <div class="cw-cta-row">
-                        <a href="#cw-consultation-form" class="cw-btn cw-btn-primary" id="cw-btn-quote" aria-label="Get a free content strategy consultation">
-                            Get Free Content Strategy
-                        </a>
-                        <button class="cw-btn cw-btn-ghost" id="cw-btn-portfolio" type="button" aria-label="View content portfolio">
-                            ▶ View Our Portfolio
-                        </button>
-                    </div>
-                    <ul class="cw-badges" role="list">
-                        <li class="cw-chip">SEO-Optimized Writing</li>
-                        <li class="cw-chip">Brand Voice Development</li>
-                        <li class="cw-chip">Multi-Platform Content</li>
-                    </ul>
-                </div>
-                <div class="cw-hero-visual" aria-hidden="true">
-                    <!-- Creative Writing Illustration -->
-                    <div class="cw-pen-wrap" id="cw-pen">
-                        <svg class="cw-pen-illustration" viewBox="0 0 240 280">
-                            <defs>
-                                <linearGradient id="cwGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#ff6b6b"/>
-                                    <stop offset="100%" style="stop-color:#4ecdc4"/>
-                                </linearGradient>
-                                <filter id="cwGlow">
-                                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                                    <feMerge> 
-                                        <feMergeNode in="coloredBlur"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            <!-- Paper -->
-                            <rect x="30" y="40" width="180" height="200" rx="8" fill="#fff" stroke="url(#cwGrad)" stroke-width="2" filter="url(#cwGlow)"/>
-                            <!-- Text lines -->
-                            <line x1="50" y1="70" x2="190" y2="70" stroke="#ff6b6b" stroke-width="2" opacity="0.7"/>
-                            <line x1="50" y1="90" x2="170" y2="90" stroke="#4ecdc4" stroke-width="2" opacity="0.7"/>
-                            <line x1="50" y1="110" x2="180" y2="110" stroke="#ffe66d" stroke-width="2" opacity="0.7"/>
-                            <line x1="50" y1="130" x2="160" y2="130" stroke="#ff6b6b" stroke-width="2" opacity="0.7"/>
-                            <!-- Pen -->
-                            <ellipse cx="200" cy="180" rx="15" ry="80" fill="url(#cwGrad)" transform="rotate(30 200 180)" filter="url(#cwGlow)"/>
-                            <circle cx="190" cy="160" r="8" fill="#ffe66d"/>
-                            <!-- Floating words -->
-                            <text x="40" y="270" font-family="Arial" font-size="12" fill="#ff6b6b" opacity="0.8">Engage</text>
-                            <text x="120" y="35" font-family="Arial" font-size="10" fill="#4ecdc4" opacity="0.8">Convert</text>
-                            <text x="180" y="270" font-family="Arial" font-size="11" fill="#ffe66d" opacity="0.8">Inspire</text>
-                        </svg>
-                    </div>
-                    <div class="cw-writing-stats">
-                        <span class="cw-stats-label">Content ROI</span>
-                        <span class="cw-stats-value" id="cw-roi">0</span>
-                        <span class="cw-stats-max">% growth</span>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80"
+                alt="Content Writing Workspace">
         </div>
     </section>
 
+    <!-- Modal Form -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Request a Free Quote</h2>
+            <form>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Your Name" required>
 
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="you@example.com" required>
 
-    <!-- ===== Modern Services Section ===== -->
-    <section class="cw-services-section" id="cw-services-section">
-        <div class="cw-container">
-            <div class="cw-services-head">
-                <p class="cw-services-eyebrow">GrowCraft · Content Services</p>
-                <h2 class="cw-services-title">Our Content Writing Services</h2>
-                <p class="cw-services-lead">
-                    We deliver SEO-friendly, audience-focused, and industry-specific content that strengthens your brand voice, 
-                    engages your target audience, and drives measurable results.
+                <label for="details">Project Details</label>
+                <textarea id="details" rows="4" placeholder="Tell us about your content needs..." required></textarea>
+
+                <button type="submit" class="submit-btn">Send Request</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="services-section">
+        <div class="services-intro">
+            <h2>Our Content Writing Services</h2>
+            <p>
+                We deliver SEO-friendly, audience-focused, and industry-specific content
+                that strengthens your brand voice, engages your target audience, and
+                drives measurable results.
+            </p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Blog & Article Writing</h3>
+                <p>Engaging, well-researched posts tailored to your audience to increase traffic and brand authority.
                 </p>
             </div>
-
-            <div class="cw-services-grid">
-                <article class="cw-service-card" role="button" tabindex="0" data-service="blog-writing" aria-pressed="false">
-                    <div class="cw-card-inner">
-                        <div class="cw-card-icon" aria-hidden="true">
-                            <i class="fas fa-edit"></i>
-                        </div>
-                        <h3 class="cw-service-title">Blog & Article Writing</h3>
-                        <p class="cw-service-sub">Engaging, well-researched posts tailored to your audience to increase traffic and brand authority.</p>
-                        <button class="cw-btn-small" aria-label="Learn more about Blog Writing">Learn more</button>
-                    </div>
-                </article>
-
-                <article class="cw-service-card" role="button" tabindex="0" data-service="website-copy" aria-pressed="false">
-                    <div class="cw-card-inner">
-                        <div class="cw-card-icon" aria-hidden="true">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <h3 class="cw-service-title">Website Copywriting</h3>
-                        <p class="cw-service-sub">Compelling website content that communicates your value proposition and drives conversions.</p>
-                        <button class="cw-btn-small" aria-label="Learn more about Website Copy">Learn more</button>
-                    </div>
-                </article>
-
-                <article class="cw-service-card" role="button" tabindex="0" data-service="product-descriptions" aria-pressed="false">
-                    <div class="cw-card-inner">
-                        <div class="cw-card-icon" aria-hidden="true">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <h3 class="cw-service-title">Product Descriptions</h3>
-                        <p class="cw-service-sub">Clear, persuasive product descriptions that highlight benefits and encourage purchases.</p>
-                        <button class="cw-btn-small" aria-label="Learn more about Product Descriptions">Learn more</button>
-                    </div>
-                </article>
-
-                <article class="cw-service-card" role="button" tabindex="0" data-service="social-media" aria-pressed="false">
-                    <div class="cw-card-inner">
-                        <div class="cw-card-icon" aria-hidden="true">
-                            <i class="fas fa-hashtag"></i>
-                        </div>
-                        <h3 class="cw-service-title">Social Media Captions</h3>
-                        <p class="cw-service-sub">Catchy, brand-aligned captions to boost engagement and grow your online community.</p>
-                        <button class="cw-btn-small" aria-label="Learn more about Social Media">Learn more</button>
-                    </div>
-                </article>
-
-                <article class="cw-service-card" role="button" tabindex="0" data-service="email-marketing" aria-pressed="false">
-                    <div class="cw-card-inner">
-                        <div class="cw-card-icon" aria-hidden="true">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3 class="cw-service-title">Email Newsletters</h3>
-                        <p class="cw-service-sub">Informative and promotional emails that nurture leads and retain customers.</p>
-                        <button class="cw-btn-small" aria-label="Learn more about Email Marketing">Learn more</button>
-                    </div>
-                </article>
-
-                <article class="cw-service-card" role="button" tabindex="0" data-service="press-releases" aria-pressed="false">
-                    <div class="cw-card-inner">
-                        <div class="cw-card-icon" aria-hidden="true">
-                            <i class="fas fa-newspaper"></i>
-                        </div>
-                        <h3 class="cw-service-title">Press Releases</h3>
-                        <p class="cw-service-sub">Professional press releases to announce updates, events, and company news effectively.</p>
-                        <button class="cw-btn-small" aria-label="Learn more about Press Releases">Learn more</button>
-                    </div>
-                </article>
-
-                <article class="cw-service-card" role="button" tabindex="0" data-service="seo-content" aria-pressed="false">
-                    <div class="cw-card-inner">
-                        <div class="cw-card-icon" aria-hidden="true">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h3 class="cw-service-title">SEO-Optimized Long-Form Content</h3>
-                        <p class="cw-service-sub">In-depth, keyword-rich articles designed to rank high in search results and build authority.</p>
-                        <button class="cw-btn-small" aria-label="Learn more about SEO Content">Learn more</button>
-                    </div>
-                </article>
+            <div class="service-card">
+                <h3>Website Copywriting</h3>
+                <p>Compelling website content that communicates your value proposition and drives conversions.</p>
             </div>
-
-            <div class="cw-services-highlight">
-                <p>💡 Custom packages available for startups, SMEs, and enterprises.</p>
+            <div class="service-card">
+                <h3>Product Descriptions</h3>
+                <p>Clear, persuasive product descriptions that highlight benefits and encourage purchases.</p>
             </div>
+            <div class="service-card">
+                <h3>Social Media Captions</h3>
+                <p>Catchy, brand-aligned captions to boost engagement and grow your online community.</p>
+            </div>
+            <div class="service-card">
+                <h3>Email Newsletters</h3>
+                <p>Informative and promotional emails that nurture leads and retain customers.</p>
+            </div>
+            <div class="service-card">
+                <h3>Press Releases</h3>
+                <p>Professional press releases to announce updates, events, and company news effectively.</p>
+            </div>
+            <div class="service-card">
+                <h3>SEO-Optimized Long-Form Content</h3>
+                <p>In-depth, keyword-rich articles designed to rank high in search results and build authority.</p>
+            </div>
+        </div>
+
+        <div class="services-highlight">
+            <p>💡 Custom packages available for startups, SMEs, and enterprises.</p>
         </div>
     </section>
 
-    <!-- ===== Content Impact Calculator ===== -->
-    <section class="cw-impact-section" id="cw-impact-section">
-        <div class="cw-container">
-            <div class="cw-impact-grid">
-                <!-- Left column: benefits + introduction -->
-                <div class="cw-impact-left">
-                    <p class="cw-services-eyebrow">GrowCraft · Why Choose Us</p>
-                    <h2 class="cw-impact-heading">Why content marketing is critical for every business</h2>
-                    <p class="cw-impact-lead">
-                        Quality content isn't just marketing — it's the foundation of trust, authority, and sustained growth. 
-                        Strategic content creation drives engagement, builds lasting relationships, and converts prospects into loyal customers.
-                    </p>
+    <section class="benefits-alt-section">
+        <div class="benefits-alt-header">
+            <h2>Why Choose Our Content Writing Services?</h2>
+            <p>Our approach blends creativity with strategy, delivering content that speaks to your audience and ranks
+                high in search results.</p>
+        </div>
 
-                    <ul class="cw-benefits" role="list">
-                        <li>
-                            <i class="fas fa-chart-line" aria-hidden="true"></i>
-                            <div>
-                                <strong>Boost Search Rankings</strong>
-                                <span>SEO-optimized content that ranks higher and drives organic traffic.</span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <i class="fas fa-users" aria-hidden="true"></i>
-                            <div>
-                                <strong>Build Audience Trust</strong>
-                                <span>Consistent, valuable content that establishes your brand as an industry leader.</span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <i class="fas fa-money-bill-wave" aria-hidden="true"></i>
-                            <div>
-                                <strong>Increase Conversion Rates</strong>
-                                <span>Persuasive copy that guides prospects through your sales funnel effectively.</span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <i class="fas fa-clock" aria-hidden="true"></i>
-                            <div>
-                                <strong>Long-term ROI</strong>
-                                <span>Content continues working for your business months and years after creation.</span>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="cw-why-cta">
-                        <button class="cw-btn cw-btn-primary" id="cw-impact-contact">Request Content Strategy</button>
-                        <a href="#cw-services-section" class="cw-btn cw-btn-ghost">Explore Services</a>
-                    </div>
+        <div class="benefits-alt-list">
+            <div class="benefit-alt-item">
+                <span class="benefit-alt-icon">📚</span>
+                <div class="benefit-alt-text">
+                    <h3>Industry Expertise</h3>
+                    <p>Specialized writers with deep knowledge of multiple industries, ensuring relevant and credible
+                        content.</p>
                 </div>
+            </div>
 
-                <!-- Right column: ROI calculator + interactive elements -->
-                <div class="cw-impact-right">
-                    <!-- ROI calculator widget -->
-                    <div class="cw-roi-widget" role="form" aria-label="Content ROI calculator">
-                        <div class="cw-roi-top">
-                            <h4>Content impact — try the slider</h4>
-                            <div class="cw-roi-summary">
-                                <div class="cw-roi-level" id="cw-roi-level">Medium</div>
-                                <div class="cw-roi-amount" id="cw-roi-amount">~$0</div>
-                            </div>
-                        </div>
+            <div class="benefit-alt-item">
+                <span class="benefit-alt-icon">🔍</span>
+                <div class="benefit-alt-text">
+                    <h3>SEO Best Practices</h3>
+                    <p>All content is search-engine optimized without sacrificing readability or user engagement.</p>
+                </div>
+            </div>
 
-                        <label for="cw-roi-range" class="visually-hidden">Content investment level</label>
-                        <input id="cw-roi-range" class="cw-range" type="range" min="0" max="100" value="45" aria-valuemin="0" aria-valuemax="100" aria-valuenow="45" />
+            <div class="benefit-alt-item">
+                <span class="benefit-alt-icon">✅</span>
+                <div class="benefit-alt-text">
+                    <h3>100% Original Content</h3>
+                    <p>Plagiarism-free, unique ideas that set your brand apart from the competition.</p>
+                </div>
+            </div>
 
-                        <div class="cw-roi-bar" aria-hidden="true">
-                            <div class="cw-roi-bar-fill" id="cw-roi-bar-fill" style="width:0%"></div>
-                        </div>
+            <div class="benefit-alt-item">
+                <span class="benefit-alt-icon">🎯</span>
+                <div class="benefit-alt-text">
+                    <h3>Consistent Brand Voice</h3>
+                    <p>We maintain your brand's tone and message across all content types.</p>
+                </div>
+            </div>
 
-                        <p class="cw-roi-note">Slide to see how content investment scales potential returns (illustrative estimates)</p>
-                    </div>
+            <div class="benefit-alt-item">
+                <span class="benefit-alt-icon">⚡</span>
+                <div class="benefit-alt-text">
+                    <h3>Fast Turnaround</h3>
+                    <p>High-quality content delivered quickly to meet your deadlines.</p>
+                </div>
+            </div>
 
-                    <!-- Content benefits showcase -->
-                    <div class="cw-benefits-showcase">
-                        <div class="cw-benefit-stat">
-                            <div class="cw-stat-icon">
-                                <i class="fas fa-search"></i>
-                            </div>
-                            <div class="cw-stat-info">
-                                <span class="cw-stat-value" data-target="70">0%</span>
-                                <span class="cw-stat-label">Higher search visibility</span>
-                            </div>
-                        </div>
-
-                        <div class="cw-benefit-stat">
-                            <div class="cw-stat-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div class="cw-stat-info">
-                                <span class="cw-stat-value" data-target="3">0x</span>
-                                <span class="cw-stat-label">More lead generation</span>
-                            </div>
-                        </div>
-
-                        <div class="cw-benefit-stat">
-                            <div class="cw-stat-icon">
-                                <i class="fas fa-trophy"></i>
-                            </div>
-                            <div class="cw-stat-info">
-                                <span class="cw-stat-value" data-target="85">0%</span>
-                                <span class="cw-stat-label">Brand authority boost</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="benefit-alt-item">
+                <span class="benefit-alt-icon">📊</span>
+                <div class="benefit-alt-text">
+                    <h3>Data-Driven Approach</h3>
+                    <p>We use research and analytics to ensure every piece of content drives measurable results.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== Process Flow Section ===== -->
-    <section class="cw-process-flow">
-        <div class="cw-container">
-            <h2 class="cw-process-title">Our Content Writing Process</h2>
-            <div class="cw-timeline">
-                <div class="cw-step" data-step="1">
+    <section class="process-flow">
+        <div class="container">
+            <h2 class="section-title">Our Content Writing Process</h2>
+            <div class="timeline">
+                <div class="step" data-step="1">
                     <h3>Research & Discovery</h3>
                     <p>Understanding your business, audience, and industry to set the right tone.</p>
                 </div>
-                <div class="cw-step" data-step="2">
+                <div class="step" data-step="2">
                     <h3>Content Strategy</h3>
                     <p>Planning content structure with SEO keywords for maximum reach.</p>
                 </div>
-                <div class="cw-step" data-step="3">
+                <div class="step" data-step="3">
                     <h3>Writing & Drafting</h3>
                     <p>Creating engaging, high-quality, and audience-focused content.</p>
                 </div>
-                <div class="cw-step" data-step="4">
+                <div class="step" data-step="4">
                     <h3>Editing & Proofreading</h3>
                     <p>Polishing the draft to ensure accuracy, tone, and readability.</p>
                 </div>
-                <div class="cw-step" data-step="5">
+                <div class="step" data-step="5">
                     <h3>Delivery & Feedback</h3>
                     <p>Delivering the final content and refining based on your feedback.</p>
                 </div>
@@ -1558,133 +1408,51 @@
         </div>
     </section>
 
-    <!-- ===== Case Studies Section ===== -->
-    <section class="cw-case-study-section">
-        <div class="cw-container">
-            <div class="cw-case-study-header">
-                <h2>Case Studies & Results</h2>
-                <p>See how our content writing has transformed businesses with measurable results.</p>
+    <section class="case-study-section">
+        <div class="case-study-header">
+            <h2>Case Studies & Results</h2>
+            <p>See how our content writing has transformed businesses with measurable results.</p>
+        </div>
+
+        <div class="case-study-cards">
+            <div class="case-card" data-result="80%">
+                <h3>SEO Blog Campaign</h3>
+                <p>We created a 6-month blog strategy that boosted organic traffic and improved search engine rankings.
+                </p>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <span class="result-text"></span>
             </div>
 
-            <div class="cw-case-study-cards">
-                <div class="cw-case-card" data-result="80">
-                    <h3>SEO Blog Campaign</h3>
-                    <p>We created a 6-month blog strategy that boosted organic traffic and improved search engine rankings.</p>
-                    <div class="cw-progress-bar">
-                        <div class="cw-progress-fill"></div>
-                    </div>
-                    <span class="cw-result-text">80% increase in organic traffic</span>
+            <div class="case-card" data-result="150%">
+                <h3>Product Copy Overhaul</h3>
+                <p>Revamped product descriptions that increased conversion rates and improved customer engagement.</p>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
                 </div>
+                <span class="result-text"></span>
+            </div>
 
-                <div class="cw-case-card" data-result="150">
-                    <h3>Product Copy Overhaul</h3>
-                    <p>Revamped product descriptions that increased conversion rates and improved customer engagement.</p>
-                    <div class="cw-progress-bar">
-                        <div class="cw-progress-fill"></div>
-                    </div>
-                    <span class="cw-result-text">150% boost in conversions</span>
+            <div class="case-card" data-result="60%">
+                <h3>Email Newsletter</h3>
+                <p>Personalized email campaigns that increased click-through rates and subscriber retention.</p>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
                 </div>
-
-                <div class="cw-case-card" data-result="60">
-                    <h3>Email Newsletter</h3>
-                    <p>Personalized email campaigns that increased click-through rates and subscriber retention.</p>
-                    <div class="cw-progress-bar">
-                        <div class="cw-progress-fill"></div>
-                    </div>
-                    <span class="cw-result-text">60% higher click-through rate</span>
-                </div>
+                <span class="result-text"></span>
             </div>
         </div>
     </section>
 
-    <!-- ===== CTA Section with Consultation Form ===== -->
-    <section class="cw-cta-section" id="cw-consultation-form">
-        <div class="cw-container">
-            <div class="cw-cta-card">
-                <div class="cw-cta-grid">
-                    <!-- Left: message -->
-                    <div class="cw-cta-left">
-                        <p class="cw-services-eyebrow">GrowCraft · Get Started</p>
-                        <h2 class="cw-cta-heading">
-                            Ready to Transform Your Words into Impact?
-                        </h2>
-                        <p class="cw-cta-copy">
-                            Start with a free content strategy consultation. We'll analyze your current content, identify opportunities, 
-                            and create a roadmap to amplify your brand voice.
-                        </p>
-
-                        <ul class="cw-cta-features" role="list">
-                            <li><strong>15–30 min</strong> strategy consultation</li>
-                            <li><strong>Content audit</strong> & recommendations</li>
-                            <li><strong>Custom roadmap</strong> for your business</li>
-                        </ul>
-
-                        <div class="cw-cta-actions">
-                            <button id="cw-cta-primary" class="cw-btn cw-btn-primary" data-magnetic>
-                                Get Free Content Strategy
-                                <span class="cw-btn-orb" aria-hidden="true"></span>
-                            </button>
-
-                            <a id="cw-cta-mail" class="cw-btn cw-btn-ghost" href="mailto:hello@growcraft.com?subject=Content%20Writing%20Inquiry&body=Hi%20GrowCraft,%0A%0AI%27d%20like%20to%20discuss%20content%20writing%20services.%0A%0ACompany:%20%0AContent%20Needs:%20%0APreferred%20Contact:%20%0A%0AThanks!">
-                                Or email us directly
-                            </a>
-                        </div>
-
-                        <div class="cw-trust">
-                            <div class="cw-trust-item"><strong id="cw-tt-written">500+</strong><span>pieces written</span></div>
-                            <div class="cw-trust-item"><strong id="cw-tt-response">24hr</strong><span>response time</span></div>
-                            <div class="cw-trust-item"><strong id="cw-tt-clients">50+</strong><span>happy clients</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Right: contact form -->
-                    <div class="cw-cta-right">
-                        <form id="cw-cta-form" class="cw-cta-form" aria-label="Request content strategy form" autocomplete="on">
-                            <input type="hidden" name="source" value="content-writing-page">
-                            <label class="cw-field">
-                                <span class="cw-label">Content Type</span>
-                                <select id="cw-service" name="service" aria-label="Select content type">
-                                    <option value="general">General content strategy</option>
-                                    <option value="blog-writing">Blog & article writing</option>
-                                    <option value="website-copy">Website copywriting</option>
-                                    <option value="seo-content">SEO content creation</option>
-                                    <option value="social-media">Social media content</option>
-                                </select>
-                            </label>
-
-                            <label class="cw-field">
-                                <span class="cw-label">Full name<span class="req"> *</span></span>
-                                <input id="cw-name" name="name" type="text" required placeholder="Your full name" />
-                            </label>
-
-                            <label class="cw-field">
-                                <span class="cw-label">Work email<span class="req"> *</span></span>
-                                <input id="cw-email" name="email" type="email" required placeholder="you@company.com" />
-                            </label>
-
-                            <label class="cw-field">
-                                <span class="cw-label">Company</span>
-                                <input id="cw-company" name="company" type="text" placeholder="Company name (optional)" />
-                            </label>
-
-                            <label class="cw-field">
-                                <span class="cw-label">Content goals</span>
-                                <textarea id="cw-message" name="message" placeholder="What are your main content objectives? (optional)"></textarea>
-                            </label>
-
-                            <div class="cw-form-row">
-                                <button id="cw-submit" type="submit" class="cw-btn cw-btn-primary">
-                                    <span class="cw-submit-label">Request strategy call</span>
-                                    <svg class="cw-btn-loader" viewBox="0 0 50 50" aria-hidden="true"><circle cx="25" cy="25" r="20" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="4"/><path d="M25 5 a20 20 0 0 1 0 40" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/></svg>
-                                </button>
-                            </div>
-
-                            <div id="cw-form-status" class="cw-form-status" role="status" aria-live="polite"></div>
-
-                            <p class="cw-privacy">We respect your privacy. Information provided will be used only to arrange this consultation.</p>
-                        </form>
-                    </div>
-                </div>
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Words into Impact?</h2>
+            <p>We craft engaging, SEO-friendly, and value-packed content that connects with your audience and drives
+                results.</p>
+            <div class="cta-button">
+                <a href="#contact" class="btn-primary">🚀 Get Started Today</a>
+                <a href="#portfolio" class="btn-secondary">See Our Work</a>
             </div>
         </div>
     </section>
@@ -1789,304 +1557,134 @@
     
     <!-- Back to Top -->
     <button id="scrollToTopBtn" title="Go to top">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
 
     <script>
-        // ===== Hero Section Animations =====
-        (function(){
-            const root = document.getElementById('cw-hero-section');
-            const penWrap = document.getElementById('cw-pen');
-            const btnQuote = document.getElementById('cw-btn-quote');
-            const btnPortfolio = document.getElementById('cw-btn-portfolio');
-            const roiEl = document.getElementById('cw-roi');
+        // //Show/hide the back-to-top button on scroll
+        // window.onscroll = function () {
+        //     const btn = document.getElementById("backToTop");
+        //     if (!btn) return;
+        //     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        //         btn.style.display = "block";
+        //     } else {
+        //         btn.style.display = "none";
+        //     }
+        // };
 
-            // ---- Content ROI Counter (counts up on view) ----
-            let counted = false;
-            const targetROI = Math.floor(150 + Math.random() * 200); // 150-350% 
-            const io = new IntersectionObserver((entries)=>{
-                entries.forEach(e=>{
-                    if(e.isIntersecting && !counted){
-                        counted = true;
-                        let val = 0;
-                        const step = () => {
-                            val += Math.max(1, Math.round((targetROI - val) * 0.14));
-                            if(val >= targetROI) { val = targetROI; }
-                            roiEl.textContent = val;
-                            if(val < targetROI) requestAnimationFrame(step);
-                        };
-                        requestAnimationFrame(step);
-                    }
-                });
-            }, { threshold: 0.35 });
-            if(roiEl) io.observe(root);
+        // // Scroll to top smoothly when back-to-top button is clicked
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     const btn = document.getElementById("backToTop");
+        //     if (btn) {
+        //         btn.addEventListener("click", function () {
+        //             window.scrollTo({ top: 0, behavior: "smooth" });
+        //         });
+        //     }
+        // });
 
-            // ---- Parallax tilt on pen illustration ----
-            const tiltStrength = 8;
-            if(penWrap) {
-                penWrap.addEventListener('pointermove', (e)=>{
-                    const r = penWrap.getBoundingClientRect();
-                    const cx = r.left + r.width/2;
-                    const cy = r.top + r.height/2;
-                    const dx = (e.clientX - cx) / (r.width/2);
-                    const dy = (e.clientY - cy) / (r.height/2);
-                    const rx = (+dy * tiltStrength).toFixed(2);
-                    const ry = (-dx * tiltStrength).toFixed(2);
-                    penWrap.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
-                });
-                penWrap.addEventListener('pointerleave', ()=>{ penWrap.style.transform = 'rotateX(0deg) rotateY(0deg)'; });
-            }
+        // Get the button
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-            // ---- Magnetic hover for primary button ----
-            if(btnQuote) {
-                btnQuote.addEventListener('mousemove', (e)=>{
-                    const r = e.currentTarget.getBoundingClientRect();
-                    const x = (e.clientX - (r.left + r.width/2)) / (r.width/2);
-                    const y = (e.clientY - (r.top + r.height/2)) / (r.height/2);
-                    e.currentTarget.style.transform = `translate(${x*6}px, ${y*6}px)`;
-                });
-                btnQuote.addEventListener('mouseleave', (e)=>{ e.currentTarget.style.transform = 'translate(0,0)'; });
-            }
+  // Show button when scrolled down 200px
+  window.addEventListener("scroll", () => {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  });
 
-            // ---- Portfolio preview pulse ----
-            if(btnPortfolio) {
-                btnPortfolio.addEventListener('click', ()=>{
-                    btnPortfolio.style.animation = 'pulse 0.6s ease-in-out';
-                    setTimeout(() => btnPortfolio.style.animation = '', 600);
-                });
-            }
-        })();
+  // Scroll to top when button clicked
+  scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
-        // ===== Service Cards Animation =====
-        (function(){
-            const cards = Array.from(document.querySelectorAll('.cw-service-card'));
-            
-            // Reveal cards on scroll
-            const io = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting) {
-                        entry.target.classList.add('in-view');
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.18 });
 
-            cards.forEach(c => io.observe(c));
+        const modal = document.getElementById("contactModal");
+        const openBtn = document.getElementById("cta-btn");
+        const closeBtn = document.getElementById("closeModal");
 
-            // Service card interactions
-            cards.forEach(card => {
-                const service = card.dataset.service;
-                card.addEventListener('click', () => {
-                    // Simple alert for now - can be expanded to show detailed modal
-                    const title = card.querySelector('.cw-service-title').textContent;
-                    alert(`Learn more about our ${title} service! Contact us for detailed information.`);
-                });
-            });
-        })();
-
-        // ===== Content ROI Calculator =====
-        (function(){
-            const range = document.getElementById('cw-roi-range');
-            const fill = document.getElementById('cw-roi-bar-fill');
-            const level = document.getElementById('cw-roi-level');
-            const amount = document.getElementById('cw-roi-amount');
-
-            if(!range || !fill || !level || !amount) return;
-
-            // Base content investment ROI (illustrative)
-            const baseROI = 5000; // example base ROI in USD
-
-            function updateROIUI(v) {
-                const pct = Math.max(0, Math.min(100, Number(v)));
-                fill.style.width = pct + '%';
-                range.setAttribute('aria-valuenow', String(pct));
-
-                // Map to descriptive level
-                let text = 'Low';
-                if(pct > 70) text = 'High';
-                else if(pct > 40) text = 'Medium';
-                level.textContent = text;
-
-                // Compute illustrative ROI estimate (exponential curve for content)
-                const multiplier = 1 + (pct / 100) * 4; // 1x to 5x multiplier
-                const est = Math.round(baseROI * multiplier);
-                amount.textContent = '~$' + est.toLocaleString();
-            }
-
-            updateROIUI(range.value);
-            range.addEventListener('input', (e) => updateROIUI(e.target.value));
-
-            // Animate stats on scroll
-            const statValues = document.querySelectorAll('.cw-stat-value[data-target]');
-            const statObserver = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting) {
-                        const valEl = entry.target;
-                        const target = Number(valEl.dataset.target || 0);
-                        let current = 0;
-                        const duration = 1200;
-                        const start = performance.now();
-                        function step(ts) {
-                            const t = Math.min(1, (ts - start) / duration);
-                            current = Math.round(target * t);
-                            if(valEl.textContent.includes('x')) {
-                                valEl.textContent = current + 'x';
-                            } else {
-                                valEl.textContent = current + '%';
-                            }
-                            if(t < 1) requestAnimationFrame(step);
-                        }
-                        requestAnimationFrame(step);
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.25 });
-
-            statValues.forEach(s => statObserver.observe(s));
-        })();
-
-        // ===== Case Studies Animation =====
-        (function(){
-            const caseCards = document.querySelectorAll('.cw-case-card');
-            
-            caseCards.forEach(card => {
-                const progressFill = card.querySelector('.cw-progress-fill');
-                const resultValue = card.dataset.result || '0';
-                
-                if(progressFill) {
-                    const observer = new IntersectionObserver(entries => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                // Animate progress bar
-                                setTimeout(() => {
-                                    progressFill.style.width = Math.min(100, resultValue) + '%';
-                                }, 300);
-                                observer.unobserve(card);
-                            }
-                        });
-                    }, { threshold: 0.4 });
-
-                    observer.observe(card);
-                }
-            });
-        })();
-
-        // ===== Contact Form Handling =====
-        (function(){
-            const primary = document.getElementById('cw-cta-primary');
-            const form = document.getElementById('cw-cta-form');
-            const status = document.getElementById('cw-form-status');
-            const submitBtn = document.getElementById('cw-submit');
-
-            if(!form) return;
-
-            // Magnetic hover for primary CTA
-            document.querySelectorAll('[data-magnetic]').forEach(el=>{
-                el.addEventListener('pointermove', (e)=>{
-                    const r = el.getBoundingClientRect();
-                    const x = (e.clientX - (r.left + r.width/2)) / (r.width/2);
-                    const y = (e.clientY - (r.top + r.height/2)) / (r.height/2);
-                    el.style.transform = `translate(${x*6}px, ${y*6}px)`;
-                });
-                el.addEventListener('pointerleave', ()=> el.style.transform = '');
-            });
-
-            // Pre-fill form if stored
-            try {
-                const saved = JSON.parse(localStorage.getItem('growcraft_content_contact') || '{}');
-                if(saved.name) document.getElementById('cw-name').value = saved.name;
-                if(saved.email) document.getElementById('cw-email').value = saved.email;
-                if(saved.company) document.getElementById('cw-company').value = saved.company;
-            } catch(e){/* ignore */ }
-
-            // Submit form handling
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                status.textContent = '';
-                
-                // Simple validation
-                const name = document.getElementById('cw-name').value.trim();
-                const email = document.getElementById('cw-email').value.trim();
-                if(!name || !email || !validateEmail(email)) {
-                    status.textContent = 'Please enter a valid name and email.';
-                    status.style.color = '#ff9aa2';
-                    return;
-                }
-
-                // Save for next time
-                try {
-                    localStorage.setItem('growcraft_content_contact', JSON.stringify({ 
-                        name, 
-                        email, 
-                        company: document.getElementById('cw-company').value.trim() 
-                    }));
-                } catch(e){}
-
-                // Show loading state
-                submitBtn.disabled = true;
-                submitBtn.querySelector('.cw-submit-label').textContent = 'Sending...';
-                const loader = submitBtn.querySelector('.cw-btn-loader');
-                if(loader) loader.style.display = 'inline-block';
-
-                // Simulate submission
-                setTimeout(()=>{
-                    if(loader) loader.style.display = 'none';
-                    submitBtn.disabled = false;
-                    submitBtn.querySelector('.cw-submit-label').textContent = 'Sent!';
-                    status.textContent = 'Thanks! We\'ll contact you within 24 hours to schedule your content strategy consultation.';
-                    status.style.color = '#4ecdc4';
-                    
-                    // Success animation
-                    submitBtn.animate([
-                        { transform: 'scale(1)' }, 
-                        { transform: 'scale(1.05)' }, 
-                        { transform: 'scale(1)' }
-                    ], { duration: 420, easing: 'cubic-bezier(.2,.9,.2,1)' });
-                    
-                    // Reset
-                    setTimeout(()=> {
-                        submitBtn.querySelector('.cw-submit-label').textContent = 'Request strategy call';
-                        form.reset();
-                    }, 3000);
-                }, 1200);
-            });
-
-            function validateEmail(mail) {
-                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail);
-            }
-        })();
-
-        // ===== Back to Top Button =====
-        (function(){
-            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-            if(!scrollToTopBtn) return;
-
-            window.addEventListener("scroll", () => {
-                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                    scrollToTopBtn.style.display = "block";
-                } else {
-                    scrollToTopBtn.style.display = "none";
-                }
-            });
-
-            scrollToTopBtn.addEventListener("click", () => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
-        })();
-
-        // ===== Accessibility & Keyboard Navigation =====
-        document.addEventListener('keydown', (e)=>{
-            if(e.key === 'Tab') document.body.classList.add('user-tabbing');
+        openBtn.addEventListener("click", () => {
+            modal.style.display = "flex";
         });
 
-        // Respect reduced-motion preference
-        if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            document.querySelectorAll('[data-magnetic]').forEach(el => { 
-                el.style.transition = 'none'; 
+        closeBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+
+
+        document.querySelectorAll(".service-card").forEach(card => {
+            card.addEventListener("click", () => {
+                alert(`Learn more about our ${card.querySelector("h3").innerText} service!`);
             });
-        }
+        });
+
+        const benefitItems = document.querySelectorAll(".benefit-alt-item");
+
+        const revealOnScroll = () => {
+            benefitItems.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    item.style.opacity = "1";
+                    item.style.transform = "translateY(0)";
+                }
+            });
+        };
+
+        benefitItems.forEach(item => {
+            item.style.opacity = "0";
+            item.style.transform = "translateY(20px)";
+            item.style.transition = "all 0.6s ease";
+        });
+
+        window.addEventListener("scroll", revealOnScroll);
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const timeline = document.querySelector(".timeline");
+
+            let scrollAmount = 0;
+            setInterval(() => {
+                if (timeline.scrollLeft + timeline.clientWidth >= timeline.scrollWidth) {
+                    timeline.scrollTo({ left: 0, behavior: "smooth" });
+                } else {
+                    scrollAmount += 280;
+                    timeline.scrollTo({ left: scrollAmount, behavior: "smooth" });
+                }
+            }, 4000);
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const caseCards = document.querySelectorAll(".case-card");
+
+            caseCards.forEach(card => {
+                const fill = card.querySelector(".progress-fill");
+                const resultText = card.querySelector(".result-text");
+                const resultValue = card.getAttribute("data-result");
+
+                // Animate when card comes into view
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            fill.style.width = resultValue;
+                            resultText.textContent = resultValue + " Growth";
+                            observer.unobserve(card);
+                        }
+                    });
+                }, { threshold: 0.4 });
+
+                observer.observe(card);
+            });
+        });
+
     </script>
     <script src="darkMode.js"></script>
 </body>
-</html>
 
+</html>
