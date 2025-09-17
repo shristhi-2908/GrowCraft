@@ -237,8 +237,10 @@ h5 {
 .bg-body-tertiary {
   background-color: transparent !important;
 }
-.icon {
-  height: 6.5rem;
+.icon {  
+  font-size: 2rem;
+  border-radius: 20px;
+  margin-right: 1rem;
 }
 
 .training-links {
@@ -1609,12 +1611,6 @@ body.dark .mb-4:hover {
 .btn-group:hover .tooltip-box {
   visibility: visible;
   opacity: 1;
-}
-
-.custom-footer-green {
-  background: linear-gradient(180deg, #4be04b 0%, #6eea6e 100%);
-  color: #222;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .custom-footer-green .footer-underline {
