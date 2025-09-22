@@ -103,6 +103,14 @@
       width: 100%;
     }
 
+<<<<<<< HEAD
+    .professional-footer .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0 !important; /* or any specific gap you need for the footer */
+    align-items: stretch !important;
+}
+=======
      /* Professional Footer */
   .professional-footer {
     background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
@@ -371,6 +379,7 @@
   }
 }
 
+>>>>>>> upstream/master
 
     /* Section Wrapper */
     .hero {
@@ -380,7 +389,7 @@
       padding: clamp(72px, 8vw, 120px) 24px 72px;
     }
 
-    .container { max-width: 1200px; margin: 0 auto; }
+    .container { max-width: 1140px; margin: 0 auto; }
 
     /* Background aesthetics */
     .bg-grid {
@@ -641,6 +650,7 @@
         height: 50px;
         font-size: 18px;
       }
+
     }
   </style>
 </head>
@@ -827,7 +837,13 @@
       </div>
     </div>
   </section>
+  
 
+<<<<<<< HEAD
+ <!-- Footer -->
+  
+  
+=======
   <!-- Professional Footer -->
 <footer class="professional-footer">
   <div class="container">
@@ -944,14 +960,25 @@
   document.getElementById("currentYear").textContent = new Date().getFullYear();
 </script>
 
+>>>>>>> upstream/master
   <!-- Enhanced Scroll to Top Button -->
   <button id="backToTop" title="Go to top" type="button">
     <i class="fas fa-chevron-up"></i>
   </button>
 
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('src/components/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+  </script>
+
   <script src="src/script.js"></script>
   <script src="src/utils.js"></script>
   <script src="src/darkMode.js"></script>
+ 
 
   <script>
     // Theme handling
