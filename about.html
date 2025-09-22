@@ -103,6 +103,14 @@
       width: 100%;
     }
 
+<<<<<<< HEAD
+    .professional-footer .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0 !important; /* or any specific gap you need for the footer */
+    align-items: stretch !important;
+}
+=======
      /* Professional Footer */
   .professional-footer {
     background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
@@ -371,6 +379,7 @@
   }
 }
 
+>>>>>>> upstream/master
 
     /* Section Wrapper */
     .hero {
@@ -380,7 +389,7 @@
       padding: clamp(72px, 8vw, 120px) 24px 72px;
     }
 
-    .container { max-width: 1200px; margin: 0 auto; }
+    .container { max-width: 1140px; margin: 0 auto; }
 
     /* Background aesthetics */
     .bg-grid {
@@ -641,6 +650,7 @@
         height: 50px;
         font-size: 18px;
       }
+
     }
   </style>
 </head>
@@ -705,7 +715,6 @@
         </div>
         <div class="actions">
           <button class="ghost reveal in" id="learnMoreBtn" aria-label="Skip to story">Our Story</button>
-          <button class="theme-toggle reveal in" id="themeToggle" aria-pressed="false" aria-label="Toggle theme">☀️</button>
         </div>
       </div>
 
@@ -828,7 +837,13 @@
       </div>
     </div>
   </section>
+  
 
+<<<<<<< HEAD
+ <!-- Footer -->
+  
+  
+=======
   <!-- Professional Footer -->
 <footer class="professional-footer">
   <div class="container">
@@ -884,23 +899,46 @@
         </ul>
       </div>
 
-    
-      <div class="col-lg-3 col-md-6 mb-4">
-        <h5 class="footer-title">Get In Touch</h5>
-        <div class=" contact-info">
-          <div class="contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@growcraft.com">info@growcraft.com</a></div>
-          <div class="contact-item"><i class="fas fa-phone"></i><a href="tel:+919999999999">+91 999 999 999</a></div>
-          <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>ABC Street, XYZ City, India</span></div>
-        </div>
-        <div class="social-links ">
-          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f social-link"></i></a>
-          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram social-link"></i></a>
-          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in social-link"></i></a>
-          <a href="https://github.com" target="_blank"><i class="fab fa-github social-link" social-link></i></a>
-          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter social-link"></i></a>
-        </div>
-      </div>
+<!-- Contact -->
+<div class="col-lg-4 col-md-6 mb-4">
+  <h5 class="footer-title">Get In Touch</h5>
+  <div class="contact-info mb-3">
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:info@growcraft.com">info@growcraft.com</a>
     </div>
+    <div class="contact-item">
+      <i class="fas fa-phone"></i>
+      <a href="tel:+919999999999">+91 999 999 999</a>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>ABC Street, XYZ City, India</span>
+    </div>
+  </div>
+
+  <div class="social-section">
+    <h6 class="social-title">Follow Us</h6>
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
 
     <!-- Footer Bottom -->
     <div class="footer-bottom text-center py-3 mt-3">
@@ -922,14 +960,25 @@
   document.getElementById("currentYear").textContent = new Date().getFullYear();
 </script>
 
+>>>>>>> upstream/master
   <!-- Enhanced Scroll to Top Button -->
   <button id="backToTop" title="Go to top" type="button">
     <i class="fas fa-chevron-up"></i>
   </button>
 
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('src/components/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+  </script>
+
   <script src="src/script.js"></script>
   <script src="src/utils.js"></script>
   <script src="src/darkMode.js"></script>
+ 
 
   <script>
     // Theme handling

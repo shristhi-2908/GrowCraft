@@ -336,6 +336,12 @@
     color: #00ffe7 !important;
   }
 
+  .row.g-4.py-4 {
+  display: flex;
+  flex-wrap: wrap; /* ensures columns stay in one row until very narrow screens */
+}
+
+
   /* Responsive Design */
   @media (max-width: 768px) {
     .professional-footer {
@@ -348,7 +354,7 @@
     }
 
     .footer-nav {
-      justify-content: flex-start;
+      justify-content: center;
     }
 
     .footer-bottom .row {
