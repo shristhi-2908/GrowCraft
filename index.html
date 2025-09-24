@@ -18,57 +18,149 @@
 
   <style>
 
-   /* Glassmorphic Services Flashcards */
-    .card-services {
-      background: rgba(39, 174, 96, 0.18);
-      border-radius: 18px;
-      box-shadow: 0 8px 32px rgba(39, 174, 96, 0.18);
-      border: 1px solid rgba(39, 174, 96, 0.25);
-      backdrop-filter: blur(12px);
-      color: #222;
-      transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
-      position: relative;
-      overflow: hidden;
-      animation: fadeInUp 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-    }
+   /* Glassmorphic Card */
+.card-services {
+  background: rgba(39, 174, 96, 0.18);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(39, 174, 96, 0.18);
+  border: 1px solid rgba(39, 174, 96, 0.25);
+  backdrop-filter: blur(12px);
+  color: #222;
+  transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
-    .card-services:hover {
-      box-shadow: 0 16px 48px rgba(39, 174, 96, 0.28);
-      background: rgba(39, 174, 96, 0.28);
-      transform: translateY(-6px) scale(1.03);
-    }
+.card-services:hover {
+  box-shadow: 0 16px 48px rgba(39, 174, 96, 0.28);
+  background: rgba(39, 174, 96, 0.28);
+  transform: translateY(-6px) scale(1.03);
+}
 
-    .card-services .card-title {
-      color: #27ae60;
-      font-weight: 700;
-      font-size: 1.3rem;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.5em;
-    }
+/* Card Title & Icon */
+.card-services .card-title {
+  color: #27ae60;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5em;
+}
 
-    .card-services .svg-img {
-      margin-bottom: 0.5em;
-    }
+.card-services .svg-img {
+  margin-bottom: 0.5em;
+}
 
-    .card-services .btn-group button {
-      background: #27ae60;
-      color: #fff;
-      border-radius: 8px !important;
-      border: none;
-      margin: 0 0.2em;
-      transition: background 0.2s, transform 0.2s;
-    }
+/* Summary */
+.card-services .summary {
+  font-size: 1.05rem;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
 
-    .card-services .btn-group button:hover {
-      background: #43e97b;
-      color: #222;
-      transform: scale(1.08);
-    }
+/* Extra Content (Read More) */
+.card-services .extra {
+  font-size: 0.95rem;
+  color: #222;
+  text-align: justify;
+  line-height: 1.5;
+  margin-top: 0.5em;
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+  overflow: hidden;
+}
 
-    .card-services .card-text {
-      font-size: 1.05rem;
-      margin-bottom: 0.5em;
-    }
+.card-services .extra.d-none {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+}
+
+.card-services .extra:not(.d-none) {
+  max-height: 500px; /* adjust for content length */
+  opacity: 1;
+  padding: 0.5em 0;
+}
+
+/* Feature List */
+.card-services .service-features {
+  list-style-type: disc;
+  margin: 0.5em 0;
+  padding-left: 1.2em;
+  color: #27ae60;
+  font-size: 0.95rem;
+}
+
+/* Stats */
+.card-services .service-stats {
+  margin-top: 0.5em;
+  gap: 0.5em;
+}
+
+.card-services .stat-badge {
+  background: rgba(39, 174, 96, 0.8);
+  color: #fff;
+  padding: 0.25em 0.6em;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Icons */
+.card-services .service-icons img {
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.card-services .service-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* Extra CTA Buttons */
+.card-services .extra-cta a.btn {
+  font-size: 0.85rem;
+  border-radius: 8px;
+  padding: 0.35em 0.75em;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.card-services .extra-cta a.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Main Card Buttons */
+.card-services .btn-group button {
+  background: #27ae60;
+  color: #fff;
+  border-radius: 8px !important;
+  border: none;
+  margin: 0 0.2em;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.card-services .btn-group button:hover {
+  background: #43e97b;
+  color: #222;
+  transform: scale(1.08);
+}
+
+/* Toggle Button */
+.card-services .toggle-btn {
+  background: rgba(39, 174, 96, 0.85);
+  color: #fff;
+  border-radius: 8px !important;
+  border: none;
+  padding: 0.35em 0.8em;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.card-services .toggle-btn:hover {
+  background: #43e97b;
+  color: #222;
+  transform: scale(1.05);
+}
+
 
     /* About Us Glassmorphic Box */
     .about-card-box {
@@ -1663,182 +1755,386 @@
       <div class="row g-4 justify-content-center">
 
         <!-- First Row - 2 Cards -->
-        <div class="col-12 col-md-6 col-lg-5">
-          <div class="card card-services h-100 d-flex flex-column" onclick="window.location.href='src/digital-marketing.html'" style="cursor: pointer;">
-            <div class="card-body d-flex flex-column align-items-center">
-              <div class="svg-img">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"
-                  style="color: #ff689b">
-                  <line x1="18" y1="20" x2="18" y2="10"></line>
-                  <line x1="12" y1="20" x2="12" y2="4"></line>
-                  <line x1="6" y1="20" x2="6" y2="14"></line>
-                </svg>
-              </div>
-              <h5 class="card-title mt-2">Digital Marketing</h5>
-              <p class="card-text summary text-center">
-                In today's digital-driven age, Marketing means Digital Marketing...
-              </p>
-              <p class="card-text extra d-none text-center">
-                Digital Marketing plays a vital role in reaching target customers and enhancing brand
-                visibility. Our
-                team specializes in SEO, PPC, social media, email campaigns, and content marketing.
-              </p>
-              <div class="btn-group">
-                <button class="btn btn-sm btn-outline-primary toggle-btn rounded" onclick="event.stopPropagation();">Read More</button>
-                <a href="src/digital-marketing.html" onclick="event.stopPropagation();"><button class="btn btn-sm btn-outline-primary">Explore</button></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-5">
-          <div class="card card-services h-100 d-flex flex-column">
-            <div class="card-body d-flex flex-column align-items-center">
-              <div class="svg-img">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout"
-                  style="color: #41cf2e">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="3" y1="9" x2="21" y2="9"></line>
-                  <line x1="9" y1="21" x2="9" y2="9"></line>
-                </svg>
-              </div>
-              <h5 class="card-title mt-2">Website Development</h5>
-              <p class="card-text summary text-center">
-                A website is often the first impression. We make it exceptional...
-              </p>
-              <p class="card-text extra d-none text-center">
-                A well-designed website increases brand trust and customer engagement. We deliver
-                responsive, aesthetic,
-                and performance-optimized websites aligned with your goals.
-              </p>
-              <div class="btn-group">
-                <button class="btn btn-sm btn-outline-primary toggle-btn rounded">Read More</button>
-                <a href="src/web.html"><button class="btn btn-sm btn-outline-primary">Explore</button></a>
-              </div>
-            </div>
-          </div>
+<div class="col-12 col-md-6 col-lg-5">
+  <div class="card card-services h-100 d-flex flex-column" style="cursor: pointer;">
+    <div class="card-body d-flex flex-column align-items-center">
+      
+      <!-- Icon -->
+      <div class="svg-img">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"
+          style="color: #ff689b">
+          <line x1="18" y1="20" x2="18" y2="10"></line>
+          <line x1="12" y1="20" x2="12" y2="4"></line>
+          <line x1="6" y1="20" x2="6" y2="14"></line>
+        </svg>
+      </div>
+
+      <!-- Title -->
+      <h5 class="card-title mt-2">Digital Marketing</h5>
+
+      <!-- Summary -->
+      <p class="card-text summary text-center">
+        In today's digital-driven age, Marketing means Digital Marketing...
+      </p>
+
+      <!-- Extra Interactive Content -->
+      <div class="card-text extra d-none text-center w-100">
+        <p>
+          Digital Marketing plays a vital role in reaching target customers and enhancing brand visibility.
+          Our team specializes in SEO, PPC, social media, email campaigns, and content marketing.
+        </p>
+
+        <!-- Features -->
+        <ul class="service-features text-start px-3">
+          <li>SEO Optimization for higher search rankings</li>
+          <li>Targeted PPC Campaigns</li>
+          <li>Social Media Strategy & Management</li>
+          <li>Email Marketing Campaigns</li>
+          <li>Content Marketing for brand awareness</li>
+        </ul>
+
+        <!-- Stats -->
+        <div class="service-stats d-flex justify-content-around mt-2">
+          <span class="stat-badge">100+ Campaigns</span>
+          <span class="stat-badge">50K+ Leads</span>
+          <span class="stat-badge">30% Avg ROI</span>
         </div>
 
-        <!-- Second Row - 2 Cards -->
+       
+        <!-- Call to Actions -->
+        <div class="extra-cta mt-3 d-flex gap-2 justify-content-center">
+          <a class="btn btn-sm btn-custom-purple">Case Study</a>
+          <a href="src/contact.html" class="btn btn-sm btn-outline-primary">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-group mt-3">
+        <button class="btn btn-sm btn-outline-primary toggle-btn rounded">Read More</button>
+        <a href="src/digital-marketing.html"><button class="btn btn-sm btn-outline-primary">Explore</button></a>
+      </div>
+    </div>
+  </div>
+</div>
         <div class="col-12 col-md-6 col-lg-5">
-          <div class="card card-services h-100 d-flex flex-column">
-            <div class="card-body d-flex flex-column align-items-center">
-              <div class="svg-img">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"
-                  style="color: #2282ff">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
-              </div>
-              <h5 class="card-title mt-2">Graphic Design</h5>
-              <p class="card-text summary text-center">
-                Stunning visuals to elevate your brand in a crowded space...
-              </p>
-              <p class="card-text extra d-none text-center">
-                From branding to social media, our designers craft engaging graphics that communicate
-                effectively and
-                leave a lasting impression.
-              </p>
-              <div class="btn-group">
-                <button class="btn btn-sm btn-outline-primary toggle-btn rounded">Read More</button>
-                <a href="src/graphic_design.html"><button class="btn btn-sm btn-outline-primary">Explore</button></a>
-              </div>
-            </div>
-          </div>
+  <div class="card card-services h-100 d-flex flex-column" style="cursor: pointer;">
+    <div class="card-body d-flex flex-column align-items-center">
+      
+      <!-- Icon -->
+      <div class="svg-img">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout"
+          style="color: #41cf2e">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="3" y1="9" x2="21" y2="9"></line>
+          <line x1="9" y1="21" x2="9" y2="9"></line>
+        </svg>
+      </div>
+
+      <!-- Title -->
+      <h5 class="card-title mt-2">Website Development</h5>
+
+      <!-- Summary -->
+      <p class="card-text summary text-center">
+        A website is often the first impression. We make it exceptional...
+      </p>
+
+      <!-- Extra Interactive Content -->
+      <div class="card-text extra d-none text-center w-100">
+        <p>
+          A well-designed website increases brand trust and customer engagement. We deliver responsive, aesthetic, 
+          and performance-optimized websites aligned with your business goals.
+        </p>
+
+        <!-- Features -->
+        <ul class="service-features text-start px-3">
+          <li>Responsive design for all devices</li>
+          <li>High-performance and fast loading</li>
+          <li>SEO-friendly structure</li>
+          <li>User-friendly navigation & UI/UX design</li>
+          <li>Integration with APIs and third-party tools</li>
+        </ul>
+
+        <!-- Stats -->
+        <div class="service-stats d-flex justify-content-around mt-2">
+          <span class="stat-badge">50+ Projects</span>
+          <span class="stat-badge">20K+ Visitors/month</span>
+          <span class="stat-badge">95% Client Satisfaction</span>
         </div>
 
 
-        <div class="col-12 col-md-6 col-lg-5">
-          <div class="card card-services h-100 d-flex flex-column">
-            <div class="card-body d-flex flex-column align-items-center">
-              <div class="svg-img">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"
-                  style="color: #8660fe">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-              </div>
-              <h5 class="card-title mt-2">Social Media Management</h5>
-              <p class="card-text summary text-center">
-                From posts to stories, we manage your online presence with style...
-              </p>
-              <p class="card-text extra d-none text-center">
-                We help you stay consistent and engaging on all platforms. Our strategies increase audience
-                retention
-                and brand loyalty.
-              </p>
-              <div class="btn-group">
-                <button class="btn btn-sm btn-outline-primary toggle-btn rounded">Read More</button>
-                <a href="src/social-media.html"><button class="btn btn-sm btn-outline-primary">Explore</button></a>
-              </div>
-            </div>
-          </div>
+        <!-- Call to Actions -->
+        <div class="extra-cta mt-3 d-flex gap-2 justify-content-center">
+          <a  class="btn btn-sm btn-custom-purple">Portfolio</a>
+          <a href="src/contact.html" class="btn btn-sm btn-outline-primary">Contact Us</a>
         </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-group mt-3">
+        <button class="btn btn-sm btn-outline-primary toggle-btn rounded">Read More</button>
+        <a href="src/web.html"><button class="btn btn-sm btn-outline-primary">Explore</button></a>
+      </div>
+
+    </div>
+  </div>
+
+        </div>
+
+       <div class="col-12 col-md-6 col-lg-5">
+  <div class="card card-services h-100 d-flex flex-column" style="cursor: pointer;">
+    <div class="card-body d-flex flex-column align-items-center">
+      
+      <!-- Icon -->
+      <div class="svg-img">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"
+          style="color: #2282ff">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+      </div>
+
+      <!-- Title -->
+      <h5 class="card-title mt-2">Graphic Design</h5>
+
+      <!-- Summary -->
+      <p class="card-text summary text-center">
+        Stunning visuals to elevate your brand in a crowded space...
+      </p>
+
+      <!-- Extra Interactive Content -->
+      <div class="card-text extra d-none text-center w-100">
+        <p>
+          From branding to social media, our designers craft engaging graphics that communicate effectively 
+          and leave a lasting impression.
+        </p>
+
+        <!-- Features -->
+        <ul class="service-features text-start px-3">
+          <li>Logo and Brand Identity Design</li>
+          <li>Social Media Graphics & Banners</li>
+          <li>Marketing Collateral Design</li>
+          <li>Illustrations and Infographics</li>
+          <li>UI/UX Visual Design for Web & Apps</li>
+        </ul>
+
+        <!-- Stats -->
+        <div class="service-stats d-flex justify-content-around mt-2">
+          <span class="stat-badge">200+ Projects</span>
+          <span class="stat-badge">150+ Happy Clients</span>
+          <span class="stat-badge">5 Awards Won</span>
+        </div>
+
+        <!-- Call to Actions -->
+        <div class="extra-cta mt-3 d-flex gap-2 justify-content-center">
+          <a  class="btn btn-sm btn-custom-purple">Portfolio</a>
+          <a href="src/contact.html" class="btn btn-sm btn-outline-primary">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-group mt-3">
+        <button class="btn btn-sm btn-outline-primary toggle-btn rounded">Read More</button>
+        <a href="src/graphic_design.html"><button class="btn btn-sm btn-outline-primary">Explore</button></a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+      <div class="col-12 col-md-6 col-lg-5">
+  <div class="card card-services h-100 d-flex flex-column" style="cursor: pointer;">
+    <div class="card-body d-flex flex-column align-items-center">
+      
+      <!-- Icon -->
+      <div class="svg-img">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"
+          style="color: #8660fe">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </div>
+
+      <!-- Title -->
+      <h5 class="card-title mt-2">Social Media Management</h5>
+
+      <!-- Summary -->
+      <p class="card-text summary text-center">
+        From posts to stories, we manage your online presence with style...
+      </p>
+
+      <!-- Extra Interactive Content -->
+      <div class="card-text extra d-none text-center w-100">
+        <p>
+          We help you stay consistent and engaging on all platforms. Our strategies increase audience retention 
+          and brand loyalty.
+        </p>
+
+        <!-- Features -->
+        <ul class="service-features text-start px-3">
+          <li>Content Creation & Scheduling</li>
+          <li>Audience Engagement & Monitoring</li>
+          <li>Influencer Collaboration</li>
+          <li>Analytics & Performance Tracking</li>
+          <li>Platform-Specific Strategy</li>
+        </ul>
+
+        <!-- Stats -->
+        <div class="service-stats d-flex justify-content-around mt-2">
+          <span class="stat-badge">500+ Posts</span>
+          <span class="stat-badge">100K+ Followers Gained</span>
+          <span class="stat-badge">95% Engagement Rate</span>
+        </div>
+
+        <!-- Call to Actions -->
+        <div class="extra-cta mt-3 d-flex gap-2 justify-content-center">
+          <a  class="btn btn-sm btn-custom-purple">Case Study</a>
+          <a href="src/contact.html" class="btn btn-sm btn-outline-primary">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-group mt-3">
+        <button class="btn btn-sm btn-outline-primary toggle-btn rounded">Read More</button>
+        <a href="src/social-media.html"><button class="btn btn-sm btn-outline-primary">Explore</button></a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
         <!-- Third Row - 2 Cards -->
-        <div class="col-12 col-md-8 col-lg-5">
-          <div class="card card-services h-100 d-flex flex-column">
-            <div class="card-body d-flex flex-column align-items-center">
-              <div class="svg-img">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"
-                  style="color: #f39c12">
-                  <path d="M12 20h9"></path>
-                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z">
-                  </path>
-                </svg>
-              </div>
-              <h5 class="card-title mt-2">Content Writing</h5>
-              <p class="card-text summary text-center">
-                Compelling content that connects, converts, and captivates your audience...
-              </p>
-              <p class="card-text extra d-none text-center">
-                Our expert writers create engaging blog posts, web copy, articles, and marketing content
-                that drives
-                results and builds your brand voice.
-              </p>
-              <div class="btn-group">
-                <button class="btn btn-sm btn-outline-primary toggle-btn rounded">Read More</button>
-                <a href="learn/contentwriting.html"><button class="btn btn-sm btn-outline-primary">Explore</button></a>
-              </div>
-            </div>
-          </div>
+     <div class="col-12 col-md-8 col-lg-5">
+  <div class="card card-services h-100 d-flex flex-column" style="cursor: pointer;">
+    <div class="card-body d-flex flex-column align-items-center">
+      
+      <!-- Icon -->
+      <div class="svg-img">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"
+          style="color: #f39c12">
+          <path d="M12 20h9"></path>
+          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+        </svg>
+      </div>
+
+      <!-- Title -->
+      <h5 class="card-title mt-2">Content Writing</h5>
+
+      <!-- Summary -->
+      <p class="card-text summary text-center">
+        Compelling content that connects, converts, and captivates your audience...
+      </p>
+
+      <!-- Extra Interactive Content -->
+      <div class="card-text extra d-none text-center w-100">
+        <p>
+          Our expert writers create engaging blog posts, web copy, articles, and marketing content
+          that drives results and builds your brand voice.
+        </p>
+
+        <!-- Features -->
+        <ul class="service-features text-start px-3">
+          <li>SEO-Optimized Blog Posts</li>
+          <li>Website Copy & Landing Pages</li>
+          <li>Marketing Emails & Newsletters</li>
+          <li>Product Descriptions & Sales Copy</li>
+          <li>Social Media Captions & Storytelling</li>
+        </ul>
+
+        <!-- Stats -->
+        <div class="service-stats d-flex justify-content-around mt-2">
+          <span class="stat-badge">500+ Articles</span>
+          <span class="stat-badge">100+ Clients</span>
+          <span class="stat-badge">98% Satisfaction</span>
         </div>
 
+        <!-- Call to Actions -->
+        <div class="extra-cta mt-3 d-flex gap-2 justify-content-center">
+          <a  class="btn btn-sm btn-custom-purple">Case Study</a>
+          <a href="src/contact.html" class="btn btn-sm btn-outline-primary">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-group mt-3">
+        <button class="btn btn-sm btn-outline-primary toggle-btn rounded">Read More</button>
+        <a href="learn/contentwriting.html"><button class="btn btn-sm btn-outline-primary">Explore</button></a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
 
         <div class="col-12 col-md-8 col-lg-5">
-          <div class="card card-services h-100 d-flex flex-column">
-            <div class="card-body d-flex flex-column align-items-center">
-              <div class="svg-img">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"
-                  style="color: #f39c12">
-                  <path d="M12 20h9"></path>
-                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z">
-                  </path>
-                </svg>
-              </div>
-              <h5 class="card-title mt-2">Cyber Analyst</h5>
-              <p class="card-text summary text-center">
-                In the digital age, a cyber analyst is the silent guardian — turning data into defense and
-                vigilance into the shield that protects our future.
-              </p>
-              <p class="card-text extra d-none text-center">
-                Think smart, click safe, and stay vigilant — because a cyber-strong society is a
-                future-proof society
-              </p>
-              <div class="btn-group">
-                <button class="btn btn-sm btn-outline-primary toggle-btn rounded">Read More</button>
-                <a href="learn/cyberanalyst.html"><button class="btn btn-sm btn-outline-primary">Explore</button></a>
-              </div>
+  <div class="card card-services h-100 d-flex flex-column" style="cursor: pointer;">
+    <div class="card-body d-flex flex-column align-items-center">
+      
+      <!-- Icon -->
+      <div class="svg-img">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"
+          style="color: #f39c12">
+          <path d="M12 20h9"></path>
+          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+        </svg>
+      </div>
 
-            </div>
-          </div>
+      <!-- Title -->
+      <h5 class="card-title mt-2">Cyber Analyst</h5>
+
+      <!-- Summary -->
+      <p class="card-text summary text-center">
+        In the digital age, a cyber analyst is the silent guardian — turning data into defense and vigilance into the shield that protects our future.
+      </p>
+
+      <!-- Extra Interactive Content -->
+      <div class="card-text extra d-none text-center w-100">
+        <p>
+          Think smart, click safe, and stay vigilant — because a cyber-strong society is a future-proof society.
+        </p>
+
+        <!-- Features -->
+        <ul class="service-features text-start px-3">
+          <li>Threat Monitoring & Analysis</li>
+          <li>Network Security & Penetration Testing</li>
+          <li>Data Protection & Compliance</li>
+          <li>Incident Response & Recovery</li>
+          <li>Cyber Intelligence & Risk Assessment</li>
+        </ul>
+
+        <!-- Stats -->
+        <div class="service-stats d-flex justify-content-around mt-2">
+          <span class="stat-badge">100+ Threats Neutralized</span>
+          <span class="stat-badge">50+ Security Audits</span>
+          <span class="stat-badge">99% Protection Success</span>
         </div>
+
+        <!-- Call to Actions -->
+        <div class="extra-cta mt-3 d-flex gap-2 justify-content-center">
+          <a  class="btn btn-sm btn-custom-purple">Case Study</a>
+          <a href="src/contact.html" class="btn btn-sm btn-outline-primary">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-group mt-3">
+        <button class="btn btn-sm btn-outline-primary toggle-btn rounded">Read More</button>
+        <a href="learn/cyberanalyst.html"><button class="btn btn-sm btn-outline-primary">Explore</button></a>
+      </div>
+
+    </div>
+  </div>
+</div>
 
       </div>
     </div>
@@ -2025,93 +2321,134 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
     defer></script>
   <script>
-    // Logo switching functionality for dark mode
-    document.addEventListener('DOMContentLoaded', function () {
-      const logo = document.querySelector("#logo");
+  document.addEventListener("DOMContentLoaded", function () {
+    /* ----------------------------
+       Logo Switching for Dark Mode
+    ----------------------------- */
+    const logo = document.querySelector("#logo");
 
-      // Function to update logo based on theme
-      function updateLogo() {
-        const isDark = document.documentElement.getAttribute("data-bs-theme") === "dark";
-        if (isDark) {
-          logo.src = 'images/Logo.png';
-        } else {
-          logo.src = 'images/Logo_new.png';
+    function updateLogo() {
+      const isDark = document.documentElement.getAttribute("data-bs-theme") === "dark";
+      logo.src = isDark ? "images/Logo.png" : "images/Logo_new.png";
+    }
+
+    // Initial update
+    updateLogo();
+
+    // Watch for theme changes
+    const observer = new MutationObserver(function (mutations) {
+      for (const mutation of mutations) {
+        if (mutation.type === "attributes" && mutation.attributeName === "data-bs-theme") {
+          updateLogo();
         }
       }
-
-      // Update logo when page loads
-      updateLogo();
-
-      // Watch for theme changes
-      const observer = new MutationObserver(function (mutations) {
-        mutations.forEach(function (mutation) {
-          if (mutation.type === 'attributes' && mutation.attributeName === 'data-bs-theme') {
-            updateLogo();
-          }
-        });
-      });
-
-      observer.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ['data-bs-theme']
-      });
     });
 
-    // JavaScript (custom carousel) 
-      var myCarousel = new bootstrap.Carousel('#carouselExampleDark', {
-          interval: 4000,  // auto-slide time
-          wrap: true       // enables infinite loop
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-bs-theme"],
     });
-    // SIMPLE FEEDBACK FUNCTIONS - FORM STAYS VISIBLE
-    function showSuccessMessage(event) {
-      event.preventDefault();
-      
-      // Get form values
-      var name = document.getElementById('userName').value;
-      var email = document.getElementById('userEmail').value;
-      var feedback = document.getElementById('userFeedback').value;
-      
-      // Check if all fields are filled
-      if (name && email && feedback) {
+
+    /* ----------------------------
+       Carousel Initialization
+    ----------------------------- */
+    const carouselEl = document.getElementById("carouselExampleDark");
+    let carouselInstance = null;
+    if (carouselEl) {
+      carouselInstance = new bootstrap.Carousel(carouselEl, {
+        interval: 4000,
+        wrap: true,
+      });
+    }
+
+    // Custom next button
+    const customNextButton = document.getElementById("customNextButton");
+    if (customNextButton && carouselInstance) {
+      customNextButton.addEventListener("click", function () {
+        carouselInstance.next();
+      });
+    }
+
+    /* ----------------------------
+       Feedback Form Handling
+    ----------------------------- */
+    const feedbackForm = document.getElementById("feedbackForm");
+    const successMessage = document.getElementById("successMessage");
+    const errorMessage = document.getElementById("errorMessage");
+
+    if (feedbackForm) {
+      feedbackForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("userName").value.trim();
+        const email = document.getElementById("userEmail").value.trim();
+        const feedback = document.getElementById("userFeedback").value.trim();
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!name || !email || !feedback) {
+          showError("⚠️ Please fill in all required fields.");
+          return;
+        }
+
+        if (!emailRegex.test(email)) {
+          showError("⚠️ Please enter a valid email address.");
+          return;
+        }
+
         // Save to localStorage
-        var data = {
-          name: name,
-          email: email,
-          feedback: feedback,
-          timestamp: new Date().toISOString()
+        const data = {
+          name,
+          email,
+          feedback,
+          timestamp: new Date().toISOString(),
         };
-        
-        var feedbacks = JSON.parse(localStorage.getItem('growcraft_feedbacks') || '[]');
+
+        const feedbacks = JSON.parse(localStorage.getItem("growcraft_feedbacks") || "[]");
         feedbacks.push(data);
-        localStorage.setItem('growcraft_feedbacks', JSON.stringify(feedbacks));
-        
-        // KEEP FORM VISIBLE - Just show success message below
-        document.getElementById('successMessage').style.display = 'block';
-        
-        // Reset form fields and hide success message after 4 seconds
-        setTimeout(function() {
-          document.getElementById('successMessage').style.display = 'none';
-          document.getElementById('feedbackForm').reset();
+        localStorage.setItem("growcraft_feedbacks", JSON.stringify(feedbacks));
+
+        // Show success message
+        showSuccess("✅ Feedback submitted successfully!");
+
+        // Reset after delay
+        setTimeout(function () {
+          feedbackForm.reset();
+          successMessage.style.display = "none";
+          if (errorMessage) errorMessage.style.display = "none";
         }, 4000);
-        
-      } else {
-        alert('Please fill all required fields!');
-      }
-      
-      return false;
-    }
-    
-    function clearForm() {
-      document.getElementById('feedbackForm').reset();
-      document.getElementById('successMessage').style.display = 'none';
+      });
     }
 
-  </script>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
+    function showSuccess(msg) {
+      if (successMessage) {
+        successMessage.textContent = msg;
+        successMessage.style.display = "block";
+      }
+      if (errorMessage) {
+        errorMessage.style.display = "none";
+      }
+    }
+
+    function showError(msg) {
+      if (errorMessage) {
+        errorMessage.textContent = msg;
+        errorMessage.style.display = "block";
+      }
+      if (successMessage) {
+        successMessage.style.display = "none";
+      }
+    }
+
+    /* ----------------------------
+       Dynamic Year in Footer
+    ----------------------------- */
     const yearSpan = document.getElementById("currentYear");
-    yearSpan.textContent = new Date().getFullYear();
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
   });
+
   </script>
   <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -2126,6 +2463,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// ==========================
+  // Read More / Read Less Toggle
+  // ==========================
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+    toggleButtons.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent card click navigation
+        const extraContent = this.closest('.card-body').querySelector('.extra');
+        if (!extraContent) return;
+        extraContent.classList.toggle('d-none');
+        this.textContent = extraContent.classList.contains('d-none') ? 'Read More' : 'Read Less';
+      });
+    });
+  });
+
+
+
 </script>
 </body>
 
