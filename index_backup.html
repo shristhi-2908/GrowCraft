@@ -16,114 +16,34 @@
   <!-- Bootstrap Bundle JS + Popper -->
 
   <style>
-    /* Design tokens inspired by cyber-analyst */
-    :root {
-      --gc-bg: #f8f9ff;
-      --gc-bg-2: #e8ebf7;
-      --gc-fg: #0c0c0f;
-      --gc-muted: #6b7280;
-      --gc-primary-1: #027991;
-      --gc-primary-2: #3c0496;
-      --gc-accent: #22c55e;
-      --gc-card: rgba(255,255,255,0.8);
-      --gc-glass: rgba(255,255,255,0.9);
-      --gc-border: rgba(0,0,0,0.1);
-      --gc-radius: 18px;
-      --gc-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      --gc-container: min(1160px, 92vw);
-    }
 
-    /* Enhanced Hero Section */
-    .hero-section {
-      position: relative;
-      isolation: isolate;
-      background: radial-gradient(1200px 600px at 20% 10%, rgba(2,121,145,0.15), transparent 50%),
-                  radial-gradient(1000px 600px at 80% 20%, rgba(60,4,150,0.12), transparent 55%),
-                  linear-gradient(180deg, var(--gc-bg), var(--gc-bg-2));
-      color: var(--gc-fg);
-      padding: clamp(80px, 8vw, 120px) 0;
-      overflow: clip;
-    }
+   /* Glassmorphic Card */
+.card-services {
+  background: rgba(39, 174, 96, 0.18);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(39, 174, 96, 0.18);
+  border: 1px solid rgba(39, 174, 96, 0.25);
+  backdrop-filter: blur(12px);
+  color: #222;
+  transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
-    /* Glassmorphic Card - Enhanced */
-    .card-services {
-      background: var(--gc-card);
-      border-radius: var(--gc-radius);
-      box-shadow: var(--gc-shadow);
-      border: 1px solid var(--gc-border);
-      backdrop-filter: blur(20px);
-      color: var(--gc-fg);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-      animation: fadeInUp 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    .card-services::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2));
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .card-services:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-      border-color: var(--gc-primary-1);
-    }
-
-    .card-services:hover::before {
-      opacity: 1;
-    }
-
-    /* Floating Animation */
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      33% { transform: translateY(-10px) rotate(1deg); }
-      66% { transform: translateY(-5px) rotate(-1deg); }
-    }
-
-    /* Enhanced Program Cards */
-    .program-card {
-      background: var(--gc-glass);
-      border: 1px solid var(--gc-border);
-      border-radius: var(--gc-radius);
-      padding: 1.2rem;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(20px);
-      box-shadow: var(--gc-shadow);
-    }
-
-    .program-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-      border-color: var(--gc-primary-1);
-    }
-
-    .program-card .icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      padding: 8px;
-      background: linear-gradient(135deg, var(--gc-primary-1), var(--gc-primary-2));
-      filter: drop-shadow(0 4px 8px rgba(2,121,145,0.3));
-    }
+.card-services:hover {
+  box-shadow: 0 16px 48px rgba(39, 174, 96, 0.28);
+  background: rgba(39, 174, 96, 0.28);
+  transform: translateY(-6px) scale(1.03);
+}
 
 /* Card Title & Icon */
 .card-services .card-title {
-  color: var(--gc-primary-1);
+  color: #27ae60;
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: 0.5px;
   margin-bottom: 0.5em;
-  background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .card-services .svg-img {
@@ -165,7 +85,7 @@
   list-style-type: disc;
   margin: 0.5em 0;
   padding-left: 1.2em;
-  color: var(--gc-primary-1);
+  color: #27ae60;
   font-size: 0.95rem;
 }
 
@@ -176,7 +96,7 @@
 }
 
 .card-services .stat-badge {
-  background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2));
+  background: rgba(39, 174, 96, 0.8);
   color: #fff;
   padding: 0.25em 0.6em;
   border-radius: 12px;
@@ -208,63 +128,53 @@
 
 /* Main Card Buttons */
 .card-services .btn-group button {
-  background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2));
+  background: #27ae60;
   color: #fff;
   border-radius: 8px !important;
   border: none;
   margin: 0 0.2em;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(2,121,145,0.2);
+  transition: background 0.2s, transform 0.2s;
 }
 
 .card-services .btn-group button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(2,121,145,0.3);
+  background: #43e97b;
+  color: #222;
+  transform: scale(1.08);
 }
 
 /* Toggle Button */
 .card-services .toggle-btn {
-  background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2));
+  background: rgba(39, 174, 96, 0.85);
   color: #fff;
   border-radius: 8px !important;
   border: none;
   padding: 0.35em 0.8em;
   font-size: 0.9rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .card-services .toggle-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(2,121,145,0.3);
+  background: #43e97b;
+  color: #222;
+  transform: scale(1.05);
 }
 
 
-    /* About Us Enhanced Glassmorphic Box */
+    /* About Us Glassmorphic Box */
     .about-card-box {
-      background: var(--gc-glass);
-      border-radius: var(--gc-radius);
-      box-shadow: var(--gc-shadow);
-      border: 1px solid var(--gc-border);
-      backdrop-filter: blur(20px);
-      color: var(--gc-fg) !important;
-      transition: all 0.3s ease;
+      background: linear-gradient(135deg, #b5b7b6 0%, #518470 40%);
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(39, 174, 96, 0.18);
+      border: 1px solid rgba(39, 174, 96, 0.18);
+      backdrop-filter: blur(10px);
+      color: #222 !important;
+      transition: box-shadow 0.3s, background 0.3s, transform 0.3s;
       position: relative;
       overflow: hidden;
       padding: 2.5em 2em;
       margin-bottom: 1em;
       animation: fadeInUp 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    .about-card-box::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2));
-      border-radius: var(--gc-radius) var(--gc-radius) 0 0;
     }
 
     .about-card-box ul {
@@ -286,7 +196,7 @@
     }
 
     .about-card-box .about-icon {
-      color: var(--gc-primary-1);
+      color: #27ae60;
       font-size: 1.3em;
       flex-shrink: 0;
       margin-top: 2px;
@@ -323,27 +233,15 @@
       box-shadow: 0 0 0 0.2rem rgba(41, 25, 135, 0.25) !important;
     }
     
-    /* Enhanced Navbar */
     .navbar {
       padding: 1rem 0;
-      background: rgba(255, 255, 255, 0.95) !important;
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--gc-border);
-      box-shadow: var(--gc-shadow);
+      background: linear-gradient(135deg,
+          #ffffff 0%,
+          #f8f9fa 100%) !important;
+      border-bottom: 3px solid #388e3c;
+      box-shadow: 0 8px 32px rgba(56, 142, 60, 0.1);
+      backdrop-filter: blur(10px);
       transition: all 0.3s ease;
-      position: relative;
-      z-index: 100;
-    }
-
-    .navbar::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2));
-      opacity: 0.3;
     }
 
     .navbar.scrolled {
@@ -388,30 +286,30 @@
     .navbar-nav .nav-link {
       position: relative;
       font-weight: 600;
-      color: var(--gc-fg) !important;
-      font-family: "Inter", sans-serif;
-      font-size: 0.9rem;
+      color: #2e7d32 !important;
+      font-family: "Poppins", sans-serif;
+      font-size: 0.75rem;
       padding: 0.75rem 1.25rem !important;
-      border-radius: 12px;
+      border-radius: 25px;
       display: flex;
       align-items: center;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       text-decoration: none;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.5px;
       background: transparent;
     }
 
     .navbar-nav .nav-link:hover {
       color: #ffffff !important;
-      background: linear-gradient(135deg, var(--gc-primary-1), var(--gc-primary-2));
+      background: linear-gradient(135deg, #388e3c 0%, #2e7d32 100%);
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(2,121,145,0.3);
+      box-shadow: 0 8px 25px rgba(56, 142, 60, 0.3);
     }
 
     .navbar-nav .nav-link.active {
       color: #ffffff !important;
-      background: linear-gradient(135deg, var(--gc-primary-1), var(--gc-primary-2));
-      box-shadow: 0 4px 15px rgba(2,121,145,0.25);
+      background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+      box-shadow: 0 4px 15px rgba(56, 142, 60, 0.25);
     }
 
     /* Elegant underline animation */
@@ -456,55 +354,26 @@
     }
 
     .about-section {
-      background: var(--gc-bg);
-      position: relative;
-    }
-
-    .about-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gc-primary-1), transparent);
+      background-color: #f9f9f9;
     }
 
     .about-title {
       font-size: 2.5rem;
       font-weight: 700;
-      background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
 
     .about-subtitle {
       font-size: 1.1rem;
       text-align: center;
-      color: var(--gc-muted);
+      color: #555;
     }
 
     .about-card {
-      background: var(--gc-glass);
-      color: var(--gc-fg);
-      border: 1px solid var(--gc-border);
-      box-shadow: var(--gc-shadow);
-      transition: all 0.3s ease;
-      backdrop-filter: blur(20px);
-      border-radius: var(--gc-radius);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .about-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2));
-      border-radius: var(--gc-radius) var(--gc-radius) 0 0;
+      background-color: #fff;
+      color: #222;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.07);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .about-para {
@@ -521,19 +390,14 @@
     }
 
     .about-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-      border-color: var(--gc-primary-1);
+      transform: translateY(-5px);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
     }
 
     .about-card h4 {
-      color: var(--gc-primary-1);
+      color: #28a745
       font-weight: 600;
-    }
-
-    .about-card .icon {
-      color: var(--gc-primary-1);
-      margin-right: 0.5rem;
+  
     }
 
     .btn-group {
@@ -1208,7 +1072,8 @@
     }
     /* Feedback & Reviews Section Styles */
     .feedback-section {
-      color: var(--gc-fg);
+      background-color: #f9f9f9;
+      color: #333;
       min-height: 60vh;
       display: flex;
       align-items: center;
@@ -1226,37 +1091,55 @@
     .feedback-title {
       font-size: 2.5rem;
       font-weight: 700;
+      color: #333;
       margin-bottom: 1rem;
       position: relative;
     }
 
+    .feedback-title::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #4caf50, #81c784);
+      border-radius: 2px;
+    }
+
     .feedback-subtitle {
       font-size: 1.1rem;
-      color: var(--gc-muted);
+      color: #555;
       font-weight: 400;
       line-height: 1.6;
     }
 
     .feedback-form-container {
-      background: var(--gc-glass);
-      border: 1px solid var(--gc-border);
-      border-radius: var(--gc-radius);
+      background: #ffffff;
+      border: 2px solid rgba(76, 175, 80, 0.3);
+      border-radius: 20px;
       padding: 2rem;
-      box-shadow: var(--gc-shadow);
+      box-shadow: 0 8px 32px rgba(76, 175, 80, 0.1);
       transition: all 0.3s ease;
       position: relative;
-      backdrop-filter: blur(20px);
     }
 
     .feedback-form-container::before {
-      content: '';
+      content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2));
-      border-radius: var(--gc-radius) var(--gc-radius) 0 0;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(135deg, 
+        rgba(76, 175, 80, 0.4) 0%, 
+        rgba(129, 199, 132, 0.4) 50%, 
+        rgba(76, 175, 80, 0.4) 100%);
+      border-radius: 22px;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
 
     .feedback-form-container:hover::before {
@@ -1304,9 +1187,9 @@
 
     .form-input:focus,
     .form-textarea:focus {
-      border-color: var(--gc-primary-1);
+      border-color: #4caf50;
       background: #ffffff;
-      box-shadow: 0 0 0 2px rgba(2,121,145,0.2);
+      box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
     }
 
     .form-textarea {
@@ -1334,15 +1217,16 @@
 
 
     .btn-submit {
-      background: linear-gradient(135deg, var(--gc-primary-1), var(--gc-primary-2));
+      background: linear-gradient(135deg, #2196f3, #1976d2);
       color: #ffffff;
       min-width: 120px;
       justify-content: center;
     }
 
     .btn-submit:hover {
+      background: linear-gradient(135deg, #1976d2, #1565c0);
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(2,121,145,0.3);
+      box-shadow: 0 6px 20px rgba(33, 150, 243, 0.3);
     }
 
     .btn-cancel {
@@ -1646,75 +1530,10 @@
 
   </nav>
   
-  <!-- Enhanced Hero Section -->
-  <section class="hero-section" id="hero">
-    <div class="gc-container mx-auto">
-      <div class="row align-items-center min-vh-75">
-        <div class="col-lg-6">
-          <div class="hero-content">
-            <span class="badge bg-gradient px-3 py-2 mb-3" style="background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2)); color: white; border-radius: 50px; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">
-              Digital Solutions
-            </span>
-            <h1 class="hero-title display-4 fw-bold mb-4" style="background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.2;">
-              Gateway to Go Digital and Grow Business
-            </h1>
-            <p class="hero-subtitle fs-5 mb-4" style="color: var(--gc-muted); line-height: 1.6; max-width: 500px;">
-              Transforming businesses through innovative digital solutions, cutting-edge technology, and strategic growth partnerships.
-            </p>
-            <div class="hero-actions d-flex gap-3 mb-4">
-              <a href="#services" class="btn btn-primary px-4 py-3 fw-bold" style="background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2)); border: none; border-radius: 12px; box-shadow: 0 8px 25px rgba(2,121,145,0.3); transition: all 0.3s ease;">
-                Explore Services
-              </a>
-              <a href="src/contact.html" class="btn btn-outline-primary px-4 py-3 fw-bold" style="border: 2px solid var(--gc-primary-1); color: var(--gc-primary-1); border-radius: 12px; transition: all 0.3s ease;">
-                Get Started
-              </a>
-            </div>
-            <div class="hero-stats d-flex gap-4">
-              <div class="stat-item">
-                <span class="stat-number fw-bold fs-4" style="color: var(--gc-primary-1);">500+</span>
-                <span class="stat-label text-muted small">Projects</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number fw-bold fs-4" style="color: var(--gc-primary-1);">100+</span>
-                <span class="stat-label text-muted small">Clients</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number fw-bold fs-4" style="color: var(--gc-primary-1);">98%</span>
-                <span class="stat-label text-muted small">Success Rate</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="hero-visual text-center">
-            <div class="floating-elements position-relative">
-              <img src="images/Logo_new.png" alt="GrowCraft" class="img-fluid" style="max-width: 400px; filter: drop-shadow(0 20px 40px rgba(2,121,145,0.2)); animation: float 6s ease-in-out infinite;">
-              <div class="floating-card position-absolute" style="top: 20%; right: -10%; background: var(--gc-glass); backdrop-filter: blur(20px); border: 1px solid var(--gc-border); border-radius: 12px; padding: 1rem; box-shadow: var(--gc-shadow); animation: float 8s ease-in-out infinite reverse;">
-                <div class="d-flex align-items-center gap-2">
-                  <div class="status-dot bg-success rounded-circle" style="width: 8px; height: 8px;"></div>
-                  <small class="text-muted">Systems Online</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Training and Internship Program Section -->
-  <!-- Training and Internship Program Section -->
-  <section class="training-section py-5" style="background: var(--gc-bg-2);">
-    <div class="container-fluid d-flex flex-column align-items-center px-2 px-sm-5">
-      <div class="text-center mb-5">
-        <span class="badge bg-gradient px-3 py-2 mb-3" style="background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2)); color: white; border-radius: 50px; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">
-          Education & Growth
-        </span>
-        <h2 class="fw-bold mb-3" style="background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-          Training and Internship Program
-        </h2>
-        <p class="text-muted fs-6">Empowering the next generation with cutting-edge skills</p>
-      </div>
+  <div class="bg-body-tertiary mt-4 py-2 mb-4 ">
+    <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center px-2 px-sm-5 mt-3 mb-4">
+      <h5 class="head-training mb-xxl-0">Training and Internship program</h5>
       <div class="row g-4 px-6 py-6 justify-content-md-center">
 
         <!-- Website Development -->
@@ -1924,16 +1743,12 @@
   </main>
 
   <!-- Services section starts here -->
-  <section class="d-flex flex-column align-items-center mt-5 section" id="services" style="background: var(--gc-bg); position: relative;">
-    <div class="text-center mb-5">
-      <span class="badge bg-gradient px-3 py-2 mb-3" style="background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2)); color: white; border-radius: 50px; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">
-        Our Expertise
-      </span>
-      <h2 class="heading-text fw-bold" style="background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2.5rem;">SERVICES</h2>
-      <p class="fst-italic text-center" style="color: var(--gc-muted); max-width: 600px; margin: 0 auto;">
-        In the realm of software, we excel at transmuting the ordinary into the extraordinary
-      </p>
-    </div>
+
+  <section class="d-flex flex-column align-items-center mt-4 section" id="services">
+    <h2 class="heading-text">SERVICES</h2>
+    <p class="fst-italic text-center">
+      In the realm of software, we excel at transmuting the ordinary into the extraordinary
+    </p>
     <div class="container text-center">
       <!-- 2-2-1 Grid Layout for Services (5 cards total) -->
       <div class="row g-4 justify-content-center">
@@ -2329,15 +2144,10 @@
   <!-- About Us section starts here -->
   <section class="about-section py-5" id="about">
     <div class="container text-center">
-      <div class="text-center mb-5">
-        <span class="badge bg-gradient px-3 py-2 mb-3" style="background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2)); color: white; border-radius: 50px; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">
-          About GrowCraft
-        </span>
-        <h2 class="about-title mb-2">About Us</h2>
-        <p class="about-subtitle mb-4 mt-2">
-          Gateway to <em>Go Digital and Grow Business</em>
-        </p>
-      </div>
+      <h2 class="about-title mb-2">About Us</h2>
+      <p class="about-subtitle mb-4 mt-2">
+        Gateway to <em>Go Digital and Grow Business</em>
+      </p>
 
       <div class="row justify-content-center g-4">
         <!-- Card 1 -->
@@ -2402,18 +2212,13 @@
   </section>
   <!-- Our Work section ends here -->
  <!-- Feedback & Reviews section starts here -->
-  <section class="feedback-section py-5" id="feedback" style="background: var(--gc-bg-2);">
+  <section class="feedback-section py-5" id="feedback">
     <div class="container d-flex flex-column align-items-center">
       <div class="feedback-content">
-        <div class="text-center mb-4">
-          <span class="badge bg-gradient px-3 py-2 mb-3" style="background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2)); color: white; border-radius: 50px; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">
-            Your Voice Matters
-          </span>
-          <h2 class="feedback-title text-center mb-3" style="background: linear-gradient(90deg, var(--gc-primary-1), var(--gc-primary-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Feedback & Reviews</h2>
-          <p class="feedback-subtitle text-center mb-4">
-            We value your feedback! Share your experience and help us improve our services.
-          </p>
-        </div>
+        <h2 class="feedback-title text-center mb-3">Feedback & Reviews</h2>
+        <p class="feedback-subtitle text-center mb-4">
+          We value your feedback! Share your experience and help us improve our services.
+        </p>
         
         <div class="feedback-form-container">
           <form id="feedbackForm" class="feedback-form" onsubmit="return showSuccessMessage(event)">
