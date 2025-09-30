@@ -1837,6 +1837,20 @@
         });
       }
 
+      function showSuccessMessage() {
+        if (!successMessage) return;
+      
+        successMessage.style.display = 'block';
+        successMessage.style.transform = 'scale(0.8)';
+        successMessage.style.opacity = '0';
+      
+        setTimeout(() => {
+          successMessage.style.transition = 'all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+          successMessage.style.transform = 'scale(1)';
+          successMessage.style.opacity = '1';
+        }, 100);
+      }
+
       /* Enhanced Service Cards Toggle */
       const toggleButtons = document.querySelectorAll('.toggle-btn');
       toggleButtons.forEach(btn => {
@@ -1936,16 +1950,7 @@
               timestamp: new Date().toISOString(),
             };
 
-            // Show success message with animation
-            successMessage.style.display = 'block';
-            successMessage.style.transform = 'scale(0.8)';
-            successMessage.style.opacity = '0';
-
-            setTimeout(() => {
-              successMessage.style.transition = 'all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-              successMessage.style.transform = 'scale(1)';
-              successMessage.style.opacity = '1';
-            }, 100);
+            showSuccessMessage();
 
             // Reset form with animation
             setTimeout(() => {
