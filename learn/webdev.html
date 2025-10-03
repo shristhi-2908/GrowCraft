@@ -59,19 +59,13 @@
             <input type="text" placeholder="Search..." />
           </div>
           <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="theme-toggle-wrapper ms-3">
+            <div class="theme-toggle-btn" id="themeToggle">
+              <i class="fas fa-moon"></i>
+            </div>
+          </div>
         </div>
-        <!-- Toggler -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        
       </div>
     </nav>
     <!-- Navbar ends here -->
@@ -516,6 +510,54 @@
           navbar.classList.remove("scrolled");
         }
       });
+
+      // Enhanced Dark Mode Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = themeToggle.querySelector('i');
+  
+  // Check for saved theme preference
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  
+  // Apply saved theme
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeIcon.classList.remove('fa-moon');
+    themeIcon.classList.add('fa-sun');
+  }
+  
+  // Toggle theme on button click
+  themeToggle.addEventListener('click', function() {
+    // Add click animation
+    this.style.transform = 'scale(0.9) rotate(-15deg)';
+    setTimeout(() => {
+      this.style.transform = '';
+    }, 300);
+    
+    document.body.classList.toggle('dark-mode');
+    
+    if (document.body.classList.contains('dark-mode')) {
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+
+  // Add scroll effect for navbar
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+});
     </script>
+    
   </body>
 </html>
