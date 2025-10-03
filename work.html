@@ -1052,6 +1052,69 @@
   }
 }
 
+    /* Mobile */
+    @media (max-width: 768px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .footer-col {
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+      .footer-col h3 {
+        justify-content: center;
+      }
+      .footer-col p,
+      .footer-col a {
+        justify-content: center;
+      }
+      .social-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .footer-right a {
+        margin: 0.3rem 0.5rem;
+      }
+    }
+
+    /* Very small screens */
+    @media (max-width: 480px) {
+      .footer-col h3 {
+        font-size: 1rem;
+      }
+      .footer-col a,
+      .footer-right a {
+        font-size: 0.85rem;
+      }
+      .footer-left {
+        font-size: 0.85rem;
+      }
+    }
+    /* Important Links margin for large screens */
+.footer-col.important-links {
+  margin-left: 70px;  /* margin only on large screens */
+}
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .footer-col.important-links {
+    margin-left: 0; /* remove margin on smaller screens */
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .footer-col.important-links {
+    margin-left: 0; /* remove margin on mobile too */
+  }
+}
   </style>
 </head>
 
@@ -1292,6 +1355,14 @@
       </div>
     </div>
   </div>
+<!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-container ">
+      <!-- About GrowCraft -->
+      <div class="footer-col">
+        <h3><i class="fa-solid fa-briefcase"></i> GrowCraft</h3>
+        <p>Boost your career with skill-focused training and internship opportunities.</p>
+      </div>
 
  <!-- ===== FOOTER ===== -->
   <footer>
@@ -1365,6 +1436,7 @@
     </div>
     <button class="chatbot-toggle-btn" onclick="toggleChat()"><i class="fas fa-leaf"></i></button>
   </div>
+  
   <script src="src/darkMode.js"></script>
   <script src="components/chatbot.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
