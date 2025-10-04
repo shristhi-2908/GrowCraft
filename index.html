@@ -1000,7 +1000,40 @@
         margin-bottom: 1rem;
       }
     }
+ /* Responsive Carousel for Mobile */
+@media (max-width: 768px) {
+  .carousel-section,
+  .carousel-inner,
+  .carousel-item,
+  .carousel-overlay img {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+  }
+  .carousel-caption {
+    left: 50% !important;
+    right: auto !important;
+    width: 90vw !important;
+    max-width: 95vw !important;
+    padding: 1rem !important;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+  }
+  .carousel-caption h2 {
+    font-size: 1.3rem !important;
+    word-break: break-word;
+  }
+  .carousel-overlay img {
+    height: 220px !important;
+    object-fit: cover !important;
+  }
+}
 
+body {
+  overflow-x: hidden !important;
+}
     /* Utility Classes */
     .glass-effect {
       background: var(--glass-bg);
@@ -1065,15 +1098,15 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
 
-
-    
-    /* ===== FOOTER STYLES ===== */
-    footer {
-      background: #111827;
-      color: #fff;
-      padding: 3rem 2rem 2rem 2rem;
-    }
+/* ===== FOOTER STYLES ===== */
+footer {
+  background: #111827;
+  color: #fff;
+  padding: 3rem 2rem 2rem 2rem;
+}
 
     .footer-container {
       display: grid;
@@ -1863,7 +1896,7 @@
 
         <div class="col-sm-6 col-lg-4" data-aos="fade-right" data-aos-delay="400">
           <div class="about-card p-4 h-100 shadow-sm hover-lift">
-            <h4 class="mb-3">
+                       <h4 class="mb-3">
               <i class="fas fa-shield-alt icon"></i>
               Reliable & Transparent
             </h4>
