@@ -25,8 +25,8 @@
         class="container-fluid d-flex justify-content-between align-items-center px-2 px-sm-5"
       >
         <!-- Brand -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="../src/images/logo_bg_transparent.png" alt="GrowCraft Logo" width="200" />
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+          <img src="../images/Logo_new.png" alt="GrowCraft Logo" id="logo" width="200" />
         </a>
 
         <!-- Nav Links -->
@@ -556,6 +556,28 @@ document.addEventListener('DOMContentLoaded', function() {
       navbar.classList.remove('scrolled');
     }
   });
+
+  // Logo update function for theme switching
+  const logo = document.querySelector("#logo");
+  
+  function updateLogo() {
+    const isDark = document.body.classList.contains('dark-mode');
+    logo.src = isDark ? "../images/Logo.png" : "../images/Logo_new.png";
+  }
+  
+  // Update logo on theme change
+  updateLogo();
+  
+  // Watch for theme changes
+  const themeObserver = new MutationObserver(function(mutations) {
+    for (const mutation of mutations) {
+      if (mutation.type === "attributes" && mutation.attributeName === "class") {
+        updateLogo();
+      }
+    }
+  });
+  
+  themeObserver.observe(document.body, { attributes: true });
 });
     </script>
     
