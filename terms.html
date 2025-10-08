@@ -13,7 +13,7 @@
     crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="Favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="src/style.css" />
-
+ 
   <style>
     /* Modern CSS Variables */
     :root {
@@ -184,6 +184,10 @@
       margin-bottom: 1.5rem;
       position: relative;
       padding-bottom: 0.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     [data-bs-theme="dark"] .section-title {
@@ -199,6 +203,27 @@
       height: 3px;
       background: var(--warning-gradient);
       border-radius: 2px;
+    }
+
+    .section-toggle {
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .section-toggle.rotated {
+      transform: rotate(180deg);
+    }
+
+    .section-content {
+      overflow: hidden;
+      transition: max-height 0.5s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+    }
+
+    .section-content.expanded {
+      max-height: 2000px;
+      opacity: 1;
     }
 
     .terms-text {
@@ -824,184 +849,239 @@
 
           <!-- Introduction -->
           <div class="terms-card">
-            <h2 class="section-title">Agreement to Terms</h2>
-            <p class="terms-text">
-              Welcome to GrowCraft. These Terms of Service ("Terms") govern your use of our website and services operated by GrowCraft ("we," "our," or "us"). By accessing or using our services, you agree to be bound by these Terms.
-            </p>
-            <div class="warning-box">
-              <h5><i class="fas fa-exclamation-triangle me-2"></i>Important Notice</h5>
-              <p class="terms-text mb-0">
-                If you do not agree to these Terms, you must not access or use our services. These Terms constitute a legally binding agreement between you and GrowCraft.
+            <h2 class="section-title" data-toggle="section" data-target="section1">
+              Agreement to Terms
+              <span class="section-toggle"><i class="fas fa-chevron-down"></i></span>
+            </h2>
+            <div class="section-content" id="section1">
+              <p class="terms-text">
+                Welcome to GrowCraft. These Terms of Service ("Terms") govern your use of our website and services operated by GrowCraft ("we," "our," or "us"). By accessing or using our services, you agree to be bound by these Terms.
               </p>
+              <div class="warning-box">
+                <h5><i class="fas fa-exclamation-triangle me-2"></i>Important Notice</h5>
+                <p class="terms-text mb-0">
+                  If you do not agree to these Terms, you must not access or use our services. These Terms constitute a legally binding agreement between you and GrowCraft.
+                </p>
+              </div>
             </div>
           </div>
 
           <!-- Services Description -->
           <div class="terms-card">
-            <h2 class="section-title">Our Services</h2>
-            <p class="terms-text">GrowCraft provides the following digital services:</p>
-            <ul class="terms-list">
-              <li>Website development and design</li>
-              <li>Digital marketing and SEO services</li>
-              <li>Graphic design and branding</li>
-              <li>Content writing and copywriting</li>
-              <li>Social media management</li>
-              <li>Cybersecurity analysis and consultation</li>
-              <li>Training and internship programs</li>
-            </ul>
-            <p class="terms-text">
-              We reserve the right to modify, suspend, or discontinue any aspect of our services at any time with or without notice.
-            </p>
+            <h2 class="section-title" data-toggle="section" data-target="section2">
+              Our Services
+              <span class="section-toggle"><i class="fas fa-chevron-down"></i></span>
+            </h2>
+            <div class="section-content" id="section2">
+              <p class="terms-text">GrowCraft provides the following digital services:</p>
+              <ul class="terms-list">
+                <li>Website development and design</li>
+                <li>Digital marketing and SEO services</li>
+                <li>Graphic design and branding</li>
+                <li>Content writing and copywriting</li>
+                <li>Social media management</li>
+                <li>Cybersecurity analysis and consultation</li>
+                <li>Training and internship programs</li>
+              </ul>
+              <p class="terms-text">
+                We reserve the right to modify, suspend, or discontinue any aspect of our services at any time with or without notice.
+              </p>
+            </div>
           </div>
 
           <!-- User Responsibilities -->
           <div class="terms-card">
-            <h2 class="section-title">User Responsibilities</h2>
-            <p class="terms-text">By using our services, you agree to:</p>
-            <ol class="numbered-list">
-              <li>Provide accurate and complete information when requested</li>
-              <li>Maintain the confidentiality of any account credentials</li>
-              <li>Use our services only for lawful purposes</li>
-              <li>Not interfere with or disrupt our services or servers</li>
-              <li>Not attempt to gain unauthorized access to our systems</li>
-              <li>Respect intellectual property rights</li>
-              <li>Comply with all applicable laws and regulations</li>
-              <li>Provide timely feedback and responses for project work</li>
-            </ol>
+            <h2 class="section-title" data-toggle="section" data-target="section3">
+              User Responsibilities
+              <span class="section-toggle"><i class="fas fa-chevron-down"></i></span>
+            </h2>
+            <div class="section-content" id="section3">
+              <p class="terms-text">By using our services, you agree to:</p>
+              <ol class="numbered-list">
+                <li>Provide accurate and complete information when requested</li>
+                <li>Maintain the confidentiality of any account credentials</li>
+                <li>Use our services only for lawful purposes</li>
+                <li>Not interfere with or disrupt our services or servers</li>
+                <li>Not attempt to gain unauthorized access to our systems</li>
+                <li>Respect intellectual property rights</li>
+                <li>Comply with all applicable laws and regulations</li>
+                <li>Provide timely feedback and responses for project work</li>
+              </ol>
+            </div>
           </div>
 
           <!-- Payment Terms -->
           <div class="terms-card">
-            <h2 class="section-title">Payment Terms</h2>
-            <p class="terms-text">
-              Payment terms vary based on the specific services and project scope:
-            </p>
-            <ul class="terms-list">
-              <li>Project-based work requires 50% advance payment before commencement</li>
-              <li>Monthly retainer services are billed in advance</li>
-              <li>Late payments may incur additional charges</li>
-              <li>Refunds are subject to our refund policy</li>
-              <li>All prices are exclusive of applicable taxes</li>
-              <li>Currency for all transactions is Indian Rupees (INR) unless specified</li>
-            </ul>
-            <p class="terms-text">
-              We reserve the right to suspend services for non-payment and pursue legal remedies for outstanding amounts.
-            </p>
+            <h2 class="section-title" data-toggle="section" data-target="section4">
+              Payment Terms
+              <span class="section-toggle"><i class="fas fa-chevron-down"></i></span>
+            </h2>
+            <div class="section-content" id="section4">
+              <p class="terms-text">
+                Payment terms vary based on the specific services and project scope:
+              </p>
+              <ul class="terms-list">
+                <li>Project-based work requires 50% advance payment before commencement</li>
+                <li>Monthly retainer services are billed in advance</li>
+                <li>Late payments may incur additional charges</li>
+                <li>Refunds are subject to our refund policy</li>
+                <li>All prices are exclusive of applicable taxes</li>
+                <li>Currency for all transactions is Indian Rupees (INR) unless specified</li>
+              </ul>
+              <p class="terms-text">
+                We reserve the right to suspend services for non-payment and pursue legal remedies for outstanding amounts.
+              </p>
+            </div>
           </div>
 
           <!-- Intellectual Property -->
           <div class="terms-card">
-            <h2 class="section-title">Intellectual Property Rights</h2>
-            <p class="terms-text">
-              <strong>Our Rights:</strong> All content, designs, code, and materials created by GrowCraft remain our intellectual property until full payment is received.
-            </p>
-            <p class="terms-text">
-              <strong>Client Rights:</strong> Upon full payment, clients receive ownership rights to custom work created specifically for them, excluding:
-            </p>
-            <ul class="terms-list">
-              <li>Third-party licensed software or components</li>
-              <li>Our proprietary tools and methodologies</li>
-              <li>Pre-existing templates or frameworks</li>
-              <li>General knowledge and experience gained</li>
-            </ul>
-            <p class="terms-text">
-              <strong>Portfolio Rights:</strong> We reserve the right to showcase completed work in our portfolio and marketing materials unless explicitly prohibited by confidentiality agreements.
-            </p>
+            <h2 class="section-title" data-toggle="section" data-target="section5">
+              Intellectual Property Rights
+              <span class="section-toggle"><i class="fas fa-chevron-down"></i></span>
+            </h2>
+            <div class="section-content" id="section5">
+              <p class="terms-text">
+                <strong>Our Rights:</strong> All content, designs, code, and materials created by GrowCraft remain our intellectual property until full payment is received.
+              </p>
+              <p class="terms-text">
+                <strong>Client Rights:</strong> Upon full payment, clients receive ownership rights to custom work created specifically for them, excluding:
+              </p>
+              <ul class="terms-list">
+                <li>Third-party licensed software or components</li>
+                <li>Our proprietary tools and methodologies</li>
+                <li>Pre-existing templates or frameworks</li>
+                <li>General knowledge and experience gained</li>
+              </ul>
+              <p class="terms-text">
+                <strong>Portfolio Rights:</strong> We reserve the right to showcase completed work in our portfolio and marketing materials unless explicitly prohibited by confidentiality agreements.
+              </p>
+            </div>
           </div>
 
           <!-- Project Delivery -->
           <div class="terms-card">
-            <h2 class="section-title">Project Delivery & Revisions</h2>
-            <p class="terms-text">
-              <strong>Timeline:</strong> Project timelines are estimates and may vary based on project complexity, client feedback, and external factors.
-            </p>
-            <p class="terms-text">
-              <strong>Revisions:</strong> Each project includes a specified number of revisions. Additional revisions beyond the agreed scope will incur extra charges.
-            </p>
-            <p class="terms-text">
-              <strong>Client Approval:</strong> Projects require client approval at key milestones. Delayed approvals may extend project timelines.
-            </p>
-            <p class="terms-text">
-              <strong>Final Delivery:</strong> Final project files and assets will be delivered upon completion of payment and project approval.
-            </p>
+            <h2 class="section-title" data-toggle="section" data-target="section6">
+              Project Delivery & Revisions
+              <span class="section-toggle"><i class="fas fa-chevron-down"></i></span>
+            </h2>
+            <div class="section-content" id="section6">
+              <p class="terms-text">
+                <strong>Timeline:</strong> Project timelines are estimates and may vary based on project complexity, client feedback, and external factors.
+              </p>
+              <p class="terms-text">
+                <strong>Revisions:</strong> Each project includes a specified number of revisions. Additional revisions beyond the agreed scope will incur extra charges.
+              </p>
+              <p class="terms-text">
+                <strong>Client Approval:</strong> Projects require client approval at key milestones. Delayed approvals may extend project timelines.
+              </p>
+              <p class="terms-text">
+                <strong>Final Delivery:</strong> Final project files and assets will be delivered upon completion of payment and project approval.
+              </p>
+            </div>
           </div>
 
           <!-- Limitations of Liability -->
           <div class="terms-card">
-            <h2 class="section-title">Limitations of Liability</h2>
-            <p class="terms-text">
-              To the maximum extent permitted by law, GrowCraft shall not be liable for:
-            </p>
-            <ul class="terms-list">
-              <li>Indirect, incidental, or consequential damages</li>
-              <li>Loss of profits, revenue, or business opportunities</li>
-              <li>Data loss or corruption</li>
-              <li>Third-party actions or failures</li>
-              <li>Force majeure events beyond our control</li>
-              <li>Damages exceeding the total amount paid for services</li>
-            </ul>
-            <div class="warning-box">
-              <h5><i class="fas fa-shield-alt me-2"></i>Disclaimer</h5>
-              <p class="terms-text mb-0">
-                Our services are provided "as is" without warranties of any kind. We do not guarantee specific results or outcomes from our services.
+            <h2 class="section-title" data-toggle="section" data-target="section7">
+              Limitations of Liability
+              <span class="section-toggle"><i class="fas fa-chevron-down"></i></span>
+            </h2>
+            <div class="section-content" id="section7">
+              <p class="terms-text">
+                To the maximum extent permitted by law, GrowCraft shall not be liable for:
               </p>
+              <ul class="terms-list">
+                <li>Indirect, incidental, or consequential damages</li>
+                <li>Loss of profits, revenue, or business opportunities</li>
+                <li>Data loss or corruption</li>
+                <li>Third-party actions or failures</li>
+                <li>Force majeure events beyond our control</li>
+                <li>Damages exceeding the total amount paid for services</li>
+              </ul>
+              <div class="warning-box">
+                <h5><i class="fas fa-shield-alt me-2"></i>Disclaimer</h5>
+                <p class="terms-text mb-0">
+                  Our services are provided "as is" without warranties of any kind. We do not guarantee specific results or outcomes from our services.
+                </p>
+              </div>
             </div>
           </div>
 
           <!-- Termination -->
           <div class="terms-card">
-            <h2 class="section-title">Termination</h2>
-            <p class="terms-text">
-              <strong>By Client:</strong> Clients may terminate services with 30 days written notice. Completed work and expenses incurred will be charged.
-            </p>
-            <p class="terms-text">
-              <strong>By GrowCraft:</strong> We may terminate services immediately for:
-            </p>
-            <ul class="terms-list">
-              <li>Non-payment of fees</li>
-              <li>Violation of these Terms</li>
-              <li>Abusive or disrespectful behavior</li>
-              <li>Illegal or unethical requests</li>
-            </ul>
-            <p class="terms-text">
-              Upon termination, all unpaid amounts become immediately due, and access to our services will be revoked.
-            </p>
+            <h2 class="section-title" data-toggle="section" data-target="section8">
+              Termination
+              <span class="section-toggle"><i class="fas fa-chevron-down"></i></span>
+            </h2>
+            <div class="section-content" id="section8">
+              <p class="terms-text">
+                <strong>By Client:</strong> Clients may terminate services with 30 days written notice. Completed work and expenses incurred will be charged.
+              </p>
+              <p class="terms-text">
+                <strong>By GrowCraft:</strong> We may terminate services immediately for:
+              </p>
+              <ul class="terms-list">
+                <li>Non-payment of fees</li>
+                <li>Violation of these Terms</li>
+                <li>Abusive or disrespectful behavior</li>
+                <li>Illegal or unethical requests</li>
+              </ul>
+              <p class="terms-text">
+                Upon termination, all unpaid amounts become immediately due, and access to our services will be revoked.
+              </p>
+            </div>
           </div>
 
           <!-- Privacy & Confidentiality -->
           <div class="terms-card">
-            <h2 class="section-title">Privacy & Confidentiality</h2>
-            <p class="terms-text">
-              We take privacy seriously and maintain strict confidentiality of client information. Our data handling practices are outlined in our <a href="privacy.html" style="color: #d946ef; text-decoration: none;">Privacy Policy</a>.
-            </p>
-            <p class="terms-text">
-              Both parties agree to maintain confidentiality of sensitive business information shared during the course of our relationship.
-            </p>
+            <h2 class="section-title" data-toggle="section" data-target="section9">
+              Privacy & Confidentiality
+              <span class="section-toggle"><i class="fas fa-chevron-down"></i></span>
+            </h2>
+            <div class="section-content" id="section9">
+              <p class="terms-text">
+                We take privacy seriously and maintain strict confidentiality of client information. Our data handling practices are outlined in our <a href="privacy.html" style="color: #d946ef; text-decoration: none;">Privacy Policy</a>.
+              </p>
+              <p class="terms-text">
+                Both parties agree to maintain confidentiality of sensitive business information shared during the course of our relationship.
+              </p>
+            </div>
           </div>
 
           <!-- Governing Law -->
           <div class="terms-card">
-            <h2 class="section-title">Governing Law & Disputes</h2>
-            <p class="terms-text">
-              These Terms are governed by the laws of India. Any disputes will be resolved through:
-            </p>
-            <ol class="numbered-list">
-              <li>Good faith negotiations between the parties</li>
-              <li>Mediation if direct negotiation fails</li>
-              <li>Arbitration under Indian Arbitration laws</li>
-              <li>Courts in [Your City], India as the final recourse</li>
-            </ol>
+            <h2 class="section-title" data-toggle="section" data-target="section10">
+              Governing Law & Disputes
+              <span class="section-toggle"><i class="fas fa-chevron-down"></i></span>
+            </h2>
+            <div class="section-content" id="section10">
+              <p class="terms-text">
+                These Terms are governed by the laws of India. Any disputes will be resolved through:
+              </p>
+              <ol class="numbered-list">
+                <li>Good faith negotiations between the parties</li>
+                <li>Mediation if direct negotiation fails</li>
+                <li>Arbitration under Indian Arbitration laws</li>
+                <li>Courts in [Your City], India as the final recourse</li>
+              </ol>
+            </div>
           </div>
 
           <!-- Changes to Terms -->
           <div class="terms-card">
-            <h2 class="section-title">Changes to Terms</h2>
-            <p class="terms-text">
-              We reserve the right to modify these Terms at any time. Changes will be posted on our website with an updated "Last Modified" date. Continued use of our services after changes constitutes acceptance of the new Terms.
-            </p>
-            <p class="terms-text">
-              For significant changes that may affect existing clients, we will provide reasonable notice via email or other appropriate communication methods.
-            </p>
+            <h2 class="section-title" data-toggle="section" data-target="section11">
+              Changes to Terms
+              <span class="section-toggle"><i class="fas fa-chevron-down"></i></span>
+            </h2>
+            <div class="section-content" id="section11">
+              <p class="terms-text">
+                We reserve the right to modify these Terms at any time. Changes will be posted on our website with an updated "Last Modified" date. Continued use of our services after changes constitutes acceptance of the new Terms.
+              </p>
+              <p class="terms-text">
+                For significant changes that may affect existing clients, we will provide reasonable notice via email or other appropriate communication methods.
+              </p>
+            </div>
           </div>
 
           <!-- Contact Information -->
@@ -1131,6 +1211,30 @@
       if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
       }
+      
+      // Initialize all sections as expanded
+      const sections = document.querySelectorAll('.section-content');
+      sections.forEach(section => {
+        section.classList.add('expanded');
+      });
+      
+      // Add click event listeners to section titles
+      const sectionTitles = document.querySelectorAll('.section-title');
+      sectionTitles.forEach(title => {
+        title.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target');
+          const content = document.getElementById(targetId);
+          const toggleIcon = this.querySelector('.section-toggle i');
+          
+          if (content.classList.contains('expanded')) {
+            content.classList.remove('expanded');
+            toggleIcon.classList.add('rotated');
+          } else {
+            content.classList.add('expanded');
+            toggleIcon.classList.remove('rotated');
+          }
+        });
+      });
     });
   </script>
 </body>
