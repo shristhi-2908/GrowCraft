@@ -31,6 +31,16 @@ body {
 .footer {
   background-color: #388e3c;
 }
+/* Footer link colors for dark mode */
+.footer-nav a {
+  color: #ffffff; /* white text for visibility */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #00bfa6; /* accent color (optional) */
+}
 
 /* .navbar .nav-link,
 .footer {
