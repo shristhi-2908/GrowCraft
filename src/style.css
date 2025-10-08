@@ -1246,6 +1246,10 @@ body.dark .mb-4:hover {
   object-fit: contain;
   vertical-align: middle;
 }
+/* Dark mode logo fix */
+[data-bs-theme="dark"] .navbar-brand img {
+  filter: brightness(0) invert(1);
+}
 
 /* Align all nav items vertically center */
 .navbar-nav .nav-link {
